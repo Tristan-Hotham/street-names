@@ -1,0 +1,848 @@
+word,kind,n,region,lq,share
+Heol,first word,1418,Wales,20.9,1.0
+Stryd,first word,214,Wales,20.9,1.0
+Ffordd,first word,971,Wales,20.9,1.0
+Clos,first word,784,Wales,20.9,0.9987
+Lon,first word,577,Wales,20.9,1.0
+Maes,first word,623,Wales,20.8,0.9952
+Rhodfa,first word,173,Wales,20.8,0.9942
+Llys,first word,530,Wales,20.7,0.9887
+Cwrt,first word,251,Wales,20.7,0.992
+Cae,first word,351,Wales,20.7,0.9886
+Bryn,first word,606,Wales,20.0,0.9587
+Parc,first word,267,Wales,17.5,0.839
+Lodge,ending,229,Northern Ireland,14.3,0.4585
+Front,first word,202,North East,12.2,0.5297
+Loan,ending,369,Scotland,11.5,0.9946
+Park,ending,9055,Northern Ireland,11.0,0.3505
+Glen,ending,272,Northern Ireland,10.7,0.3419
+Wynd,ending,981,Scotland,10.3,0.8919
+Loke,ending,187,Eastern,9.9,0.9893
+Brae,ending,789,Scotland,9.8,0.8479
+Fore,first word,199,South West,8.5,0.8291
+Dene,first word,225,North East,8.3,0.36
+Manse,first word,268,Scotland,8.0,0.6978
+Ings,first word,169,Yorkshire and the Humber,8.0,0.8107
+Garth,ending,883,Yorkshire and the Humber,7.4,0.752
+Pleasant,first word,151,Wales,6.8,0.3245
+Kirk,first word,245,Scotland,6.6,0.5714
+Cottages,ending,389,Northern Ireland,6.5,0.2082
+Burnside,first word,331,Scotland,6.4,0.5589
+Mount,ending,1095,Yorkshire and the Humber,6.3,0.6374
+Higher,first word,463,South West,6.2,0.6069
+Passage,ending,590,London,6.2,0.3763
+Brow,ending,511,North West,6.1,0.775
+Bruce,first word,195,Scotland,6.1,0.5282
+Circle,ending,288,Scotland,6.0,0.5174
+Percy,first word,205,North East,6.0,0.2585
+Hillview,first word,211,Northern Ireland,5.9,0.3744
+Garth,first word,212,Wales,5.9,0.283
+Cameron,first word,185,Scotland,5.7,0.4973
+Northumberland,first word,154,North East,5.5,0.2403
+Wallace,first word,244,Scotland,5.4,0.4672
+Carr,first word,479,Yorkshire and the Humber,5.4,0.5449
+Stewart,first word,195,Scotland,5.4,0.4667
+Parade,ending,1064,Northern Ireland,5.3,0.1682
+Anderson,first word,212,Scotland,5.3,0.4623
+Murray,first word,198,Scotland,5.2,0.4495
+Golf,first word,192,Scotland,5.2,0.4531
+Pentland,first word,159,Scotland,5.2,0.4528
+Ashby,first word,153,East Midlands,5.1,0.4379
+Thornhill,first word,239,Northern Ireland,5.1,0.1925
+Glen,first word,625,Scotland,5.1,0.4432
+Norwich,first word,178,Eastern,5.0,0.5
+Shore,first word,183,Scotland,4.9,0.4262
+Bury,first word,198,Eastern,4.7,0.4697
+Meadows,ending,1166,Northern Ireland,4.7,0.1518
+Durham,first word,298,North East,4.7,0.2047
+Villas,ending,495,Northern Ireland,4.7,0.2808
+Fraser,first word,176,Scotland,4.7,0.4034
+Broomhill,first word,177,Scotland,4.6,0.3955
+Cheviot,first word,216,North East,4.5,0.1944
+Hardwick,first word,189,East Midlands,4.5,0.381
+Fairview,first word,253,Northern Ireland,4.4,0.1621
+Commercial,first word,265,Wales,4.3,0.2075
+Cleveland,first word,258,North East,4.3,0.186
+Coombe,first word,273,South West,4.3,0.4176
+Fold,ending,953,Yorkshire and the Humber,4.3,0.4428
+Pasture,first word,199,Yorkshire and the Humber,4.3,0.4322
+Drove,ending,1792,Eastern,4.3,0.4269
+Copse,ending,347,South East,4.2,0.5648
+Beck,first word,175,Yorkshire and the Humber,4.2,0.4286
+Wood,ending,613,Northern Ireland,4.2,0.2741
+Lewis,first word,258,Wales,4.1,0.1977
+Moss,first word,556,North West,4.1,0.5306
+Harbour,first word,230,Scotland,4.1,0.3522
+Maxwell,first word,150,Scotland,4.1,0.3533
+Low,first word,692,Yorkshire and the Humber,4.0,0.4061
+Estate,ending,320,Northern Ireland,4.0,0.15
+Clyde,first word,171,Scotland,3.9,0.3392
+Pool,first word,178,West Midlands,3.9,0.3146
+Arden,first word,168,West Midlands,3.9,0.3214
+Place,ending,25208,Scotland,3.8,0.331
+Spinney,first word,226,East Midlands,3.8,0.323
+Collingwood,first word,175,North East,3.8,0.1886
+Downs,first word,163,South East,3.8,0.5215
+Charnwood,first word,153,East Midlands,3.8,0.3268
+Drummond,first word,158,Northern Ireland,3.8,0.3228
+Douglas,first word,446,Scotland,3.7,0.3229
+Miller,first word,221,Scotland,3.6,0.3122
+Leicester,first word,178,East Midlands,3.6,0.3034
+Thistle,first word,188,Scotland,3.6,0.3138
+Eskdale,first word,159,North East,3.6,0.3082
+Chase,ending,1137,Eastern,3.6,0.3571
+Croft,ending,3133,West Midlands,3.6,0.2952
+Ross,first word,204,Scotland,3.6,0.3088
+Lyndhurst,first word,251,Northern Ireland,3.6,0.1713
+Holme,first word,250,Yorkshire and the Humber,3.6,0.364
+Trent,first word,239,East Midlands,3.5,0.2971
+Plantation,first word,206,Northern Ireland,3.5,0.1845
+Stoke,first word,179,South West,3.5,0.3408
+Moor,first word,892,Yorkshire and the Humber,3.5,0.3543
+Pinfold,first word,276,East Midlands,3.5,0.3514
+Mews,ending,6878,London,3.5,0.2137
+Steps,ending,194,South West,3.5,0.3402
+Main,first word,1842,East Midlands,3.5,0.2953
+Lichfield,first word,171,West Midlands,3.4,0.2807
+Aston,first word,209,West Midlands,3.4,0.2775
+Rosedale,first word,194,North East,3.4,0.2629
+Stanhope,first word,179,North East,3.4,0.1732
+Ashbourne,first word,174,Northern Ireland,3.4,0.2184
+Glendale,first word,168,North East,3.3,0.1726
+Stephenson,first word,175,North East,3.3,0.1486
+Cross,ending,302,South West,3.3,0.3245
+Back,first word,3090,Yorkshire and the Humber,3.3,0.3994
+Orchard,ending,949,South West,3.3,0.3203
+Seaton,first word,162,North East,3.3,0.142
+Kensington,first word,302,Northern Ireland,3.3,0.202
+Bracken,first word,336,Northern Ireland,3.3,0.1607
+Burns,first word,293,Scotland,3.3,0.2901
+Campbell,first word,293,Scotland,3.3,0.2833
+Top,first word,190,East Midlands,3.3,0.2842
+Rydal,first word,248,North West,3.2,0.4113
+Harewood,first word,173,Yorkshire and the Humber,3.2,0.3295
+Hunter,first word,168,Scotland,3.2,0.2798
+Copse,first word,168,South East,3.2,0.4405
+Barton,first word,429,South West,3.2,0.3077
+Greenfield,first word,397,Wales,3.2,0.2015
+David,first word,192,Scotland,3.2,0.2812
+Fountain,first word,183,Northern Ireland,3.2,0.1858
+Connaught,first word,182,London,3.2,0.2363
+Watery,first word,205,South West,3.2,0.3122
+Terrace,ending,10049,Scotland,3.2,0.2815
+Egerton,first word,170,North West,3.2,0.4118
+Fleming,first word,167,Scotland,3.2,0.2814
+Promenade,ending,150,Wales,3.1,0.18
+Thorpe,first word,257,East Midlands,3.1,0.2763
+Leys,ending,206,East Midlands,3.1,0.2621
+Sunny,first word,210,Yorkshire and the Humber,3.1,0.3143
+Stafford,first word,255,West Midlands,3.1,0.2549
+Sunnyside,first word,238,Scotland,3.1,0.2731
+Oval,ending,201,Yorkshire and the Humber,3.1,0.3134
+Norwood,first word,211,Yorkshire and the Humber,3.0,0.3033
+Sutherland,first word,216,Scotland,3.0,0.2639
+Graham,first word,233,Scotland,3.0,0.2618
+Dene,ending,222,North East,3.0,0.2568
+Thirlmere,first word,212,North West,3.0,0.3868
+Path,ending,1538,Scotland,3.0,0.2633
+Alley,ending,385,London,3.0,0.2805
+Crawford,first word,158,Scotland,3.0,0.2595
+Woodhouse,first word,202,Yorkshire and the Humber,3.0,0.302
+Pound,first word,397,South West,3.0,0.2997
+Chichester,first word,198,Northern Ireland,3.0,0.2929
+Greenbank,first word,186,Scotland,3.0,0.328
+Dixon,first word,160,North East,3.0,0.1938
+Coppice,first word,302,West Midlands,3.0,0.2417
+Marine,first word,268,Wales,3.0,0.2575
+Dalton,first word,179,North East,3.0,0.3184
+Pastures,ending,152,East Midlands,2.9,0.2434
+Montrose,first word,163,Scotland,2.9,0.2515
+Smithy,first word,271,North West,2.9,0.369
+Moorland,first word,262,Yorkshire and the Humber,2.9,0.2901
+Buttermere,first word,180,North East,2.9,0.3333
+Peel,first word,271,North West,2.9,0.3727
+Ennerdale,first word,189,North West,2.9,0.3704
+Court,first word,410,South West,2.9,0.2805
+Lilac,first word,338,North East,2.9,0.145
+Grasmere,first word,306,North East,2.9,0.2941
+Lord,first word,224,North West,2.9,0.3705
+Moat,first word,214,West Midlands,2.9,0.2383
+Beach,first word,241,Wales,2.9,0.2075
+Alexander,first word,290,Scotland,2.8,0.2448
+Railway,first word,418,Northern Ireland,2.8,0.1603
+Hill,ending,8971,South West,2.8,0.2732
+Scott,first word,354,Scotland,2.8,0.2458
+Booth,first word,151,North West,2.8,0.3642
+Ride,ending,304,South East,2.8,0.3816
+Approach,ending,711,London,2.8,0.2208
+Bristol,first word,150,South West,2.8,0.2733
+Townsend,first word,178,South West,2.8,0.2697
+Mere,first word,176,North West,2.8,0.3636
+Ashwood,first word,172,North East,2.8,0.186
+Links,first word,246,Scotland,2.8,0.2398
+Fairfax,first word,177,Yorkshire and the Humber,2.8,0.2825
+Brown,first word,207,Scotland,2.8,0.2802
+Common,first word,439,Eastern,2.8,0.2756
+Devonshire,first word,308,London,2.8,0.2078
+Belle,first word,230,North East,2.8,0.2261
+Stamford,first word,166,East Midlands,2.8,0.3193
+Causeway,ending,284,Eastern,2.7,0.2711
+Farm,ending,341,Northern Ireland,2.7,0.1848
+Neville,first word,196,Yorkshire and the Humber,2.7,0.2704
+Charlton,first word,198,South West,2.7,0.2677
+Conway,first word,273,Wales,2.7,0.2161
+Brick,first word,188,Eastern,2.7,0.266
+Perry,first word,170,West Midlands,2.7,0.2235
+Castle,first word,1903,Northern Ireland,2.7,0.1597
+Weavers,first word,244,Northern Ireland,2.7,0.1762
+Kennedy,first word,173,Scotland,2.7,0.237
+Hurst,first word,222,South East,2.7,0.3649
+Mead,first word,220,South West,2.7,0.3545
+Vincent,first word,175,London,2.7,0.2171
+Bolton,first word,167,North West,2.7,0.3473
+Craven,first word,164,Yorkshire and the Humber,2.7,0.2744
+Ullswater,first word,199,North East,2.7,0.2915
+Westgate,first word,198,Yorkshire and the Humber,2.7,0.2778
+Beaumont,first word,287,North East,2.7,0.1289
+Coopers,first word,184,Northern Ireland,2.7,0.2391
+Westfield,first word,731,Yorkshire and the Humber,2.7,0.275
+Langdale,first word,252,North West,2.7,0.3413
+Sea,first word,253,North East,2.7,0.2806
+Hampton,first word,274,Northern Ireland,2.7,0.2117
+Millfield,first word,247,North East,2.7,0.1457
+Southfield,first word,287,Yorkshire and the Humber,2.7,0.2753
+Marston,first word,157,West Midlands,2.6,0.2102
+Whitehouse,first word,153,West Midlands,2.6,0.2092
+Parsonage,first word,227,South West,2.6,0.2555
+Cross,first word,1302,Yorkshire and the Humber,2.6,0.2673
+Severn,first word,230,West Midlands,2.6,0.213
+Mount,first word,1265,Northern Ireland,2.6,0.1257
+Bay,first word,212,South West,2.6,0.2547
+Arlington,first word,150,London,2.6,0.1667
+Stratford,first word,181,West Midlands,2.6,0.2099
+Rectory,first word,853,Eastern,2.6,0.2544
+Derby,first word,279,North West,2.6,0.3369
+Greenway,first word,283,South West,2.6,0.258
+Derwent,first word,486,North East,2.6,0.2387
+Waverley,first word,333,Scotland,2.6,0.2252
+Montgomery,first word,197,Scotland,2.6,0.2284
+Hamilton,first word,537,Scotland,2.6,0.2291
+Folly,first word,197,South West,2.6,0.2538
+Elmwood,first word,189,North East,2.6,0.1481
+Common,ending,255,Eastern,2.6,0.2549
+Nook,ending,225,North West,2.6,0.3333
+Butts,first word,163,South West,2.6,0.2515
+Blackberry,first word,153,South West,2.5,0.2418
+Mendip,first word,178,South West,2.5,0.2416
+Bath,first word,344,South West,2.5,0.2442
+Cotton,first word,151,North West,2.5,0.3179
+Hastings,first word,197,North East,2.5,0.1421
+Herbert,first word,193,Wales,2.5,0.1503
+Watson,first word,192,Scotland,2.5,0.2188
+Lady,first word,345,Scotland,2.5,0.2174
+Eden,first word,342,North East,2.5,0.2018
+Sherwood,first word,358,East Midlands,2.5,0.2123
+Crescent,first word,291,London,2.5,0.1753
+Gordon,first word,537,Scotland,2.5,0.2142
+Belmont,first word,460,Northern Ireland,2.5,0.1522
+Union,first word,567,Scotland,2.5,0.2152
+End,ending,1700,Eastern,2.5,0.2606
+Crescent,ending,21693,Scotland,2.5,0.2188
+Mitchell,first word,225,Scotland,2.5,0.2133
+Ferndale,first word,228,Northern Ireland,2.5,0.1316
+Kingswood,first word,204,London,2.5,0.1814
+Burton,first word,308,East Midlands,2.5,0.211
+Mansfield,first word,210,East Midlands,2.5,0.2095
+Calder,first word,241,Scotland,2.5,0.3071
+Greenhill,first word,255,Northern Ireland,2.5,0.1647
+Town,first word,452,Yorkshire and the Humber,2.5,0.2566
+Stirling,first word,293,Scotland,2.4,0.2048
+Princes,first word,390,London,2.4,0.1513
+Laurel,first word,600,Northern Ireland,2.4,0.14
+Napier,first word,205,Scotland,2.4,0.2049
+Melrose,first word,274,North East,2.4,0.1715
+Beaconsfield,first word,183,London,2.4,0.2077
+Norton,first word,295,West Midlands,2.4,0.1932
+Coniston,first word,362,North East,2.4,0.2928
+Vale,first word,358,Wales,2.4,0.2067
+Shirley,first word,173,London,2.4,0.1908
+Rosewood,first word,176,North East,2.4,0.2045
+Cliff,first word,323,Yorkshire and the Humber,2.4,0.2477
+Hayes,first word,157,London,2.4,0.1975
+Clare,first word,218,Northern Ireland,2.4,0.1697
+Bakers,first word,174,Eastern,2.4,0.2356
+Lee,first word,245,Yorkshire and the Humber,2.4,0.2408
+Montague,first word,177,London,2.4,0.209
+Woodland,first word,830,Wales,2.4,0.1422
+Pennine,first word,190,North West,2.4,0.3105
+Quay,ending,251,Northern Ireland,2.4,0.2032
+Greenside,first word,187,Yorkshire and the Humber,2.4,0.246
+Wharf,first word,166,West Midlands,2.4,0.1928
+Eastfield,first word,251,Yorkshire and the Humber,2.4,0.247
+Short,first word,262,Eastern,2.4,0.2366
+Shepherds,first word,239,South East,2.4,0.3264
+Hall,first word,1175,Eastern,2.4,0.2374
+Hollow,ending,292,Northern Ireland,2.4,0.1952
+Worcester,first word,249,West Midlands,2.4,0.1928
+Lincoln,first word,455,East Midlands,2.3,0.2
+Kiln,first word,302,South East,2.3,0.3179
+Pond,first word,209,Eastern,2.3,0.2919
+Dark,first word,235,South West,2.3,0.2213
+Dudley,first word,202,West Midlands,2.3,0.1881
+Kendal,first word,236,North West,2.3,0.2966
+Surrey,first word,168,London,2.3,0.1964
+Leigh,first word,194,South West,2.3,0.2216
+Thorn,first word,193,Yorkshire and the Humber,2.3,0.2332
+Yard,ending,1427,London,2.3,0.2011
+Dell,ending,250,Eastern,2.3,0.228
+Bank,ending,2175,North East,2.3,0.2152
+Field,ending,1147,Eastern,2.3,0.2947
+Pear,first word,264,West Midlands,2.3,0.1856
+Ferry,first word,247,Scotland,2.3,0.1984
+Lea,ending,468,North East,2.3,0.1709
+Lea,first word,264,West Midlands,2.3,0.1894
+Broomfield,first word,208,Scotland,2.3,0.1971
+James,first word,689,Scotland,2.3,0.2003
+Bourne,first word,254,South East,2.3,0.3071
+Robert,first word,253,Scotland,2.3,0.2016
+Berkeley,first word,268,South West,2.3,0.2201
+Gloucester,first word,383,London,2.3,0.1645
+Moorfield,first word,171,North West,2.3,0.2982
+Badgers,first word,222,South East,2.3,0.3108
+Lonsdale,first word,164,London,2.3,0.2927
+Exeter,first word,217,South West,2.3,0.2212
+Malthouse,first word,157,South East,2.3,0.3121
+Wilson,first word,367,Scotland,2.3,0.2016
+Northfield,first word,367,Yorkshire and the Humber,2.3,0.2371
+Chatsworth,first word,305,East Midlands,2.3,0.1967
+Ridgeway,first word,287,Wales,2.3,0.2265
+Keswick,first word,179,North West,2.3,0.2961
+Beaufort,first word,256,Wales,2.3,0.1836
+Carlton,first word,488,Yorkshire and the Humber,2.3,0.2357
+Essex,first word,237,London,2.3,0.1603
+Sunningdale,first word,247,Northern Ireland,2.3,0.1822
+Woodstock,first word,196,London,2.3,0.1939
+Hope,first word,323,North West,2.3,0.291
+London,first word,443,Eastern,2.3,0.298
+Windermere,first word,325,North East,2.3,0.2615
+Brunel,first word,188,South West,2.2,0.2181
+Anchor,first word,163,Eastern,2.2,0.2209
+Broughton,first word,177,East Midlands,2.2,0.1864
+Hawthorne,first word,330,Yorkshire and the Humber,2.2,0.2273
+Chester,first word,365,North East,2.2,0.2603
+Thomas,first word,470,Wales,2.2,0.1553
+Sydney,first word,165,London,2.2,0.1697
+Gleneagles,first word,157,Scotland,2.2,0.1911
+Birkdale,first word,154,North East,2.2,0.2143
+Cow,first word,165,Yorkshire and the Humber,2.2,0.2242
+Beresford,first word,171,London,2.2,0.1871
+Balfour,first word,150,Scotland,2.2,0.1933
+Square,ending,4799,North East,2.2,0.1315
+Meadow,ending,2045,South West,2.2,0.2186
+Harrow,first word,208,London,2.2,0.2019
+Lansdowne,first word,287,London,2.2,0.1603
+Chiltern,first word,263,South East,2.2,0.2928
+Brooklands,first word,252,Northern Ireland,2.2,0.2103
+Ashton,first word,252,North West,2.2,0.2857
+Richmond,first word,799,Northern Ireland,2.2,0.1702
+Morley,first word,183,East Midlands,2.2,0.1858
+Cecil,first word,204,London,2.2,0.201
+Eastern,first word,180,South East,2.2,0.2944
+Tudor,first word,567,Wales,2.2,0.1481
+Prospect,first word,563,Yorkshire and the Humber,2.2,0.2238
+Newport,first word,181,West Midlands,2.2,0.1768
+Glebe,first word,834,Northern Ireland,2.2,0.1547
+Holland,first word,238,London,2.2,0.1849
+Almond,first word,305,Scotland,2.2,0.1934
+Thames,first word,188,South East,2.2,0.3032
+Beverley,first word,312,Northern Ireland,2.2,0.1538
+Silver,first word,558,South West,2.2,0.2168
+Summer,first word,202,West Midlands,2.2,0.203
+Wentworth,first word,361,Yorkshire and the Humber,2.2,0.2216
+Cumberland,first word,273,London,2.2,0.1978
+Ford,first word,272,South West,2.1,0.2059
+Woodfield,first word,262,Wales,2.1,0.145
+Hudson,first word,185,Yorkshire and the Humber,2.1,0.2108
+Silverdale,first word,187,North West,2.1,0.2674
+Morton,first word,168,North East,2.1,0.1429
+Oakley,first word,191,London,2.1,0.1675
+Brunswick,first word,262,London,2.1,0.1832
+Post,first word,172,Eastern,2.1,0.2093
+Addison,first word,189,London,2.1,0.1429
+Highland,first word,152,Wales,2.1,0.1513
+Woodville,first word,150,London,2.1,0.18
+Harvest,first word,213,East Midlands,2.1,0.2113
+Westbury,first word,177,London,2.1,0.1638
+Ridge,first word,223,South West,2.1,0.2018
+Apple,first word,220,South West,2.1,0.2045
+Hyde,first word,218,London,2.1,0.2156
+Telford,first word,177,Scotland,2.1,0.1864
+Bridle,first word,171,East Midlands,2.1,0.1813
+All,first word,247,Eastern,2.1,0.2065
+Rochester,first word,175,North East,2.1,0.1886
+Strawberry,first word,195,South West,2.1,0.2
+Broom,first word,303,Scotland,2.1,0.1848
+Argyle,first word,198,Scotland,2.1,0.1818
+Hilton,first word,199,Scotland,2.1,0.2362
+Parsons,first word,160,South West,2.1,0.225
+Barn,first word,402,South West,2.1,0.2065
+Lynton,first word,179,North West,2.1,0.2737
+Rock,first word,281,South West,2.1,0.2064
+Ashfield,first word,280,Yorkshire and the Humber,2.1,0.2179
+Cambridge,first word,521,London,2.1,0.1823
+Westminster,first word,238,North West,2.1,0.2731
+Heath,first word,644,Eastern,2.1,0.205
+College,first word,670,Northern Ireland,2.1,0.1657
+Weston,first word,301,West Midlands,2.1,0.1761
+Langley,first word,300,North East,2.1,0.1533
+Johnson,first word,199,East Midlands,2.1,0.1809
+Saxon,first word,416,Eastern,2.1,0.2115
+Rutland,first word,321,London,2.1,0.2243
+Somerset,first word,300,Northern Ireland,2.1,0.1533
+Home,first word,329,East Midlands,2.1,0.2036
+Brookfield,first word,331,Northern Ireland,2.1,0.2205
+Grosvenor,first word,494,London,2.1,0.2105
+Clarendon,first word,277,London,2.1,0.2058
+Harvey,first word,185,Eastern,2.1,0.2108
+Poppy,first word,273,Eastern,2.1,0.2051
+Sussex,first word,261,London,2.1,0.2605
+Heron,first word,410,Eastern,2.0,0.1976
+Oakfield,first word,339,Wales,2.0,0.174
+Forge,first word,349,South East,2.0,0.2751
+Briar,first word,358,North East,2.0,0.1453
+Cemetery,first word,198,Wales,2.0,0.1869
+Parkfield,first word,197,Yorkshire and the Humber,2.0,0.2437
+Dukes,first word,196,South East,2.0,0.2704
+Temple,first word,344,Northern Ireland,2.0,0.1715
+Avon,first word,371,South West,2.0,0.1968
+Lawrence,first word,323,London,2.0,0.1641
+Tennyson,first word,323,East Midlands,2.0,0.1734
+Nightingale,first word,391,South East,2.0,0.2762
+Avenue,first word,398,South East,2.0,0.2764
+Cavendish,first word,383,East Midlands,2.0,0.1671
+Woodpecker,first word,165,Eastern,2.0,0.2727
+Ruskin,first word,223,North West,2.0,0.2556
+Henley,first word,215,West Midlands,2.0,0.1674
+Knights,first word,174,South East,2.0,0.2701
+Clayton,first word,212,North West,2.0,0.2594
+Spencer,first word,343,London,2.0,0.1691
+Wesley,first word,366,Wales,2.0,0.1721
+Hillcrest,first word,378,Northern Ireland,2.0,0.1138
+Beacon,first word,376,South West,2.0,0.2074
+Beechwood,first word,538,Northern Ireland,2.0,0.1506
+Baker,first word,209,East Midlands,2.0,0.1866
+Whitehall,first word,207,Northern Ireland,2.0,0.1401
+Smith,first word,243,Scotland,2.0,0.2181
+Ambleside,first word,183,North East,2.0,0.2295
+Dale,first word,514,East Midlands,2.0,0.2198
+Bentley,first word,185,West Midlands,2.0,0.173
+Westbourne,first word,261,Yorkshire and the Humber,2.0,0.2031
+Shaftesbury,first word,209,London,2.0,0.1531
+Charlotte,first word,204,Scotland,2.0,0.1765
+Pembroke,first word,307,London,2.0,0.1368
+Thornton,first word,286,Yorkshire and the Humber,2.0,0.2343
+Bank,first word,598,Scotland,2.0,0.2458
+Margaret,first word,254,Scotland,2.0,0.1693
+Dove,first word,247,Eastern,2.0,0.2024
+Three,first word,185,South West,2.0,0.1946
+Woodside,first word,685,Scotland,2.0,0.1723
+Windmill,first word,691,Northern Ireland,2.0,0.2127
+Rye,first word,186,Eastern,2.0,0.1989
+Florence,first word,252,London,2.0,0.1389
+Millers,first word,233,Eastern,2.0,0.1974
+Compton,first word,235,South West,2.0,0.1957
+Acacia,first word,261,London,2.0,0.1341
+Seymour,first word,263,London,2.0,0.1901
+Hartley,first word,183,North West,2.0,0.2514
+Mill,first word,3610,Eastern,2.0,0.1961
+Side,ending,437,Yorkshire and the Humber,2.0,0.1991
+Osprey,first word,221,Scotland,2.0,0.1719
+Cottage,first word,225,West Midlands,2.0,0.16
+Bowling,first word,188,Scotland,2.0,0.1809
+Ascot,first word,171,North East,2.0,0.1813
+Gardens,ending,23178,London,2.0,0.1557
+Gate,ending,2025,Yorkshire and the Humber,2.0,0.204
+Street,ending,79558,North West,2.0,0.2535
+View,ending,8762,Yorkshire and the Humber,2.0,0.2079
+Fields,ending,940,West Midlands,2.0,0.1904
+Glade,ending,329,South East,1.9,0.2644
+Court,ending,25620,North East,1.9,0.152
+Summerfield,first word,159,Yorkshire and the Humber,1.9,0.1887
+Uplands,first word,171,West Midlands,1.9,0.2047
+Kimberley,first word,168,London,1.9,0.125
+Hereford,first word,190,North West,1.9,0.2421
+Sir,first word,187,Scotland,1.9,0.1711
+Eaton,first word,226,London,1.9,0.2257
+Spring,first word,1068,Yorkshire and the Humber,1.9,0.1919
+Wood,first word,1143,Yorkshire and the Humber,1.9,0.1934
+John,first word,944,Scotland,1.9,0.1653
+Monks,first word,264,South East,1.9,0.2614
+Lake,first word,264,Northern Ireland,1.9,0.1818
+Stuart,first word,263,Scotland,1.9,0.1673
+Jackson,first word,250,North West,1.9,0.248
+Stanley,first word,694,North West,1.9,0.2378
+Cypress,first word,232,North East,1.9,0.1638
+Suffolk,first word,227,Northern Ireland,1.9,0.1718
+Paddock,ending,502,East Midlands,1.9,0.1873
+Partridge,first word,210,Eastern,1.9,0.2048
+Barley,first word,306,Eastern,1.9,0.1895
+Love,first word,206,Eastern,1.9,0.2039
+Rookery,first word,209,Eastern,1.9,0.1866
+Francis,first word,270,Wales,1.9,0.1333
+Daisy,first word,269,Yorkshire and the Humber,1.9,0.2007
+Clay,first word,275,Eastern,1.9,0.1927
+Royal,first word,486,Northern Ireland,1.9,0.1543
+Dorset,first word,257,London,1.9,0.2179
+Brewery,first word,157,North East,1.9,0.1529
+Deer,first word,161,Scotland,1.9,0.1677
+Carlisle,first word,154,North West,1.9,0.2468
+Chantry,first word,213,South West,1.9,0.1878
+Avondale,first word,214,London,1.9,0.2009
+Parklands,first word,217,Northern Ireland,1.9,0.1475
+Foster,first word,156,Eastern,1.9,0.1859
+Dean,first word,385,Scotland,1.9,0.1922
+Kingfisher,first word,458,Eastern,1.9,0.19
+Buckingham,first word,321,London,1.9,0.215
+Shaw,first word,331,Yorkshire and the Humber,1.9,0.2236
+Walnut,first word,533,Eastern,1.9,0.1876
+Marlborough,first word,472,Northern Ireland,1.9,0.178
+Cornwall,first word,244,London,1.9,0.1557
+Walker,first word,247,Scotland,1.9,0.2267
+Middle,first word,615,South West,1.9,0.187
+Wilton,first word,236,North East,1.9,0.2076
+Belgrave,first word,242,North West,1.9,0.2397
+Crown,first word,595,Eastern,1.9,0.1933
+Lime,first word,888,East Midlands,1.9,0.1588
+Drake,first word,180,South West,1.9,0.1889
+Peacock,first word,179,Eastern,1.9,0.1899
+Wordsworth,first word,271,North West,1.9,0.2435
+Burnham,first word,174,London,1.9,0.1897
+Ashley,first word,369,Northern Ireland,1.9,0.1762
+Byron,first word,384,East Midlands,1.9,0.1615
+Eastwood,first word,162,Yorkshire and the Humber,1.9,0.1914
+Buxton,first word,163,London,1.9,0.2147
+Yew,first word,508,West Midlands,1.8,0.1909
+Sandy,first word,724,Eastern,1.8,0.1823
+Field,first word,742,East Midlands,1.8,0.1617
+Keats,first word,210,East Midlands,1.8,0.1857
+Bradley,first word,205,South West,1.8,0.1707
+Friars,first word,203,Eastern,1.8,0.1872
+Middleton,first word,274,Yorkshire and the Humber,1.8,0.1788
+Grange,first word,1363,Yorkshire and the Humber,1.8,0.1783
+Hornbeam,first word,250,Eastern,1.8,0.224
+Cotswold,first word,251,South West,1.8,0.1753
+Vale,ending,736,Yorkshire and the Humber,1.8,0.1821
+Wharf,ending,233,London,1.8,0.206
+Spinney,ending,277,South East,1.8,0.2491
+Rise,ending,4775,Yorkshire and the Humber,1.8,0.1807
+Grove,ending,18758,West Midlands,1.8,0.1854
+Bull,first word,187,Eastern,1.8,0.1818
+Rosebery,first word,167,London,1.8,0.1257
+Dairy,first word,167,East Midlands,1.8,0.1796
+Riverside,first word,684,Northern Ireland,1.8,0.1535
+Taylor,first word,262,North West,1.8,0.2366
+Horseshoe,first word,151,Eastern,1.8,0.2384
+Wren,first word,229,Eastern,1.8,0.1747
+Melbourne,first word,228,East Midlands,1.8,0.1535
+Black,first word,415,Eastern,1.8,0.1759
+Stoney,first word,244,Yorkshire and the Humber,1.8,0.1803
+Gorse,first word,254,East Midlands,1.8,0.1732
+Magnolia,first word,209,Eastern,1.8,0.1818
+Warwick,first word,537,London,1.8,0.1955
+Lavender,first word,322,London,1.8,0.177
+Parkside,first word,315,North East,1.8,0.1841
+Falcon,first word,319,Eastern,1.8,0.1787
+Buttercup,first word,197,East Midlands,1.8,0.1675
+Granville,first word,319,Northern Ireland,1.8,0.1787
+Swan,first word,471,West Midlands,1.8,0.1762
+Malvern,first word,327,West Midlands,1.8,0.1865
+Princess,first word,446,North West,1.8,0.2309
+Ivy,first word,472,Yorkshire and the Humber,1.8,0.1864
+Fox,first word,475,Yorkshire and the Humber,1.8,0.1789
+Well,first word,559,Yorkshire and the Humber,1.8,0.186
+Newton,first word,593,Scotland,1.8,0.1636
+Longfield,first word,193,Yorkshire and the Humber,1.8,0.1813
+Western,first word,428,South East,1.8,0.2453
+Clarence,first word,417,London,1.8,0.1487
+Hazelwood,first word,211,Northern Ireland,1.8,0.1517
+Palmer,first word,177,East Midlands,1.8,0.1638
+Coach,first word,175,North East,1.8,0.1829
+Duke,first word,350,North West,1.8,0.2343
+Boundary,first word,338,North West,1.8,0.2308
+Gladstone,first word,351,North East,1.8,0.1481
+Stone,first word,403,Yorkshire and the Humber,1.8,0.1836
+Balmoral,first word,410,North East,1.8,0.2171
+Marsh,first word,549,South West,1.8,0.1712
+Dickens,first word,151,North East,1.8,0.2119
+Merton,first word,164,London,1.8,0.2378
+Dorchester,first word,165,London,1.8,0.2
+Plough,first word,160,West Midlands,1.8,0.225
+Hermitage,first word,162,London,1.8,0.1852
+Haven,first word,160,Yorkshire and the Humber,1.8,0.1875
+Hilltop,first word,160,East Midlands,1.8,0.1812
+Earl,first word,159,Scotland,1.7,0.2075
+Row,ending,2301,Wales,1.7,0.1221
+Avenue,ending,56423,North West,1.7,0.2119
+Winston,first word,164,South East,1.7,0.2256
+Edge,ending,186,Yorkshire and the Humber,1.7,0.1828
+Church,first word,7872,Eastern,1.7,0.1688
+Highfield,first word,981,Yorkshire and the Humber,1.7,0.1753
+Winchester,first word,304,London,1.7,0.2237
+Canal,first word,305,North West,1.7,0.223
+Devon,first word,252,North West,1.7,0.2222
+Thompson,first word,202,Yorkshire and the Humber,1.7,0.1832
+Mary,first word,264,Wales,1.7,0.1439
+Canterbury,first word,262,South East,1.7,0.229
+Vernon,first word,258,East Midlands,1.7,0.2093
+Bishops,first word,278,South West,1.7,0.1763
+Bridge,first word,1282,Wales,1.7,0.1303
+Ward,first word,172,West Midlands,1.7,0.1977
+Golden,first word,173,South East,1.7,0.2254
+Sandringham,first word,350,North East,1.7,0.1971
+Robin,first word,342,East Midlands,1.7,0.1959
+Frederick,first word,199,West Midlands,1.7,0.1608
+Badger,first word,196,Yorkshire and the Humber,1.7,0.1684
+Albany,first word,312,London,1.7,0.1603
+Rosemary,first word,294,West Midlands,1.7,0.1905
+Broadway,first word,321,South West,1.7,0.162
+Blackthorn,first word,325,East Midlands,1.7,0.1815
+Abbey,first word,791,Northern Ireland,1.7,0.1226
+Croft,first word,711,Yorkshire and the Humber,1.7,0.1758
+Clifton,first word,594,North West,1.7,0.2138
+Quarry,first word,595,Yorkshire and the Humber,1.7,0.1731
+Marshall,first word,215,Scotland,1.7,0.1581
+Edinburgh,first word,223,Eastern,1.7,0.1704
+Firs,first word,152,South East,1.7,0.2303
+Chaucer,first word,219,South East,1.7,0.2329
+Portland,first word,450,East Midlands,1.7,0.1444
+Regent,first word,443,Yorkshire and the Humber,1.7,0.1874
+Harcourt,first word,163,London,1.7,0.184
+Franklin,first word,162,Eastern,1.7,0.1914
+Boulevard,ending,277,East Midlands,1.7,0.1733
+Gibson,first word,161,North East,1.7,0.1429
+Green,first word,2660,Yorkshire and the Humber,1.7,0.1714
+Dover,first word,164,South East,1.7,0.2378
+Second,first word,256,Eastern,1.7,0.168
+Foundry,first word,238,Wales,1.7,0.1681
+Chapel,first word,2581,East Midlands,1.7,0.1406
+Skylark,first word,151,South East,1.7,0.2318
+Harrison,first word,229,North West,1.7,0.2227
+Holt,first word,219,North West,1.7,0.2192
+Sutton,first word,414,East Midlands,1.7,0.1498
+Paddock,first word,400,East Midlands,1.7,0.2075
+Lancaster,first word,512,North West,1.7,0.2188
+Brookside,first word,414,East Midlands,1.7,0.1691
+Alder,first word,436,North West,1.7,0.2156
+Bedford,first word,393,London,1.7,0.173
+Churchill,first word,463,South West,1.7,0.1814
+Fir,first word,402,North West,1.7,0.2239
+Bramley,first word,336,East Midlands,1.7,0.2173
+Oaklands,first word,375,Northern Ireland,1.7,0.1707
+Valley,first word,646,North East,1.7,0.144
+Milton,first word,667,Scotland,1.7,0.1559
+Coronation,first word,529,North East,1.7,0.1531
+Adelaide,first word,179,London,1.7,0.1899
+Claremont,first word,332,London,1.7,0.1657
+Osborne,first word,335,North East,1.7,0.1881
+Lane,ending,77042,South West,1.6,0.158
+Road,ending,172750,London,1.6,0.1488
+Arthur,first word,294,Wales,1.6,0.1463
+Foxglove,first word,294,Eastern,1.6,0.1599
+Pinewood,first word,323,North East,1.6,0.1703
+Clover,first word,320,Eastern,1.6,0.1594
+Upton,first word,202,East Midlands,1.6,0.1832
+Orchid,first word,197,North East,1.6,0.1523
+Barnfield,first word,196,South East,1.6,0.2194
+Barnes,first word,194,South West,1.6,0.1804
+Forest,first word,708,East Midlands,1.6,0.2105
+Rowan,first word,710,Scotland,1.6,0.138
+Broad,first word,719,South West,1.6,0.1641
+Poplar,first word,789,West Midlands,1.6,0.1521
+Farm,first word,596,South East,1.6,0.2198
+Lodge,first word,591,Eastern,1.6,0.1591
+Warren,first word,585,South East,1.6,0.2222
+De,first word,356,Eastern,1.6,0.1629
+Robinson,first word,173,North East,1.6,0.1792
+Spruce,first word,167,Scotland,1.6,0.1377
+Windsor,first word,1034,North East,1.6,0.1499
+George,first word,978,Scotland,1.6,0.1411
+Holly,first word,986,West Midlands,1.6,0.1521
+Brook,ending,166,South East,1.6,0.2169
+Springfield,first word,917,Yorkshire and the Humber,1.6,0.1581
+Kings,first word,902,South East,1.6,0.2195
+Green,ending,4975,Eastern,1.6,0.155
+Westwood,first word,277,Yorkshire and the Humber,1.6,0.1588
+Kingsway,first word,297,North West,1.6,0.1987
+Long,first word,1217,Eastern,1.6,0.1561
+Campion,first word,210,South West,1.6,0.1714
+Arundel,first word,289,South East,1.6,0.2111
+Myrtle,first word,282,Wales,1.6,0.1596
+Preston,first word,249,North East,1.6,0.1807
+Paradise,first word,158,West Midlands,1.6,0.1519
+Holmes,first word,159,East Midlands,1.6,0.2075
+Swift,first word,166,South East,1.6,0.2169
+Browning,first word,166,North West,1.6,0.2108
+Clifford,first word,189,West Midlands,1.6,0.1693
+River,first word,523,Northern Ireland,1.6,0.1663
+Cooper,first word,193,East Midlands,1.6,0.171
+Catherine,first word,190,Wales,1.6,0.1684
+Fair,first word,181,Wales,1.6,0.1768
+Linnet,first word,181,Eastern,1.6,0.2044
+Alexandra,first word,627,Wales,1.6,0.1483
+Queen'S,first word,677,London,1.6,0.1477
+Edward,first word,491,Wales,1.6,0.1711
+Laburnum,first word,551,North East,1.6,0.1525
+Linden,first word,541,North East,1.6,0.1701
+Bell,first word,540,Eastern,1.6,0.1926
+Cromwell,first word,402,Eastern,1.6,0.1567
+Mallard,first word,337,East Midlands,1.6,0.1573
+Shakespeare,first word,255,East Midlands,1.6,0.1373
+Crabtree,first word,162,West Midlands,1.6,0.1605
+Mason,first word,150,West Midlands,1.6,0.2067
+Orchard,first word,2295,South West,1.6,0.1743
+Manor,first word,2444,East Midlands,1.6,0.1678
+Grafton,first word,212,West Midlands,1.6,0.1934
+Vine,first word,219,London,1.6,0.1553
+Gainsborough,first word,222,London,1.6,0.1802
+Berry,first word,243,South West,1.6,0.1605
+Kenilworth,first word,244,West Midlands,1.6,0.1885
+Bailey,first word,213,East Midlands,1.6,0.1643
+Way,ending,38443,Eastern,1.6,0.1852
+Abbots,first word,230,South West,1.6,0.1522
+Eagle,first word,227,Eastern,1.6,0.1586
+Arnold,first word,152,Eastern,1.5,0.1908
+Elder,first word,223,Yorkshire and the Humber,1.5,0.148
+Belvedere,first word,214,Northern Ireland,1.5,0.1542
+Village,first word,245,Wales,1.5,0.1837
+Honeysuckle,first word,255,South East,1.5,0.2039
+Turner,first word,256,Eastern,1.5,0.1641
+Alfred,first word,235,North West,1.5,0.1872
+Lakeside,first word,236,Yorkshire and the Humber,1.5,0.1695
+Brook,first word,1063,West Midlands,1.5,0.1703
+Talbot,first word,309,West Midlands,1.5,0.1877
+Waterloo,first word,328,West Midlands,1.5,0.1402
+Nursery,first word,620,South East,1.5,0.2032
+School,first word,2281,Eastern,1.5,0.1504
+Sandpiper,first word,164,Eastern,1.5,0.1524
+Hill,first word,1532,Wales,1.5,0.1332
+Willow,first word,1643,Yorkshire and the Humber,1.5,0.1509
+Albion,first word,408,Yorkshire and the Humber,1.5,0.1642
+Bramble,first word,394,East Midlands,1.5,0.1904
+Raven,first word,150,Eastern,1.5,0.1867
+Blake,first word,156,East Midlands,1.5,0.141
+Greenacres,first word,160,South East,1.5,0.2
+Teal,first word,161,East Midlands,1.5,0.1553
+Sandown,first word,162,South East,1.5,0.2099
+Parker,first word,163,Eastern,1.5,0.184
+Kestrel,first word,369,East Midlands,1.5,0.1545
+Prince,first word,374,North East,1.5,0.1417
+Fern,first word,383,North West,1.5,0.1932
+Lapwing,first word,180,Eastern,1.5,0.1833
+Charles,first word,627,Wales,1.5,0.1228
+Henry,first word,318,North West,1.5,0.1887
+Fairfield,first word,602,Yorkshire and the Humber,1.5,0.1478
+King'S,first word,509,South East,1.5,0.1984
+Tower,first word,524,South West,1.5,0.1508
+Russell,first word,492,London,1.5,0.1423
+Elizabeth,first word,499,Eastern,1.5,0.1543
+Larch,first word,428,Scotland,1.5,0.1589
+Blenheim,first word,454,Eastern,1.5,0.1982
+Bluebell,first word,444,East Midlands,1.5,0.1644
+Oakwood,first word,429,Northern Ireland,1.5,0.1585
+Salisbury,first word,466,London,1.5,0.176
+Waterside,first word,314,West Midlands,1.5,0.1433
+Kingston,first word,309,London,1.5,0.1812
+Bishop,first word,178,East Midlands,1.5,0.1292
+Ashford,first word,171,South East,1.5,0.2047
+Coleridge,first word,181,London,1.5,0.1823
+Water,first word,648,Eastern,1.5,0.1512
+Blue,first word,186,Yorkshire and the Humber,1.5,0.1505
+Alma,first word,309,Wales,1.5,0.1489
+Victory,first word,150,Eastern,1.5,0.1667
+Vicarage,first word,927,South West,1.5,0.178
+Hillside,first word,901,Northern Ireland,1.5,0.1254
+Bridge,ending,196,South West,1.5,0.148
+Woodlands,first word,920,Yorkshire and the Humber,1.5,0.1783
+Chestnut,first word,1270,East Midlands,1.5,0.1724
+White,first word,1002,Yorkshire and the Humber,1.5,0.2086
+Grove,first word,1056,London,1.5,0.1496
+Curlew,first word,209,Eastern,1.5,0.1483
+Jasmine,first word,203,West Midlands,1.5,0.1626
+Priory,first word,896,Eastern,1.5,0.1641
+Newlands,first word,344,North East,1.5,0.1773
+Wells,first word,265,Eastern,1.5,0.1472
+Heathfield,first word,267,London,1.5,0.206
+Hanover,first word,249,Northern Ireland,1.5,0.2048
+Queensway,first word,250,North West,1.5,0.196
+Violet,first word,171,East Midlands,1.5,0.1345
+Jubilee,first word,787,South West,1.5,0.1487
+Third,first word,200,North East,1.5,0.14
+Harris,first word,201,Eastern,1.5,0.1493
+Walton,first word,351,West Midlands,1.5,0.1795
+Kent,first word,355,North West,1.5,0.1915
+May,first word,230,South West,1.4,0.1696
+Fairway,first word,215,Yorkshire and the Humber,1.4,0.1442
+Queens,first word,683,South East,1.4,0.1947
+Oxford,first word,587,North East,1.4,0.1738
+Birch,first word,1005,North West,1.4,0.1851
+Sycamore,first word,998,Yorkshire and the Humber,1.4,0.1403
+Kingsley,first word,306,North West,1.4,0.1732
+Swallow,first word,297,Eastern,1.4,0.1684
+First,first word,289,Eastern,1.4,0.1557
+Martin,first word,263,East Midlands,1.4,0.1483
+Red,first word,706,West Midlands,1.4,0.1601
+Close,ending,129895,East Midlands,1.4,0.1876
+Queen,first word,957,Scotland,1.4,0.1285
+Mulberry,first word,425,East Midlands,1.4,0.1812
+Gilbert,first word,184,London,1.4,0.1685
+Greenwood,first word,334,Northern Ireland,1.4,0.1707
+William,first word,665,North East,1.4,0.1308
+Norman,first word,330,Yorkshire and the Humber,1.4,0.1909
+Norfolk,first word,374,London,1.4,0.1818
+Howard,first word,391,Eastern,1.4,0.1918
+Hardy,first word,191,South West,1.4,0.178
+Fisher,first word,161,Scotland,1.4,0.1429
+Victoria,first word,1971,Wales,1.4,0.139
+Park,first word,4400,Yorkshire and the Humber,1.4,0.1386
+Station,first word,3127,Wales,1.4,0.1426
+Beech,first word,1613,Yorkshire and the Humber,1.4,0.1624
+Nelson,first word,533,North East,1.4,0.1632
+Roman,first word,492,Eastern,1.4,0.1931
+Central,first word,457,East Midlands,1.4,0.1772
+Ellis,first word,167,Eastern,1.4,0.1737
+Birchwood,first word,250,Yorkshire and the Humber,1.4,0.144
+Hunters,first word,265,South East,1.4,0.1925
+York,first word,816,Yorkshire and the Humber,1.4,0.1654
+Aspen,first word,337,North East,1.4,0.1513
+Acorn,first word,307,North East,1.4,0.1857
+Ash,first word,1261,Yorkshire and the Humber,1.4,0.1531
+Trinity,first word,564,Eastern,1.4,0.1365
+Garden,first word,570,Yorkshire and the Humber,1.4,0.1544
+Phoenix,first word,207,North East,1.4,0.1836
+Trafalgar,first word,221,South East,1.3,0.1765
+Morris,first word,218,Wales,1.3,0.1284
+Market,first word,1127,Wales,1.3,0.1242
+Oak,first word,1755,West Midlands,1.3,0.1538
+Cherry,first word,1193,West Midlands,1.3,0.1534
+Roberts,first word,188,South West,1.3,0.1755
+Britannia,first word,190,London,1.3,0.1421
+Meadow,first word,2161,East Midlands,1.3,0.136
+Elm,first word,1379,Eastern,1.3,0.1523
+Drive,ending,49678,West Midlands,1.3,0.1609
+Mayfield,first word,513,West Midlands,1.3,0.154
+Albert,first word,916,North West,1.3,0.167
+Walk,ending,15910,London,1.3,0.1547
+Primrose,first word,732,Eastern,1.3,0.1339
+Pine,first word,719,South East,1.3,0.1725
+Juniper,first word,337,South East,1.3,0.181
+Wellington,first word,745,Northern Ireland,1.3,0.153
+Redwood,first word,285,North West,1.3,0.1719
+Shelley,first word,299,East Midlands,1.3,0.1605
+King,first word,1217,Scotland,1.3,0.1208
+Hawthorn,first word,994,North East,1.3,0.1328
+Heather,first word,477,Yorkshire and the Humber,1.2,0.1509
+Merlin,first word,242,South East,1.2,0.1694
+Hazel,first word,691,Yorkshire and the Humber,1.2,0.1462
+Rose,first word,815,North West,1.2,0.1571
+Maple,first word,1025,Eastern,1.2,0.1424
+Cedar,first word,1006,East Midlands,1.2,0.1412

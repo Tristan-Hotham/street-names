@@ -1,0 +1,8475 @@
+{
+ "meta": {
+  "n_streets": 913335,
+  "n_gb": 884116,
+  "n_ni": 29219,
+  "by_nation": {
+   "England": 761208,
+   "Scotland": 79205,
+   "Wales": 43703,
+   "Northern Ireland": 29219
+  },
+  "n_names": 388197,
+  "n_councils": 361,
+  "prep": {
+   "gb_retrieved": "2026-10-29T07:40:52.665Z",
+   "ni_retrieved": "2026-10-29T07:52:19.707Z",
+   "ni_ways_all": 71066,
+   "ni_ways_kept": 66824,
+   "ni_streets": 29219,
+   "ni_bridges_dropped": 441,
+   "gb_streets": 884116,
+   "link_m": 50.0,
+   "snapped": 1003,
+   "nation_mismatch": 23
+  },
+  "n_cells10": 2513,
+  "unique_share": 0.749,
+  "streets_with_unique_name": 290774
+ },
+ "top_uk": [
+  [
+   "High Street",
+   2507
+  ],
+  [
+   "Station Road",
+   2074
+  ],
+  [
+   "Church Lane",
+   2005
+  ],
+  [
+   "Church Street",
+   1573
+  ],
+  [
+   "Mill Lane",
+   1415
+  ],
+  [
+   "Main Street",
+   1336
+  ],
+  [
+   "Green Lane",
+   1288
+  ],
+  [
+   "Church Road",
+   1280
+  ],
+  [
+   "School Lane",
+   981
+  ],
+  [
+   "New Road",
+   949
+  ],
+  [
+   "Back Lane",
+   834
+  ],
+  [
+   "Park Road",
+   782
+  ],
+  [
+   "Chapel Lane",
+   752
+  ],
+  [
+   "The Green",
+   717
+  ],
+  [
+   "Orchard Close",
+   626
+  ],
+  [
+   "The Crescent",
+   624
+  ],
+  [
+   "The Avenue",
+   619
+  ],
+  [
+   "Chapel Street",
+   609
+  ],
+  [
+   "The Street",
+   606
+  ],
+  [
+   "Park Lane",
+   596
+  ],
+  [
+   "Bridge Street",
+   567
+  ],
+  [
+   "Queen Street",
+   558
+  ],
+  [
+   "Manor Road",
+   548
+  ],
+  [
+   "King Street",
+   536
+  ],
+  [
+   "Victoria Road",
+   529
+  ],
+  [
+   "George Street",
+   505
+  ],
+  [
+   "West Street",
+   498
+  ],
+  [
+   "New Street",
+   491
+  ],
+  [
+   "North Street",
+   479
+  ],
+  [
+   "Mill Road",
+   462
+  ],
+  [
+   "Park Avenue",
+   458
+  ],
+  [
+   "Sandy Lane",
+   453
+  ],
+  [
+   "School Road",
+   441
+  ],
+  [
+   "Cross Street",
+   436
+  ],
+  [
+   "The Close",
+   432
+  ],
+  [
+   "Main Road",
+   417
+  ],
+  [
+   "Victoria Street",
+   414
+  ],
+  [
+   "Market Street",
+   397
+  ],
+  [
+   "Grange Road",
+   383
+  ],
+  [
+   "Church Close",
+   381
+  ]
+ ],
+ "top_nation": {
+  "England": [
+   [
+    "High Street",
+    2103
+   ],
+   [
+    "Church Lane",
+    1916
+   ],
+   [
+    "Station Road",
+    1637
+   ],
+   [
+    "Mill Lane",
+    1364
+   ],
+   [
+    "Church Street",
+    1303
+   ],
+   [
+    "Green Lane",
+    1260
+   ],
+   [
+    "Church Road",
+    1126
+   ],
+   [
+    "School Lane",
+    904
+   ],
+   [
+    "Main Street",
+    886
+   ],
+   [
+    "New Road",
+    846
+   ],
+   [
+    "Back Lane",
+    820
+   ],
+   [
+    "Chapel Lane",
+    716
+   ],
+   [
+    "The Green",
+    667
+   ],
+   [
+    "Park Road",
+    660
+   ],
+   [
+    "Orchard Close",
+    602
+   ]
+  ],
+  "Scotland": [
+   [
+    "Main Street",
+    309
+   ],
+   [
+    "Station Road",
+    250
+   ],
+   [
+    "High Street",
+    206
+   ],
+   [
+    "Church Street",
+    116
+   ],
+   [
+    "Old Military Road",
+    91
+   ],
+   [
+    "School Road",
+    85
+   ],
+   [
+    "Bridge Street",
+    84
+   ],
+   [
+    "Manse Road",
+    80
+   ],
+   [
+    "King Street",
+    79
+   ],
+   [
+    "George Street",
+    75
+   ],
+   [
+    "Union Street",
+    70
+   ],
+   [
+    "Queen Street",
+    67
+   ],
+   [
+    "Castle Street",
+    66
+   ],
+   [
+    "Park Road",
+    65
+   ],
+   [
+    "Bank Street",
+    65
+   ]
+  ],
+  "Wales": [
+   [
+    "High Street",
+    166
+   ],
+   [
+    "Station Road",
+    143
+   ],
+   [
+    "Church Street",
+    113
+   ],
+   [
+    "Bridge Street",
+    85
+   ],
+   [
+    "Chapel Street",
+    80
+   ],
+   [
+    "Church Road",
+    70
+   ],
+   [
+    "New Road",
+    67
+   ],
+   [
+    "Cross Street",
+    57
+   ],
+   [
+    "Hill Street",
+    51
+   ],
+   [
+    "Castle Street",
+    49
+   ],
+   [
+    "Park Road",
+    47
+   ],
+   [
+    "Church Lane",
+    42
+   ],
+   [
+    "New Street",
+    41
+   ],
+   [
+    "Market Street",
+    41
+   ],
+   [
+    "John Street",
+    40
+   ]
+  ],
+  "Northern Ireland": [
+   [
+    "Main Street",
+    132
+   ],
+   [
+    "Station Road",
+    44
+   ],
+   [
+    "Church Street",
+    41
+   ],
+   [
+    "Church Road",
+    40
+   ],
+   [
+    "Bridge Street",
+    33
+   ],
+   [
+    "High Street",
+    32
+   ],
+   [
+    "Belfast Road",
+    30
+   ],
+   [
+    "Glen Road",
+    28
+   ],
+   [
+    "Mill Road",
+    27
+   ],
+   [
+    "Castle Street",
+    25
+   ],
+   [
+    "The Square",
+    23
+   ],
+   [
+    "Lough Road",
+    22
+   ],
+   [
+    "Market Street",
+    22
+   ],
+   [
+    "The Beeches",
+    21
+   ],
+   [
+    "The Meadows",
+    21
+   ]
+  ]
+ },
+ "top_generic": [
+  [
+   "Road",
+   172750,
+   0.1891
+  ],
+  [
+   "Close",
+   129895,
+   0.1422
+  ],
+  [
+   "Street",
+   79558,
+   0.0871
+  ],
+  [
+   "Lane",
+   77042,
+   0.0844
+  ],
+  [
+   "Avenue",
+   56423,
+   0.0618
+  ],
+  [
+   "Drive",
+   49678,
+   0.0544
+  ],
+  [
+   "Way",
+   38443,
+   0.0421
+  ],
+  [
+   "Court",
+   25620,
+   0.0281
+  ],
+  [
+   "Place",
+   25208,
+   0.0276
+  ],
+  [
+   "Gardens",
+   23178,
+   0.0254
+  ],
+  [
+   "Crescent",
+   21693,
+   0.0238
+  ],
+  [
+   "Grove",
+   18758,
+   0.0205
+  ],
+  [
+   "Walk",
+   15910,
+   0.0174
+  ],
+  [
+   "Terrace",
+   10049,
+   0.011
+  ],
+  [
+   "Park",
+   9055,
+   0.0099
+  ],
+  [
+   "Hill",
+   8971,
+   0.0098
+  ],
+  [
+   "View",
+   8762,
+   0.0096
+  ],
+  [
+   "Mews",
+   6878,
+   0.0075
+  ],
+  [
+   "Green",
+   4975,
+   0.0054
+  ],
+  [
+   "Square",
+   4799,
+   0.0053
+  ],
+  [
+   "Rise",
+   4775,
+   0.0052
+  ],
+  [
+   "Croft",
+   3133,
+   0.0034
+  ],
+  [
+   "Row",
+   2301,
+   0.0025
+  ],
+  [
+   "Bank",
+   2175,
+   0.0024
+  ],
+  [
+   "Meadow",
+   2045,
+   0.0022
+  ]
+ ],
+ "no_generic_share": 0.0834,
+ "generic_by_nation": {
+  "England": {
+   "Road": 0.1899,
+   "Close": 0.1636,
+   "Street": 0.0837,
+   "Lane": 0.0944,
+   "Avenue": 0.062,
+   "Drive": 0.0539,
+   "Way": 0.0461,
+   "Court": 0.0258,
+   "Place": 0.0203,
+   "Gardens": 0.0239,
+   "Crescent": 0.02,
+   "Park": 0.0053,
+   "Terrace": 0.0077,
+   "Wynd": 0.0001,
+   "Brae": 0.0
+  },
+  "Scotland": {
+   "Road": 0.174,
+   "Close": 0.0088,
+   "Street": 0.1153,
+   "Lane": 0.0337,
+   "Avenue": 0.0734,
+   "Drive": 0.0724,
+   "Way": 0.0263,
+   "Court": 0.0476,
+   "Place": 0.1053,
+   "Gardens": 0.0433,
+   "Crescent": 0.0599,
+   "Park": 0.0192,
+   "Terrace": 0.0357,
+   "Wynd": 0.011,
+   "Brae": 0.0084
+  },
+  "Wales": {
+   "Road": 0.1517,
+   "Close": 0.0913,
+   "Street": 0.1104,
+   "Lane": 0.04,
+   "Avenue": 0.0406,
+   "Drive": 0.0309,
+   "Way": 0.02,
+   "Court": 0.0254,
+   "Place": 0.0228,
+   "Gardens": 0.0101,
+   "Crescent": 0.0189,
+   "Park": 0.0072,
+   "Terrace": 0.0273,
+   "Wynd": 0.0,
+   "Brae": 0.0
+  },
+  "Northern Ireland": {
+   "Road": 0.2666,
+   "Close": 0.0222,
+   "Street": 0.065,
+   "Lane": 0.0258,
+   "Avenue": 0.0568,
+   "Drive": 0.0546,
+   "Way": 0.013,
+   "Court": 0.0387,
+   "Place": 0.0136,
+   "Gardens": 0.0393,
+   "Crescent": 0.0315,
+   "Park": 0.1086,
+   "Terrace": 0.0069,
+   "Wynd": 0.0,
+   "Brae": 0.0033
+  }
+ },
+ "hm": {
+  "uk": {
+   "high": 2507,
+   "main": 1336,
+   "main_share": 0.3476
+  },
+  "nation": {
+   "England": {
+    "high": 2103,
+    "main": 886,
+    "main_share": 0.2964
+   },
+   "Scotland": {
+    "high": 206,
+    "main": 309,
+    "main_share": 0.6
+   },
+   "Wales": {
+    "high": 166,
+    "main": 9,
+    "main_share": 0.0514
+   },
+   "Northern Ireland": {
+    "high": 32,
+    "main": 132,
+    "main_share": 0.8049
+   }
+  },
+  "region": {
+   "East Midlands": {
+    "high": 324,
+    "main": 414,
+    "main_share": 0.561
+   },
+   "Eastern": {
+    "high": 400,
+    "main": 31,
+    "main_share": 0.0719
+   },
+   "London": {
+    "high": 54,
+    "main": 1,
+    "main_share": 0.0182
+   },
+   "North East": {
+    "high": 57,
+    "main": 18,
+    "main_share": 0.24
+   },
+   "North West": {
+    "high": 100,
+    "main": 57,
+    "main_share": 0.3631
+   },
+   "Northern Ireland": {
+    "high": 32,
+    "main": 132,
+    "main_share": 0.8049
+   },
+   "Scotland": {
+    "high": 206,
+    "main": 309,
+    "main_share": 0.6
+   },
+   "South East": {
+    "high": 443,
+    "main": 52,
+    "main_share": 0.1051
+   },
+   "South West": {
+    "high": 337,
+    "main": 18,
+    "main_share": 0.0507
+   },
+   "Wales": {
+    "high": 166,
+    "main": 9,
+    "main_share": 0.0514
+   },
+   "West Midlands": {
+    "high": 180,
+    "main": 51,
+    "main_share": 0.2208
+   },
+   "Yorkshire and the Humber": {
+    "high": 208,
+    "main": 244,
+    "main_share": 0.5398
+   }
+  },
+  "bands_gb": [
+   {
+    "high": 6,
+    "main": 1,
+    "main_share": 0.1429,
+    "y0_km": 0
+   },
+   {
+    "high": 66,
+    "main": 4,
+    "main_share": 0.0571,
+    "y0_km": 50
+   },
+   {
+    "high": 282,
+    "main": 9,
+    "main_share": 0.0309,
+    "y0_km": 100
+   },
+   {
+    "high": 420,
+    "main": 22,
+    "main_share": 0.0498,
+    "y0_km": 150
+   },
+   {
+    "high": 381,
+    "main": 62,
+    "main_share": 0.14,
+    "y0_km": 200
+   },
+   {
+    "high": 376,
+    "main": 144,
+    "main_share": 0.2769,
+    "y0_km": 250
+   },
+   {
+    "high": 210,
+    "main": 237,
+    "main_share": 0.5302,
+    "y0_km": 300
+   },
+   {
+    "high": 218,
+    "main": 114,
+    "main_share": 0.3434,
+    "y0_km": 350
+   },
+   {
+    "high": 175,
+    "main": 146,
+    "main_share": 0.4548,
+    "y0_km": 400
+   },
+   {
+    "high": 52,
+    "main": 116,
+    "main_share": 0.6905,
+    "y0_km": 450
+   },
+   {
+    "high": 69,
+    "main": 31,
+    "main_share": 0.31,
+    "y0_km": 500
+   },
+   {
+    "high": 30,
+    "main": 29,
+    "main_share": 0.4915,
+    "y0_km": 550
+   },
+   {
+    "high": 28,
+    "main": 51,
+    "main_share": 0.6456,
+    "y0_km": 600
+   },
+   {
+    "high": 64,
+    "main": 153,
+    "main_share": 0.7051,
+    "y0_km": 650
+   },
+   {
+    "high": 34,
+    "main": 39,
+    "main_share": 0.5342,
+    "y0_km": 700
+   },
+   {
+    "high": 11,
+    "main": 6,
+    "main_share": 0.3529,
+    "y0_km": 750
+   },
+   {
+    "high": 17,
+    "main": 16,
+    "main_share": 0.4848,
+    "y0_km": 800
+   },
+   {
+    "high": 30,
+    "main": 18,
+    "main_share": 0.375,
+    "y0_km": 850
+   },
+   {
+    "high": 1,
+    "main": 3,
+    "main_share": 0.75,
+    "y0_km": 900
+   },
+   {
+    "high": 3,
+    "main": 1,
+    "main_share": 0.25,
+    "y0_km": 950
+   },
+   {
+    "high": 1,
+    "main": 1,
+    "main_share": 0.5,
+    "y0_km": 1000
+   },
+   {
+    "high": 0,
+    "main": 0,
+    "main_share": null,
+    "y0_km": 1050
+   },
+   {
+    "high": 1,
+    "main": 1,
+    "main_share": 0.5,
+    "y0_km": 1100
+   },
+   {
+    "high": 0,
+    "main": 0,
+    "main_share": null,
+    "y0_km": 1150
+   },
+   {
+    "high": 0,
+    "main": 0,
+    "main_share": null,
+    "y0_km": 1200
+   }
+  ],
+  "england_councils_main_more": 33,
+  "england_councils": 296,
+  "england_main_top": [
+   [
+    "North Yorkshire",
+    94,
+    61
+   ],
+   [
+    "East Riding of Yorkshire",
+    72,
+    22
+   ],
+   [
+    "Harborough",
+    49,
+    11
+   ],
+   [
+    "Melton",
+    33,
+    4
+   ],
+   [
+    "Newark and Sherwood",
+    33,
+    9
+   ],
+   [
+    "Rushcliffe",
+    27,
+    2
+   ],
+   [
+    "Hinckley and Bosworth",
+    26,
+    4
+   ],
+   [
+    "North Northamptonshire",
+    25,
+    39
+   ],
+   [
+    "Rutland",
+    23,
+    5
+   ],
+   [
+    "South Derbyshire",
+    23,
+    7
+   ],
+   [
+    "South Kesteven",
+    23,
+    22
+   ],
+   [
+    "Cumberland",
+    22,
+    8
+   ]
+  ],
+  "scotland_high_more": [
+   [
+    "Highland",
+    26,
+    11
+   ],
+   [
+    "East Lothian",
+    12,
+    7
+   ],
+   [
+    "Moray",
+    10,
+    6
+   ],
+   [
+    "Angus",
+    7,
+    2
+   ],
+   [
+    "Dundee City",
+    2,
+    1
+   ],
+   [
+    "Aberdeen City",
+    1,
+    0
+   ]
+  ],
+  "scotland_councils": 32,
+  "kind_matched_share": 0.8623,
+  "by_kind_england": {
+   "City": {
+    "high": 72,
+    "main": 15,
+    "main_share": 0.1724
+   },
+   "Town": {
+    "high": 664,
+    "main": 55,
+    "main_share": 0.0765
+   },
+   "Village": {
+    "high": 1238,
+    "main": 764,
+    "main_share": 0.3816
+   },
+   "Hamlet or other": {
+    "high": 58,
+    "main": 26,
+    "main_share": 0.3095
+   }
+  },
+  "by_kind_midlands_north": {
+   "City": {
+    "high": 11,
+    "main": 12,
+    "main_share": 0.5217
+   },
+   "Town": {
+    "high": 134,
+    "main": 20,
+    "main_share": 0.1299
+   },
+   "Village": {
+    "high": 363,
+    "main": 583,
+    "main_share": 0.6163
+   },
+   "Hamlet or other": {
+    "high": 5,
+    "main": 25,
+    "main_share": 0.8333
+   }
+  },
+  "by_kind_scotland": {
+   "City": {
+    "high": 7,
+    "main": 7,
+    "main_share": 0.5
+   },
+   "Town": {
+    "high": 129,
+    "main": 47,
+    "main_share": 0.267
+   },
+   "Village": {
+    "high": 62,
+    "main": 225,
+    "main_share": 0.784
+   },
+   "Hamlet or other": {
+    "high": 1,
+    "main": 6,
+    "main_share": 0.8571
+   }
+  },
+  "scotland_high_n": 6
+ },
+ "main_words": {
+  "high_street": {
+   "n": 2507,
+   "top_regions": [
+    [
+     "South East",
+     443,
+     0.1767
+    ],
+    [
+     "Eastern",
+     400,
+     0.1596
+    ],
+    [
+     "South West",
+     337,
+     0.1344
+    ]
+   ]
+  },
+  "main_street": {
+   "n": 1336,
+   "top_regions": [
+    [
+     "East Midlands",
+     414,
+     0.3099
+    ],
+    [
+     "Scotland",
+     309,
+     0.2313
+    ],
+    [
+     "Yorkshire and the Humber",
+     244,
+     0.1826
+    ]
+   ]
+  },
+  "the_street": {
+   "n": 606,
+   "top_regions": [
+    [
+     "Eastern",
+     361,
+     0.5957
+    ],
+    [
+     "South East",
+     159,
+     0.2624
+    ],
+    [
+     "South West",
+     67,
+     0.1106
+    ]
+   ]
+  },
+  "fore_street": {
+   "n": 181,
+   "top_regions": [
+    [
+     "South West",
+     163,
+     0.9006
+    ],
+    [
+     "Eastern",
+     8,
+     0.0442
+    ],
+    [
+     "Scotland",
+     3,
+     0.0166
+    ]
+   ]
+  },
+  "front_street": {
+   "n": 168,
+   "top_regions": [
+    [
+     "North East",
+     100,
+     0.5952
+    ],
+    [
+     "Yorkshire and the Humber",
+     24,
+     0.1429
+    ],
+    [
+     "East Midlands",
+     13,
+     0.0774
+    ]
+   ]
+  }
+ },
+ "terms": {
+  "high_street": {
+   "label": "High Street",
+   "group": "name",
+   "note": "",
+   "n": 2507,
+   "per_10k": 27.45,
+   "nation": {
+    "England": 2103,
+    "Scotland": 206,
+    "Wales": 166,
+    "Northern Ireland": 32
+   },
+   "top_region": [
+    "Eastern",
+    1.6,
+    0.1767
+   ],
+   "regions": {
+    "East Midlands": 324,
+    "Eastern": 400,
+    "London": 54,
+    "North East": 57,
+    "North West": 100,
+    "Northern Ireland": 32,
+    "Scotland": 206,
+    "South East": 443,
+    "South West": 337,
+    "Wales": 166,
+    "West Midlands": 180,
+    "Yorkshire and the Humber": 208
+   },
+   "top_councils": [
+    [
+     "South Cambridgeshire",
+     66,
+     229.4
+    ],
+    [
+     "East Cambridgeshire",
+     21,
+     119.0
+    ],
+    [
+     "West Lindsey",
+     26,
+     117.2
+    ],
+    [
+     "Forest of Dean",
+     17,
+     107.0
+    ],
+    [
+     "North Kesteven",
+     26,
+     104.4
+    ]
+   ]
+  },
+  "main_street": {
+   "label": "Main Street",
+   "group": "name",
+   "note": "",
+   "n": 1336,
+   "per_10k": 14.63,
+   "nation": {
+    "England": 886,
+    "Scotland": 309,
+    "Wales": 9,
+    "Northern Ireland": 132
+   },
+   "top_region": [
+    "East Midlands",
+    3.6,
+    0.3099
+   ],
+   "regions": {
+    "East Midlands": 414,
+    "Eastern": 31,
+    "London": 1,
+    "North East": 18,
+    "North West": 57,
+    "Northern Ireland": 132,
+    "Scotland": 309,
+    "South East": 52,
+    "South West": 18,
+    "Wales": 9,
+    "West Midlands": 51,
+    "Yorkshire and the Humber": 244
+   },
+   "top_councils": [
+    [
+     "Melton",
+     33,
+     283.7
+    ],
+    [
+     "Harborough",
+     49,
+     255.2
+    ],
+    [
+     "Rutland",
+     23,
+     254.4
+    ],
+    [
+     "Fermanagh and Omagh",
+     27,
+     141.9
+    ],
+    [
+     "Newark and Sherwood",
+     33,
+     141.2
+    ]
+   ]
+  },
+  "the_street": {
+   "label": "The Street",
+   "group": "name",
+   "note": "",
+   "n": 606,
+   "per_10k": 6.64,
+   "nation": {
+    "England": 600,
+    "Scotland": 4,
+    "Wales": 1,
+    "Northern Ireland": 1
+   },
+   "top_region": [
+    "Eastern",
+    6.0,
+    0.5957
+   ],
+   "regions": {
+    "East Midlands": 3,
+    "Eastern": 361,
+    "London": 1,
+    "North East": 3,
+    "North West": 2,
+    "Northern Ireland": 1,
+    "Scotland": 4,
+    "South East": 159,
+    "South West": 67,
+    "Wales": 1,
+    "West Midlands": 1,
+    "Yorkshire and the Humber": 3
+   },
+   "top_councils": [
+    [
+     "North Norfolk",
+     46,
+     178.9
+    ],
+    [
+     "Babergh",
+     28,
+     153.0
+    ],
+    [
+     "South Norfolk",
+     44,
+     135.3
+    ],
+    [
+     "Mid Suffolk",
+     31,
+     129.7
+    ],
+    [
+     "West Suffolk",
+     36,
+     114.5
+    ]
+   ]
+  },
+  "fore_street": {
+   "label": "Fore Street",
+   "group": "name",
+   "note": "",
+   "n": 181,
+   "per_10k": 1.98,
+   "nation": {
+    "England": 178,
+    "Scotland": 3,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "South West",
+    9.2,
+    0.9006
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 8,
+    "London": 3,
+    "North East": 2,
+    "North West": 1,
+    "Northern Ireland": 0,
+    "Scotland": 3,
+    "South East": 0,
+    "South West": 163,
+    "Wales": 0,
+    "West Midlands": 1,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "West Devon",
+     8,
+     80.1
+    ],
+    [
+     "Cornwall",
+     70,
+     76.7
+    ],
+    [
+     "Torridge",
+     8,
+     69.4
+    ],
+    [
+     "South Hams",
+     13,
+     65.5
+    ],
+    [
+     "Mid Devon",
+     11,
+     64.6
+    ]
+   ]
+  },
+  "front_street": {
+   "label": "Front Street",
+   "group": "name",
+   "note": "",
+   "n": 168,
+   "per_10k": 1.84,
+   "nation": {
+    "England": 163,
+    "Scotland": 3,
+    "Wales": 2,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "North East",
+    13.7,
+    0.5952
+   ],
+   "regions": {
+    "East Midlands": 13,
+    "Eastern": 9,
+    "London": 0,
+    "North East": 100,
+    "North West": 6,
+    "Northern Ireland": 0,
+    "Scotland": 3,
+    "South East": 2,
+    "South West": 7,
+    "Wales": 2,
+    "West Midlands": 2,
+    "Yorkshire and the Humber": 24
+   },
+   "top_councils": [
+    [
+     "County Durham",
+     61,
+     78.0
+    ],
+    [
+     "North Tyneside",
+     10,
+     35.8
+    ],
+    [
+     "Northumberland",
+     14,
+     25.9
+    ],
+    [
+     "West Lindsey",
+     5,
+     22.5
+    ],
+    [
+     "South Tyneside",
+     4,
+     20.8
+    ]
+   ]
+  },
+  "station_road": {
+   "label": "Station Road",
+   "group": "name",
+   "note": "",
+   "n": 2074,
+   "per_10k": 22.71,
+   "nation": {
+    "England": 1637,
+    "Scotland": 250,
+    "Wales": 143,
+    "Northern Ireland": 44
+   },
+   "top_region": [
+    "Wales",
+    1.4,
+    0.1379
+   ],
+   "regions": {
+    "East Midlands": 238,
+    "Eastern": 286,
+    "London": 55,
+    "North East": 83,
+    "North West": 150,
+    "Northern Ireland": 44,
+    "Scotland": 250,
+    "South East": 272,
+    "South West": 211,
+    "Wales": 143,
+    "West Midlands": 140,
+    "Yorkshire and the Humber": 202
+   },
+   "top_councils": [
+    [
+     "West Devon",
+     12,
+     120.1
+    ],
+    [
+     "Rutland",
+     8,
+     88.5
+    ],
+    [
+     "Stirling",
+     12,
+     85.5
+    ],
+    [
+     "High Peak",
+     12,
+     74.0
+    ],
+    [
+     "East Lindsey",
+     23,
+     73.7
+    ]
+   ]
+  },
+  "church_lane": {
+   "label": "Church Lane",
+   "group": "name",
+   "note": "",
+   "n": 2005,
+   "per_10k": 21.95,
+   "nation": {
+    "England": 1916,
+    "Scotland": 35,
+    "Wales": 42,
+    "Northern Ireland": 12
+   },
+   "top_region": [
+    "East Midlands",
+    2.2,
+    0.1905
+   ],
+   "regions": {
+    "East Midlands": 381,
+    "Eastern": 382,
+    "London": 24,
+    "North East": 34,
+    "North West": 87,
+    "Northern Ireland": 12,
+    "Scotland": 35,
+    "South East": 341,
+    "South West": 248,
+    "Wales": 42,
+    "West Midlands": 165,
+    "Yorkshire and the Humber": 254
+   },
+   "top_councils": [
+    [
+     "Melton",
+     26,
+     223.6
+    ],
+    [
+     "Rutland",
+     19,
+     210.2
+    ],
+    [
+     "East Lindsey",
+     51,
+     163.5
+    ],
+    [
+     "North Warwickshire",
+     14,
+     135.7
+    ],
+    [
+     "West Lindsey",
+     27,
+     121.7
+    ]
+   ]
+  },
+  "church_street": {
+   "label": "Church Street",
+   "group": "name",
+   "note": "",
+   "n": 1573,
+   "per_10k": 17.22,
+   "nation": {
+    "England": 1303,
+    "Scotland": 116,
+    "Wales": 113,
+    "Northern Ireland": 41
+   },
+   "top_region": [
+    "East Midlands",
+    1.8,
+    0.1519
+   ],
+   "regions": {
+    "East Midlands": 239,
+    "Eastern": 171,
+    "London": 13,
+    "North East": 59,
+    "North West": 150,
+    "Northern Ireland": 41,
+    "Scotland": 116,
+    "South East": 172,
+    "South West": 212,
+    "Wales": 113,
+    "West Midlands": 126,
+    "Yorkshire and the Humber": 161
+   },
+   "top_councils": [
+    [
+     "Rutland",
+     8,
+     88.5
+    ],
+    [
+     "Derbyshire Dales",
+     14,
+     81.4
+    ],
+    [
+     "Powys",
+     15,
+     78.2
+    ],
+    [
+     "Ceredigion",
+     6,
+     77.8
+    ],
+    [
+     "South Kesteven",
+     19,
+     71.4
+    ]
+   ]
+  },
+  "mill_lane": {
+   "label": "Mill Lane",
+   "group": "name",
+   "note": "",
+   "n": 1415,
+   "per_10k": 15.49,
+   "nation": {
+    "England": 1364,
+    "Scotland": 16,
+    "Wales": 30,
+    "Northern Ireland": 5
+   },
+   "top_region": [
+    "Eastern",
+    1.8,
+    0.1809
+   ],
+   "regions": {
+    "East Midlands": 204,
+    "Eastern": 256,
+    "London": 9,
+    "North East": 32,
+    "North West": 145,
+    "Northern Ireland": 5,
+    "Scotland": 16,
+    "South East": 224,
+    "South West": 211,
+    "Wales": 30,
+    "West Midlands": 108,
+    "Yorkshire and the Humber": 175
+   },
+   "top_councils": [
+    [
+     "East Lindsey",
+     33,
+     105.8
+    ],
+    [
+     "Mid Suffolk",
+     21,
+     87.9
+    ],
+    [
+     "Rutland",
+     7,
+     77.4
+    ],
+    [
+     "Boston",
+     8,
+     70.0
+    ],
+    [
+     "King's Lynn and West Norfolk",
+     19,
+     60.8
+    ]
+   ]
+  },
+  "back_lane": {
+   "label": "Back Lane",
+   "group": "name",
+   "note": "",
+   "n": 834,
+   "per_10k": 9.13,
+   "nation": {
+    "England": 820,
+    "Scotland": 2,
+    "Wales": 11,
+    "Northern Ireland": 1
+   },
+   "top_region": [
+    "Yorkshire and the Humber",
+    2.9,
+    0.2974
+   ],
+   "regions": {
+    "East Midlands": 112,
+    "Eastern": 123,
+    "London": 7,
+    "North East": 19,
+    "North West": 102,
+    "Northern Ireland": 1,
+    "Scotland": 2,
+    "South East": 44,
+    "South West": 111,
+    "Wales": 11,
+    "West Midlands": 54,
+    "Yorkshire and the Humber": 248
+   },
+   "top_councils": [
+    [
+     "Isles of Scilly",
+     3,
+     434.8
+    ],
+    [
+     "North Yorkshire",
+     130,
+     93.7
+    ],
+    [
+     "Westmorland and Furness",
+     27,
+     64.4
+    ],
+    [
+     "Breckland",
+     15,
+     50.8
+    ],
+    [
+     "Ribble Valley",
+     6,
+     45.7
+    ]
+   ]
+  },
+  "green_lane": {
+   "label": "Green Lane",
+   "group": "name",
+   "note": "",
+   "n": 1288,
+   "per_10k": 14.1,
+   "nation": {
+    "England": 1260,
+    "Scotland": 10,
+    "Wales": 16,
+    "Northern Ireland": 2
+   },
+   "top_region": [
+    "Yorkshire and the Humber",
+    1.8,
+    0.1871
+   ],
+   "regions": {
+    "East Midlands": 170,
+    "Eastern": 195,
+    "London": 17,
+    "North East": 41,
+    "North West": 135,
+    "Northern Ireland": 2,
+    "Scotland": 10,
+    "South East": 210,
+    "South West": 144,
+    "Wales": 16,
+    "West Midlands": 107,
+    "Yorkshire and the Humber": 241
+   },
+   "top_councils": [
+    [
+     "Boston",
+     11,
+     96.2
+    ],
+    [
+     "Derbyshire Dales",
+     13,
+     75.6
+    ],
+    [
+     "East Lindsey",
+     22,
+     70.5
+    ],
+    [
+     "North Warwickshire",
+     7,
+     67.8
+    ],
+    [
+     "Breckland",
+     20,
+     67.8
+    ]
+   ]
+  },
+  "manse_road": {
+   "label": "Manse Road",
+   "group": "name",
+   "note": "",
+   "n": 105,
+   "per_10k": 1.15,
+   "nation": {
+    "England": 5,
+    "Scotland": 80,
+    "Wales": 0,
+    "Northern Ireland": 20
+   },
+   "top_region": [
+    "Scotland",
+    8.8,
+    0.7619
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 1,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 20,
+    "Scotland": 80,
+    "South East": 0,
+    "South West": 2,
+    "Wales": 0,
+    "West Midlands": 1,
+    "Yorkshire and the Humber": 1
+   },
+   "top_councils": [
+    [
+     "Perth and Kinross",
+     8,
+     30.1
+    ],
+    [
+     "Scottish Borders",
+     5,
+     24.4
+    ],
+    [
+     "Ards and North Down",
+     6,
+     23.0
+    ],
+    [
+     "Aberdeenshire",
+     8,
+     18.3
+    ],
+    [
+     "Highland",
+     7,
+     18.0
+    ]
+   ]
+  },
+  "london_road": {
+   "label": "London Road",
+   "group": "name",
+   "note": "",
+   "n": 306,
+   "per_10k": 3.35,
+   "nation": {
+    "England": 293,
+    "Scotland": 5,
+    "Wales": 7,
+    "Northern Ireland": 1
+   },
+   "top_region": [
+    "Eastern",
+    2.6,
+    0.3301
+   ],
+   "regions": {
+    "East Midlands": 34,
+    "Eastern": 80,
+    "London": 19,
+    "North East": 0,
+    "North West": 18,
+    "Northern Ireland": 1,
+    "Scotland": 5,
+    "South East": 101,
+    "South West": 22,
+    "Wales": 7,
+    "West Midlands": 14,
+    "Yorkshire and the Humber": 5
+   },
+   "top_councils": [
+    [
+     "Cotswold",
+     5,
+     31.2
+    ],
+    [
+     "Thurrock",
+     5,
+     30.4
+    ],
+    [
+     "Rother",
+     4,
+     27.4
+    ],
+    [
+     "North Hertfordshire",
+     5,
+     27.0
+    ],
+    [
+     "Mid Sussex",
+     6,
+     26.9
+    ]
+   ]
+  },
+  "belfast_road": {
+   "label": "Belfast Road",
+   "group": "name",
+   "note": "",
+   "n": 34,
+   "per_10k": 0.37,
+   "nation": {
+    "England": 4,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 30
+   },
+   "top_region": [
+    "Northern Ireland",
+    27.6,
+    0.8824
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 2,
+    "North East": 0,
+    "North West": 1,
+    "Northern Ireland": 30,
+    "Scotland": 0,
+    "South East": 1,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Antrim and Newtownabbey",
+     6,
+     25.8
+    ],
+    [
+     "Mid Ulster",
+     5,
+     24.3
+    ],
+    [
+     "Ards and North Down",
+     5,
+     19.2
+    ],
+    [
+     "Newry, Mourne and Down",
+     6,
+     18.1
+    ],
+    [
+     "Mid and East Antrim",
+     4,
+     17.2
+    ]
+   ]
+  },
+  "w_church": {
+   "label": "Church",
+   "group": "word",
+   "note": "any street with the word Church",
+   "n": 8268,
+   "per_10k": 90.53,
+   "nation": {
+    "England": 7376,
+    "Scotland": 321,
+    "Wales": 348,
+    "Northern Ireland": 223
+   },
+   "top_region": [
+    "Eastern",
+    1.7,
+    0.1672
+   ],
+   "regions": {
+    "East Midlands": 1110,
+    "Eastern": 1382,
+    "London": 248,
+    "North East": 218,
+    "North West": 615,
+    "Northern Ireland": 223,
+    "Scotland": 321,
+    "South East": 1192,
+    "South West": 1080,
+    "Wales": 348,
+    "West Midlands": 684,
+    "Yorkshire and the Humber": 847
+   },
+   "top_councils": [
+    [
+     "Rutland",
+     35,
+     387.2
+    ],
+    [
+     "Melton",
+     41,
+     352.5
+    ],
+    [
+     "Mid Suffolk",
+     80,
+     334.7
+    ],
+    [
+     "West Lindsey",
+     64,
+     288.5
+    ],
+    [
+     "East Lindsey",
+     89,
+     285.3
+    ]
+   ]
+  },
+  "w_kirk": {
+   "label": "Kirk",
+   "group": "word",
+   "note": "Kirk as a word or at the start of the name",
+   "n": 1497,
+   "per_10k": 16.39,
+   "nation": {
+    "England": 859,
+    "Scotland": 603,
+    "Wales": 4,
+    "Northern Ireland": 31
+   },
+   "top_region": [
+    "Scotland",
+    4.6,
+    0.4028
+   ],
+   "regions": {
+    "East Midlands": 111,
+    "Eastern": 50,
+    "London": 30,
+    "North East": 92,
+    "North West": 235,
+    "Northern Ireland": 31,
+    "Scotland": 603,
+    "South East": 39,
+    "South West": 17,
+    "Wales": 4,
+    "West Midlands": 39,
+    "Yorkshire and the Humber": 246
+   },
+   "top_councils": [
+    [
+     "East Renfrewshire",
+     29,
+     226.4
+    ],
+    [
+     "Angus",
+     28,
+     147.7
+    ],
+    [
+     "Dumfries and Galloway",
+     34,
+     125.5
+    ],
+    [
+     "South Ayrshire",
+     23,
+     125.1
+    ],
+    [
+     "Clackmannanshire",
+     9,
+     116.4
+    ]
+   ]
+  },
+  "w_chapel": {
+   "label": "Chapel",
+   "group": "word",
+   "note": "",
+   "n": 2695,
+   "per_10k": 29.51,
+   "nation": {
+    "England": 2384,
+    "Scotland": 108,
+    "Wales": 163,
+    "Northern Ireland": 40
+   },
+   "top_region": [
+    "East Midlands",
+    1.6,
+    0.1399
+   ],
+   "regions": {
+    "East Midlands": 377,
+    "Eastern": 355,
+    "London": 39,
+    "North East": 57,
+    "North West": 344,
+    "Northern Ireland": 40,
+    "Scotland": 108,
+    "South East": 279,
+    "South West": 369,
+    "Wales": 163,
+    "West Midlands": 212,
+    "Yorkshire and the Humber": 352
+   },
+   "top_councils": [
+    [
+     "Melton",
+     16,
+     137.6
+    ],
+    [
+     "East Lindsey",
+     38,
+     121.8
+    ],
+    [
+     "Derbyshire Dales",
+     19,
+     110.5
+    ],
+    [
+     "Ribble Valley",
+     14,
+     106.6
+    ],
+    [
+     "West Lindsey",
+     23,
+     103.7
+    ]
+   ]
+  },
+  "w_mill": {
+   "label": "Mill",
+   "group": "word",
+   "note": "",
+   "n": 5317,
+   "per_10k": 58.22,
+   "nation": {
+    "England": 4549,
+    "Scotland": 372,
+    "Wales": 165,
+    "Northern Ireland": 231
+   },
+   "top_region": [
+    "Eastern",
+    1.7,
+    0.1646
+   ],
+   "regions": {
+    "East Midlands": 519,
+    "Eastern": 875,
+    "London": 97,
+    "North East": 117,
+    "North West": 566,
+    "Northern Ireland": 231,
+    "Scotland": 372,
+    "South East": 679,
+    "South West": 568,
+    "Wales": 165,
+    "West Midlands": 447,
+    "Yorkshire and the Humber": 681
+   },
+   "top_councils": [
+    [
+     "Mid Suffolk",
+     58,
+     242.7
+    ],
+    [
+     "South Norfolk",
+     63,
+     193.7
+    ],
+    [
+     "East Lindsey",
+     60,
+     192.4
+    ],
+    [
+     "North Norfolk",
+     46,
+     178.9
+    ],
+    [
+     "Uttlesford",
+     28,
+     177.0
+    ]
+   ]
+  },
+  "w_station": {
+   "label": "Station",
+   "group": "word",
+   "note": "",
+   "n": 3384,
+   "per_10k": 37.05,
+   "nation": {
+    "England": 2670,
+    "Scotland": 405,
+    "Wales": 229,
+    "Northern Ireland": 80
+   },
+   "top_region": [
+    "Wales",
+    1.4,
+    0.143
+   ],
+   "regions": {
+    "East Midlands": 350,
+    "Eastern": 419,
+    "London": 167,
+    "North East": 145,
+    "North West": 239,
+    "Northern Ireland": 80,
+    "Scotland": 405,
+    "South East": 484,
+    "South West": 311,
+    "Wales": 229,
+    "West Midlands": 227,
+    "Yorkshire and the Humber": 328
+   },
+   "top_councils": [
+    [
+     "West Devon",
+     15,
+     150.2
+    ],
+    [
+     "Moray",
+     19,
+     102.2
+    ],
+    [
+     "Maldon",
+     12,
+     100.5
+    ],
+    [
+     "Highland",
+     39,
+     100.3
+    ],
+    [
+     "Stirling",
+     14,
+     99.8
+    ]
+   ]
+  },
+  "w_school": {
+   "label": "School",
+   "group": "word",
+   "note": "",
+   "n": 2768,
+   "per_10k": 30.31,
+   "nation": {
+    "England": 2279,
+    "Scotland": 312,
+    "Wales": 134,
+    "Northern Ireland": 43
+   },
+   "top_region": [
+    "Eastern",
+    1.4,
+    0.1416
+   ],
+   "regions": {
+    "East Midlands": 289,
+    "Eastern": 392,
+    "London": 28,
+    "North East": 59,
+    "North West": 288,
+    "Northern Ireland": 43,
+    "Scotland": 312,
+    "South East": 382,
+    "South West": 282,
+    "Wales": 134,
+    "West Midlands": 274,
+    "Yorkshire and the Humber": 285
+   },
+   "top_councils": [
+    [
+     "North Norfolk",
+     29,
+     112.8
+    ],
+    [
+     "Derbyshire Dales",
+     18,
+     104.7
+    ],
+    [
+     "Wychavon",
+     24,
+     104.3
+    ],
+    [
+     "Aberdeenshire",
+     44,
+     100.8
+    ],
+    [
+     "Argyll and Bute",
+     14,
+     98.1
+    ]
+   ]
+  },
+  "w_back": {
+   "label": "Back",
+   "group": "word",
+   "note": "names starting with Back",
+   "n": 3090,
+   "per_10k": 33.83,
+   "nation": {
+    "England": 2952,
+    "Scotland": 96,
+    "Wales": 32,
+    "Northern Ireland": 10
+   },
+   "top_region": [
+    "Yorkshire and the Humber",
+    3.3,
+    0.3994
+   ],
+   "regions": {
+    "East Midlands": 135,
+    "Eastern": 184,
+    "London": 13,
+    "North East": 65,
+    "North West": 1234,
+    "Northern Ireland": 10,
+    "Scotland": 96,
+    "South East": 62,
+    "South West": 159,
+    "Wales": 32,
+    "West Midlands": 72,
+    "Yorkshire and the Humber": 1028
+   },
+   "top_councils": [
+    [
+     "Bolton",
+     667,
+     1226.1
+    ],
+    [
+     "Bury",
+     165,
+     497.1
+    ],
+    [
+     "Isles of Scilly",
+     3,
+     434.8
+    ],
+    [
+     "Leeds",
+     490,
+     367.8
+    ],
+    [
+     "Pendle",
+     30,
+     166.7
+    ]
+   ]
+  },
+  "w_victoria": {
+   "label": "Victoria",
+   "group": "royal",
+   "note": "",
+   "n": 2032,
+   "per_10k": 22.25,
+   "nation": {
+    "England": 1591,
+    "Scotland": 228,
+    "Wales": 138,
+    "Northern Ireland": 75
+   },
+   "top_region": [
+    "Wales",
+    1.4,
+    0.1393
+   ],
+   "regions": {
+    "East Midlands": 156,
+    "Eastern": 134,
+    "London": 87,
+    "North East": 87,
+    "North West": 283,
+    "Northern Ireland": 75,
+    "Scotland": 228,
+    "South East": 225,
+    "South West": 186,
+    "Wales": 138,
+    "West Midlands": 154,
+    "Yorkshire and the Humber": 279
+   },
+   "top_councils": [
+    [
+     "Orkney Islands",
+     4,
+     96.4
+    ],
+    [
+     "Blaenau Gwent",
+     8,
+     88.0
+    ],
+    [
+     "Argyll and Bute",
+     11,
+     77.1
+    ],
+    [
+     "East Renfrewshire",
+     9,
+     70.3
+    ],
+    [
+     "Moray",
+     13,
+     69.9
+    ]
+   ]
+  },
+  "w_albert": {
+   "label": "Albert",
+   "group": "royal",
+   "note": "",
+   "n": 962,
+   "per_10k": 10.53,
+   "nation": {
+    "England": 813,
+    "Scotland": 101,
+    "Wales": 35,
+    "Northern Ireland": 13
+   },
+   "top_region": [
+    "North West",
+    1.3,
+    0.1715
+   ],
+   "regions": {
+    "East Midlands": 87,
+    "Eastern": 64,
+    "London": 67,
+    "North East": 40,
+    "North West": 165,
+    "Northern Ireland": 13,
+    "Scotland": 101,
+    "South East": 116,
+    "South West": 71,
+    "Wales": 35,
+    "West Midlands": 86,
+    "Yorkshire and the Humber": 117
+   },
+   "top_councils": [
+    [
+     "Argyll and Bute",
+     7,
+     49.1
+    ],
+    [
+     "Hyndburn",
+     6,
+     41.8
+    ],
+    [
+     "Malvern Hills",
+     5,
+     39.7
+    ],
+    [
+     "Isle of Wight",
+     9,
+     38.0
+    ],
+    [
+     "Haringey",
+     5,
+     36.4
+    ]
+   ]
+  },
+  "w_queen": {
+   "label": "Queen or Queen's",
+   "group": "royal",
+   "note": "",
+   "n": 2378,
+   "per_10k": 26.04,
+   "nation": {
+    "England": 1944,
+    "Scotland": 269,
+    "Wales": 111,
+    "Northern Ireland": 54
+   },
+   "top_region": [
+    "Scotland",
+    1.3,
+    0.1459
+   ],
+   "regions": {
+    "East Midlands": 188,
+    "Eastern": 235,
+    "London": 160,
+    "North East": 101,
+    "North West": 282,
+    "Northern Ireland": 54,
+    "Scotland": 269,
+    "South East": 347,
+    "South West": 221,
+    "Wales": 111,
+    "West Midlands": 165,
+    "Yorkshire and the Humber": 245
+   },
+   "top_councils": [
+    [
+     "Thanet",
+     18,
+     91.0
+    ],
+    [
+     "Windsor and Maidenhead",
+     17,
+     88.8
+    ],
+    [
+     "Blaenau Gwent",
+     8,
+     88.0
+    ],
+    [
+     "City of London",
+     5,
+     85.3
+    ],
+    [
+     "Argyll and Bute",
+     12,
+     84.1
+    ]
+   ]
+  },
+  "w_king": {
+   "label": "King or King's",
+   "group": "royal",
+   "note": "",
+   "n": 2735,
+   "per_10k": 29.95,
+   "nation": {
+    "England": 2336,
+    "Scotland": 241,
+    "Wales": 109,
+    "Northern Ireland": 49
+   },
+   "top_region": [
+    "South East",
+    1.2,
+    0.1675
+   ],
+   "regions": {
+    "East Midlands": 247,
+    "Eastern": 319,
+    "London": 171,
+    "North East": 91,
+    "North West": 291,
+    "Northern Ireland": 49,
+    "Scotland": 241,
+    "South East": 458,
+    "South West": 317,
+    "Wales": 109,
+    "West Midlands": 183,
+    "Yorkshire and the Humber": 259
+   },
+   "top_councils": [
+    [
+     "Adur",
+     8,
+     115.8
+    ],
+    [
+     "Elmbridge",
+     16,
+     95.2
+    ],
+    [
+     "Kingston upon Thames",
+     11,
+     90.4
+    ],
+    [
+     "Melton",
+     10,
+     86.0
+    ],
+    [
+     "City of London",
+     5,
+     85.3
+    ]
+   ]
+  },
+  "w_george": {
+   "label": "George",
+   "group": "royal",
+   "note": "",
+   "n": 1215,
+   "per_10k": 13.3,
+   "nation": {
+    "England": 977,
+    "Scotland": 161,
+    "Wales": 68,
+    "Northern Ireland": 9
+   },
+   "top_region": [
+    "Scotland",
+    1.5,
+    0.1325
+   ],
+   "regions": {
+    "East Midlands": 109,
+    "Eastern": 132,
+    "London": 56,
+    "North East": 73,
+    "North West": 139,
+    "Northern Ireland": 9,
+    "Scotland": 161,
+    "South East": 135,
+    "South West": 87,
+    "Wales": 68,
+    "West Midlands": 110,
+    "Yorkshire and the Humber": 136
+   },
+   "top_councils": [
+    [
+     "Adur",
+     4,
+     57.9
+    ],
+    [
+     "Argyll and Bute",
+     6,
+     42.0
+    ],
+    [
+     "Hyndburn",
+     6,
+     41.8
+    ],
+    [
+     "Dumfries and Galloway",
+     11,
+     40.6
+    ],
+    [
+     "Renfrewshire",
+     10,
+     39.5
+    ]
+   ]
+  },
+  "w_elizabeth": {
+   "label": "Elizabeth",
+   "group": "royal",
+   "note": "",
+   "n": 605,
+   "per_10k": 6.62,
+   "nation": {
+    "England": 535,
+    "Scotland": 44,
+    "Wales": 15,
+    "Northern Ireland": 11
+   },
+   "top_region": [
+    "Eastern",
+    1.5,
+    0.1521
+   ],
+   "regions": {
+    "East Midlands": 70,
+    "Eastern": 91,
+    "London": 33,
+    "North East": 27,
+    "North West": 64,
+    "Northern Ireland": 11,
+    "Scotland": 44,
+    "South East": 92,
+    "South West": 55,
+    "Wales": 15,
+    "West Midlands": 52,
+    "Yorkshire and the Humber": 51
+   },
+   "top_councils": [
+    [
+     "Oadby and Wigston",
+     3,
+     37.9
+    ],
+    [
+     "Rochford",
+     4,
+     35.8
+    ],
+    [
+     "Thurrock",
+     5,
+     30.4
+    ],
+    [
+     "Dover",
+     5,
+     26.2
+    ],
+    [
+     "Rossendale",
+     4,
+     26.1
+    ]
+   ]
+  },
+  "w_coronation": {
+   "label": "Coronation",
+   "group": "royal",
+   "note": "",
+   "n": 535,
+   "per_10k": 5.86,
+   "nation": {
+    "England": 451,
+    "Scotland": 28,
+    "Wales": 39,
+    "Northern Ireland": 17
+   },
+   "top_region": [
+    "North East",
+    1.9,
+    0.1514
+   ],
+   "regions": {
+    "East Midlands": 55,
+    "Eastern": 48,
+    "London": 7,
+    "North East": 43,
+    "North West": 81,
+    "Northern Ireland": 17,
+    "Scotland": 28,
+    "South East": 44,
+    "South West": 74,
+    "Wales": 39,
+    "West Midlands": 41,
+    "Yorkshire and the Humber": 58
+   },
+   "top_councils": [
+    [
+     "Great Yarmouth",
+     6,
+     34.5
+    ],
+    [
+     "Blaenau Gwent",
+     3,
+     33.0
+    ],
+    [
+     "Caerphilly",
+     8,
+     32.9
+    ],
+    [
+     "North Warwickshire",
+     3,
+     29.1
+    ],
+    [
+     "Barnsley",
+     12,
+     28.0
+    ]
+   ]
+  },
+  "w_jubilee": {
+   "label": "Jubilee",
+   "group": "royal",
+   "note": "",
+   "n": 808,
+   "per_10k": 8.85,
+   "nation": {
+    "England": 710,
+    "Scotland": 41,
+    "Wales": 30,
+    "Northern Ireland": 27
+   },
+   "top_region": [
+    "South West",
+    1.5,
+    0.146
+   ],
+   "regions": {
+    "East Midlands": 97,
+    "Eastern": 114,
+    "London": 26,
+    "North East": 42,
+    "North West": 83,
+    "Northern Ireland": 27,
+    "Scotland": 41,
+    "South East": 112,
+    "South West": 118,
+    "Wales": 30,
+    "West Midlands": 57,
+    "Yorkshire and the Humber": 61
+   },
+   "top_councils": [
+    [
+     "South Hams",
+     7,
+     35.3
+    ],
+    [
+     "Bolsover",
+     5,
+     34.8
+    ],
+    [
+     "Torridge",
+     4,
+     34.7
+    ],
+    [
+     "Rutland",
+     3,
+     33.2
+    ],
+    [
+     "King's Lynn and West Norfolk",
+     10,
+     32.0
+    ]
+   ]
+  },
+  "g_street": {
+   "label": "... Street",
+   "group": "ending",
+   "note": "",
+   "n": 79558,
+   "per_10k": 871.07,
+   "nation": {
+    "England": 63704,
+    "Scotland": 9129,
+    "Wales": 4826,
+    "Northern Ireland": 1899
+   },
+   "top_region": [
+    "North West",
+    2.0,
+    0.2535
+   ],
+   "regions": {
+    "East Midlands": 6659,
+    "Eastern": 3607,
+    "London": 4267,
+    "North East": 4517,
+    "North West": 20168,
+    "Northern Ireland": 1899,
+    "Scotland": 9129,
+    "South East": 4355,
+    "South West": 4616,
+    "Wales": 4826,
+    "West Midlands": 6035,
+    "Yorkshire and the Humber": 9480
+   },
+   "top_councils": [
+    [
+     "Burnley",
+     680,
+     4244.7
+    ],
+    [
+     "Tower Hamlets",
+     660,
+     4056.5
+    ],
+    [
+     "Hyndburn",
+     582,
+     4050.1
+    ],
+    [
+     "Pendle",
+     718,
+     3988.9
+    ],
+    [
+     "Westminster",
+     551,
+     3207.2
+    ]
+   ]
+  },
+  "g_road": {
+   "label": "... Road",
+   "group": "ending",
+   "note": "",
+   "n": 172750,
+   "per_10k": 1891.42,
+   "nation": {
+    "England": 144549,
+    "Scotland": 13781,
+    "Wales": 6630,
+    "Northern Ireland": 7790
+   },
+   "top_region": [
+    "London",
+    1.6,
+    0.1488
+   ],
+   "regions": {
+    "East Midlands": 13072,
+    "Eastern": 19028,
+    "London": 16427,
+    "North East": 5482,
+    "North West": 19163,
+    "Northern Ireland": 7790,
+    "Scotland": 13781,
+    "South East": 25713,
+    "South West": 17958,
+    "Wales": 6630,
+    "West Midlands": 14710,
+    "Yorkshire and the Humber": 12996
+   },
+   "top_councils": [
+    [
+     "Waltham Forest",
+     788,
+     5051.3
+    ],
+    [
+     "Haringey",
+     693,
+     5043.7
+    ],
+    [
+     "Fermanagh and Omagh",
+     958,
+     5034.2
+    ],
+    [
+     "Mid Ulster",
+     917,
+     4453.6
+    ],
+    [
+     "Portsmouth",
+     799,
+     4390.1
+    ]
+   ]
+  },
+  "g_lane": {
+   "label": "... Lane",
+   "group": "ending",
+   "note": "",
+   "n": 77042,
+   "per_10k": 843.52,
+   "nation": {
+    "England": 71871,
+    "Scotland": 2669,
+    "Wales": 1747,
+    "Northern Ireland": 755
+   },
+   "top_region": [
+    "South West",
+    1.6,
+    0.158
+   ],
+   "regions": {
+    "East Midlands": 8523,
+    "Eastern": 9104,
+    "London": 1664,
+    "North East": 1594,
+    "North West": 8526,
+    "Northern Ireland": 755,
+    "Scotland": 2669,
+    "South East": 11968,
+    "South West": 12175,
+    "Wales": 1747,
+    "West Midlands": 6488,
+    "Yorkshire and the Humber": 11829
+   },
+   "top_councils": [
+    [
+     "Isles of Scilly",
+     28,
+     4058.0
+    ],
+    [
+     "Derbyshire Dales",
+     594,
+     3455.5
+    ],
+    [
+     "North Devon",
+     647,
+     2892.3
+    ],
+    [
+     "Mid Devon",
+     438,
+     2570.4
+    ],
+    [
+     "North Yorkshire",
+     3486,
+     2513.7
+    ]
+   ]
+  },
+  "g_close": {
+   "label": "... Close",
+   "group": "ending",
+   "note": "",
+   "n": 129895,
+   "per_10k": 1422.21,
+   "nation": {
+    "England": 124558,
+    "Scotland": 697,
+    "Wales": 3990,
+    "Northern Ireland": 650
+   },
+   "top_region": [
+    "East Midlands",
+    1.4,
+    0.1876
+   ],
+   "regions": {
+    "East Midlands": 15759,
+    "Eastern": 16622,
+    "London": 8511,
+    "North East": 5072,
+    "North West": 16367,
+    "Northern Ireland": 650,
+    "Scotland": 697,
+    "South East": 24373,
+    "South West": 15052,
+    "Wales": 3990,
+    "West Midlands": 13480,
+    "Yorkshire and the Humber": 9322
+   },
+   "top_councils": [
+    [
+     "Redditch",
+     507,
+     5105.7
+    ],
+    [
+     "Crawley",
+     569,
+     3783.2
+    ],
+    [
+     "Blaby",
+     535,
+     3379.7
+    ],
+    [
+     "Swindon",
+     961,
+     3186.3
+    ],
+    [
+     "Wokingham",
+     717,
+     3095.9
+    ]
+   ]
+  },
+  "g_avenue": {
+   "label": "... Avenue",
+   "group": "ending",
+   "note": "",
+   "n": 56423,
+   "per_10k": 617.77,
+   "nation": {
+    "England": 47172,
+    "Scotland": 5816,
+    "Wales": 1774,
+    "Northern Ireland": 1661
+   },
+   "top_region": [
+    "North West",
+    1.7,
+    0.2119
+   ],
+   "regions": {
+    "East Midlands": 4877,
+    "Eastern": 3866,
+    "London": 4180,
+    "North East": 3167,
+    "North West": 11958,
+    "Northern Ireland": 1661,
+    "Scotland": 5816,
+    "South East": 5395,
+    "South West": 3078,
+    "Wales": 1774,
+    "West Midlands": 4115,
+    "Yorkshire and the Humber": 6536
+   },
+   "top_councils": [
+    [
+     "Blackpool",
+     548,
+     3075.2
+    ],
+    [
+     "Wyre",
+     420,
+     1878.4
+    ],
+    [
+     "East Renfrewshire",
+     239,
+     1865.7
+    ],
+    [
+     "Renfrewshire",
+     441,
+     1743.8
+    ],
+    [
+     "Manchester",
+     1207,
+     1616.9
+    ]
+   ]
+  },
+  "g_drive": {
+   "label": "... Drive",
+   "group": "ending",
+   "note": "",
+   "n": 49678,
+   "per_10k": 543.92,
+   "nation": {
+    "England": 40998,
+    "Scotland": 5737,
+    "Wales": 1349,
+    "Northern Ireland": 1594
+   },
+   "top_region": [
+    "West Midlands",
+    1.3,
+    0.1609
+   ],
+   "regions": {
+    "East Midlands": 5251,
+    "Eastern": 4222,
+    "London": 1655,
+    "North East": 1995,
+    "North West": 7995,
+    "Northern Ireland": 1594,
+    "Scotland": 5737,
+    "South East": 5767,
+    "South West": 3447,
+    "Wales": 1349,
+    "West Midlands": 5464,
+    "Yorkshire and the Humber": 5202
+   },
+   "top_councils": [
+    [
+     "East Renfrewshire",
+     219,
+     1709.6
+    ],
+    [
+     "East Dunbartonshire",
+     232,
+     1403.5
+    ],
+    [
+     "Renfrewshire",
+     311,
+     1229.7
+    ],
+    [
+     "Telford and Wrekin",
+     333,
+     1222.0
+    ],
+    [
+     "Oadby and Wigston",
+     95,
+     1201.0
+    ]
+   ]
+  },
+  "g_way": {
+   "label": "... Way",
+   "group": "ending",
+   "note": "",
+   "n": 38443,
+   "per_10k": 420.91,
+   "nation": {
+    "England": 35105,
+    "Scotland": 2083,
+    "Wales": 876,
+    "Northern Ireland": 379
+   },
+   "top_region": [
+    "Eastern",
+    1.6,
+    0.1852
+   ],
+   "regions": {
+    "East Midlands": 3928,
+    "Eastern": 6059,
+    "London": 2468,
+    "North East": 1590,
+    "North West": 3523,
+    "Northern Ireland": 379,
+    "Scotland": 2083,
+    "South East": 7118,
+    "South West": 3892,
+    "Wales": 876,
+    "West Midlands": 3359,
+    "Yorkshire and the Humber": 3168
+   },
+   "top_councils": [
+    [
+     "Three Rivers",
+     125,
+     1265.2
+    ],
+    [
+     "South Cambridgeshire",
+     332,
+     1154.0
+    ],
+    [
+     "Huntingdonshire",
+     342,
+     1002.1
+    ],
+    [
+     "Tendring",
+     246,
+     982.0
+    ],
+    [
+     "Nuneaton and Bedworth",
+     155,
+     976.1
+    ]
+   ]
+  },
+  "g_gardens": {
+   "label": "... Gardens",
+   "group": "ending",
+   "note": "",
+   "n": 23178,
+   "per_10k": 253.77,
+   "nation": {
+    "England": 18159,
+    "Scotland": 3429,
+    "Wales": 443,
+    "Northern Ireland": 1147
+   },
+   "top_region": [
+    "London",
+    2.0,
+    0.1557
+   ],
+   "regions": {
+    "East Midlands": 1496,
+    "Eastern": 1862,
+    "London": 2888,
+    "North East": 1555,
+    "North West": 1639,
+    "Northern Ireland": 1147,
+    "Scotland": 3429,
+    "South East": 3608,
+    "South West": 2018,
+    "Wales": 443,
+    "West Midlands": 1350,
+    "Yorkshire and the Humber": 1743
+   },
+   "top_councils": [
+    [
+     "Redbridge",
+     250,
+     1488.1
+    ],
+    [
+     "Barking and Dagenham",
+     156,
+     1355.3
+    ],
+    [
+     "Gateshead",
+     350,
+     1236.3
+    ],
+    [
+     "Kensington and Chelsea",
+     97,
+     1057.8
+    ],
+    [
+     "East Dunbartonshire",
+     159,
+     961.9
+    ]
+   ]
+  },
+  "g_crescent": {
+   "label": "... Crescent",
+   "group": "ending",
+   "note": "",
+   "n": 21693,
+   "per_10k": 237.51,
+   "nation": {
+    "England": 15202,
+    "Scotland": 4746,
+    "Wales": 825,
+    "Northern Ireland": 920
+   },
+   "top_region": [
+    "Scotland",
+    2.5,
+    0.2188
+   ],
+   "regions": {
+    "East Midlands": 1664,
+    "Eastern": 1361,
+    "London": 1123,
+    "North East": 1149,
+    "North West": 2062,
+    "Northern Ireland": 920,
+    "Scotland": 4746,
+    "South East": 2276,
+    "South West": 1470,
+    "Wales": 825,
+    "West Midlands": 1580,
+    "Yorkshire and the Humber": 2517
+   },
+   "top_councils": [
+    [
+     "East Renfrewshire",
+     115,
+     897.7
+    ],
+    [
+     "Renfrewshire",
+     226,
+     893.6
+    ],
+    [
+     "West Dunbartonshire",
+     95,
+     814.1
+    ],
+    [
+     "North Lanarkshire",
+     422,
+     809.7
+    ],
+    [
+     "Stirling",
+     108,
+     769.8
+    ]
+   ]
+  },
+  "g_terrace": {
+   "label": "... Terrace",
+   "group": "ending",
+   "note": "",
+   "n": 10049,
+   "per_10k": 110.03,
+   "nation": {
+    "England": 5826,
+    "Scotland": 2829,
+    "Wales": 1192,
+    "Northern Ireland": 202
+   },
+   "top_region": [
+    "Scotland",
+    3.2,
+    0.2815
+   ],
+   "regions": {
+    "East Midlands": 274,
+    "Eastern": 248,
+    "London": 469,
+    "North East": 1311,
+    "North West": 620,
+    "Northern Ireland": 202,
+    "Scotland": 2829,
+    "South East": 448,
+    "South West": 678,
+    "Wales": 1192,
+    "West Midlands": 250,
+    "Yorkshire and the Humber": 1528
+   },
+   "top_councils": [
+    [
+     "Dundee City",
+     217,
+     1019.3
+    ],
+    [
+     "Blaenau Gwent",
+     83,
+     913.1
+    ],
+    [
+     "Rhondda Cynon Taf",
+     226,
+     708.0
+    ],
+    [
+     "Caerphilly",
+     161,
+     662.6
+    ],
+    [
+     "Aberdeen City",
+     186,
+     633.9
+    ]
+   ]
+  },
+  "g_park": {
+   "label": "... Park",
+   "group": "ending",
+   "note": "",
+   "n": 9055,
+   "per_10k": 99.14,
+   "nation": {
+    "England": 4046,
+    "Scotland": 1521,
+    "Wales": 314,
+    "Northern Ireland": 3174
+   },
+   "top_region": [
+    "Northern Ireland",
+    11.0,
+    0.3505
+   ],
+   "regions": {
+    "East Midlands": 208,
+    "Eastern": 306,
+    "London": 237,
+    "North East": 248,
+    "North West": 587,
+    "Northern Ireland": 3174,
+    "Scotland": 1521,
+    "South East": 645,
+    "South West": 1123,
+    "Wales": 314,
+    "West Midlands": 214,
+    "Yorkshire and the Humber": 478
+   },
+   "top_councils": [
+    [
+     "Derry City and Strabane",
+     352,
+     1744.3
+    ],
+    [
+     "Causeway Coast and Glens",
+     412,
+     1646.0
+    ],
+    [
+     "Lisburn and Castlereagh",
+     321,
+     1272.3
+    ],
+    [
+     "Ards and North Down",
+     330,
+     1266.3
+    ],
+    [
+     "Belfast",
+     480,
+     1042.8
+    ]
+   ]
+  },
+  "g_mews": {
+   "label": "... Mews",
+   "group": "ending",
+   "note": "",
+   "n": 6878,
+   "per_10k": 75.31,
+   "nation": {
+    "England": 6270,
+    "Scotland": 148,
+    "Wales": 97,
+    "Northern Ireland": 363
+   },
+   "top_region": [
+    "London",
+    3.5,
+    0.2137
+   ],
+   "regions": {
+    "East Midlands": 386,
+    "Eastern": 798,
+    "London": 1470,
+    "North East": 186,
+    "North West": 546,
+    "Northern Ireland": 363,
+    "Scotland": 148,
+    "South East": 1132,
+    "South West": 529,
+    "Wales": 97,
+    "West Midlands": 344,
+    "Yorkshire and the Humber": 879
+   },
+   "top_councils": [
+    [
+     "Kensington and Chelsea",
+     100,
+     1090.5
+    ],
+    [
+     "Westminster",
+     176,
+     1024.4
+    ],
+    [
+     "Camden",
+     96,
+     766.2
+    ],
+    [
+     "Lambeth",
+     86,
+     529.9
+    ],
+    [
+     "Islington",
+     65,
+     496.6
+    ]
+   ]
+  },
+  "g_row": {
+   "label": "... Row",
+   "group": "ending",
+   "note": "",
+   "n": 2301,
+   "per_10k": 25.19,
+   "nation": {
+    "England": 1822,
+    "Scotland": 240,
+    "Wales": 183,
+    "Northern Ireland": 56
+   },
+   "top_region": [
+    "Wales",
+    1.7,
+    0.1221
+   ],
+   "regions": {
+    "East Midlands": 149,
+    "Eastern": 208,
+    "London": 212,
+    "North East": 132,
+    "North West": 185,
+    "Northern Ireland": 56,
+    "Scotland": 240,
+    "South East": 264,
+    "South West": 229,
+    "Wales": 183,
+    "West Midlands": 162,
+    "Yorkshire and the Humber": 281
+   },
+   "top_councils": [
+    [
+     "Blaenau Gwent",
+     18,
+     198.0
+    ],
+    [
+     "City of London",
+     10,
+     170.6
+    ],
+    [
+     "Westminster",
+     29,
+     168.8
+    ],
+    [
+     "Islington",
+     19,
+     145.1
+    ],
+    [
+     "Kensington and Chelsea",
+     13,
+     141.8
+    ]
+   ]
+  },
+  "r_wynd": {
+   "label": "Wynd",
+   "group": "regional",
+   "note": "",
+   "n": 981,
+   "per_10k": 10.74,
+   "nation": {
+    "England": 105,
+    "Scotland": 875,
+    "Wales": 0,
+    "Northern Ireland": 1
+   },
+   "top_region": [
+    "Scotland",
+    10.3,
+    0.8919
+   ],
+   "regions": {
+    "East Midlands": 4,
+    "Eastern": 4,
+    "London": 0,
+    "North East": 68,
+    "North West": 2,
+    "Northern Ireland": 1,
+    "Scotland": 875,
+    "South East": 2,
+    "South West": 1,
+    "Wales": 0,
+    "West Midlands": 3,
+    "Yorkshire and the Humber": 21
+   },
+   "top_councils": [
+    [
+     "Fife",
+     148,
+     251.8
+    ],
+    [
+     "North Ayrshire",
+     55,
+     247.3
+    ],
+    [
+     "East Lothian",
+     40,
+     242.0
+    ],
+    [
+     "South Lanarkshire",
+     91,
+     159.0
+    ],
+    [
+     "Angus",
+     29,
+     153.0
+    ]
+   ]
+  },
+  "r_vennel": {
+   "label": "Vennel",
+   "group": "regional",
+   "note": "",
+   "n": 41,
+   "per_10k": 0.45,
+   "nation": {
+    "England": 1,
+    "Scotland": 39,
+    "Wales": 0,
+    "Northern Ireland": 1
+   },
+   "top_region": [
+    "Scotland",
+    11.0,
+    0.9512
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 1,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 1,
+    "Scotland": 39,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Perth and Kinross",
+     8,
+     30.1
+    ],
+    [
+     "North Ayrshire",
+     5,
+     22.5
+    ],
+    [
+     "Dumfries and Galloway",
+     5,
+     18.5
+    ],
+    [
+     "Fife",
+     3,
+     5.1
+    ]
+   ]
+  },
+  "r_brae": {
+   "label": "Brae",
+   "group": "regional",
+   "note": "",
+   "n": 789,
+   "per_10k": 8.64,
+   "nation": {
+    "England": 22,
+    "Scotland": 669,
+    "Wales": 1,
+    "Northern Ireland": 97
+   },
+   "top_region": [
+    "Scotland",
+    9.8,
+    0.8479
+   ],
+   "regions": {
+    "East Midlands": 1,
+    "Eastern": 2,
+    "London": 0,
+    "North East": 6,
+    "North West": 5,
+    "Northern Ireland": 97,
+    "Scotland": 669,
+    "South East": 4,
+    "South West": 1,
+    "Wales": 1,
+    "West Midlands": 1,
+    "Yorkshire and the Humber": 2
+   },
+   "top_councils": [
+    [
+     "Argyll and Bute",
+     44,
+     308.3
+    ],
+    [
+     "Scottish Borders",
+     45,
+     219.8
+    ],
+    [
+     "Shetland Islands",
+     8,
+     204.6
+    ],
+    [
+     "West Lothian",
+     35,
+     153.6
+    ],
+    [
+     "Orkney Islands",
+     6,
+     144.6
+    ]
+   ]
+  },
+  "r_loan": {
+   "label": "Loan",
+   "group": "regional",
+   "note": "",
+   "n": 369,
+   "per_10k": 4.04,
+   "nation": {
+    "England": 2,
+    "Scotland": 367,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Scotland",
+    11.5,
+    0.9946
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 2,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 367,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Orkney Islands",
+     13,
+     313.3
+    ],
+    [
+     "City of Edinburgh",
+     118,
+     230.0
+    ],
+    [
+     "Midlothian",
+     28,
+     199.4
+    ],
+    [
+     "Stirling",
+     26,
+     185.3
+    ],
+    [
+     "East Lothian",
+     21,
+     127.0
+    ]
+   ]
+  },
+  "r_gait": {
+   "label": "Gait",
+   "group": "regional",
+   "note": "",
+   "n": 92,
+   "per_10k": 1.01,
+   "nation": {
+    "England": 3,
+    "Scotland": 89,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Scotland",
+    11.2,
+    0.9674
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 1,
+    "Northern Ireland": 0,
+    "Scotland": 89,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 2
+   },
+   "top_councils": [
+    [
+     "City of Edinburgh",
+     43,
+     83.8
+    ],
+    [
+     "South Lanarkshire",
+     14,
+     24.5
+    ],
+    [
+     "Renfrewshire",
+     5,
+     19.8
+    ],
+    [
+     "East Ayrshire",
+     4,
+     19.2
+    ],
+    [
+     "East Lothian",
+     3,
+     18.1
+    ]
+   ]
+  },
+  "r_pend": {
+   "label": "Pend",
+   "group": "regional",
+   "note": "",
+   "n": 16,
+   "per_10k": 0.18,
+   "nation": {
+    "England": 0,
+    "Scotland": 16,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Scotland",
+    11.5,
+    1.0
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 16,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Dundee City",
+     5,
+     23.5
+    ],
+    [
+     "Midlothian",
+     3,
+     21.4
+    ]
+   ]
+  },
+  "r_chare": {
+   "label": "Chare",
+   "group": "regional",
+   "note": "",
+   "n": 42,
+   "per_10k": 0.46,
+   "nation": {
+    "England": 42,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "North East",
+    23.1,
+    1.0
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 42,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Newcastle upon Tyne",
+     13,
+     35.6
+    ],
+    [
+     "Hartlepool",
+     3,
+     19.6
+    ],
+    [
+     "County Durham",
+     14,
+     17.9
+    ],
+    [
+     "Northumberland",
+     6,
+     11.1
+    ],
+    [
+     "Gateshead",
+     3,
+     10.6
+    ]
+   ]
+  },
+  "r_gate": {
+   "label": "-gate (one word) or ... Gate",
+   "group": "regional",
+   "note": "e.g. Briggate, Kirkgate, Castle Gate",
+   "n": 3490,
+   "per_10k": 38.21,
+   "nation": {
+    "England": 2970,
+    "Scotland": 444,
+    "Wales": 27,
+    "Northern Ireland": 49
+   },
+   "top_region": [
+    "Yorkshire and the Humber",
+    2.4,
+    0.2458
+   ],
+   "regions": {
+    "East Midlands": 469,
+    "Eastern": 310,
+    "London": 101,
+    "North East": 138,
+    "North West": 453,
+    "Northern Ireland": 49,
+    "Scotland": 444,
+    "South East": 355,
+    "South West": 138,
+    "Wales": 27,
+    "West Midlands": 148,
+    "Yorkshire and the Humber": 858
+   },
+   "top_councils": [
+    [
+     "South Holland",
+     138,
+     682.5
+    ],
+    [
+     "Stevenage",
+     18,
+     231.7
+    ],
+    [
+     "Milton Keynes",
+     79,
+     188.8
+    ],
+    [
+     "Boston",
+     18,
+     157.5
+    ],
+    [
+     "Glasgow City",
+     98,
+     154.2
+    ]
+   ]
+  },
+  "r_garth": {
+   "label": "Garth",
+   "group": "regional",
+   "note": "",
+   "n": 883,
+   "per_10k": 9.67,
+   "nation": {
+    "England": 863,
+    "Scotland": 0,
+    "Wales": 20,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Yorkshire and the Humber",
+    7.4,
+    0.752
+   ],
+   "regions": {
+    "East Midlands": 17,
+    "Eastern": 26,
+    "London": 10,
+    "North East": 56,
+    "North West": 56,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 22,
+    "South West": 7,
+    "Wales": 20,
+    "West Midlands": 5,
+    "Yorkshire and the Humber": 664
+   },
+   "top_councils": [
+    [
+     "East Riding of Yorkshire",
+     172,
+     231.0
+    ],
+    [
+     "Leeds",
+     188,
+     141.1
+    ],
+    [
+     "Kingston upon Hull, City of",
+     42,
+     134.0
+    ],
+    [
+     "York",
+     31,
+     105.0
+    ],
+    [
+     "North Yorkshire",
+     138,
+     99.5
+    ]
+   ]
+  },
+  "r_fold": {
+   "label": "Fold",
+   "group": "regional",
+   "note": "",
+   "n": 953,
+   "per_10k": 10.43,
+   "nation": {
+    "England": 943,
+    "Scotland": 1,
+    "Wales": 1,
+    "Northern Ireland": 8
+   },
+   "top_region": [
+    "Yorkshire and the Humber",
+    4.3,
+    0.4428
+   ],
+   "regions": {
+    "East Midlands": 36,
+    "Eastern": 5,
+    "London": 3,
+    "North East": 6,
+    "North West": 422,
+    "Northern Ireland": 8,
+    "Scotland": 1,
+    "South East": 3,
+    "South West": 4,
+    "Wales": 1,
+    "West Midlands": 51,
+    "Yorkshire and the Humber": 413
+   },
+   "top_councils": [
+    [
+     "High Peak",
+     21,
+     129.5
+    ],
+    [
+     "Bradford",
+     117,
+     128.1
+    ],
+    [
+     "Ribble Valley",
+     15,
+     114.2
+    ],
+    [
+     "Burnley",
+     18,
+     112.4
+    ],
+    [
+     "Rochdale",
+     42,
+     110.8
+    ]
+   ]
+  },
+  "r_brow": {
+   "label": "Brow",
+   "group": "regional",
+   "note": "",
+   "n": 511,
+   "per_10k": 5.59,
+   "nation": {
+    "England": 500,
+    "Scotland": 2,
+    "Wales": 3,
+    "Northern Ireland": 6
+   },
+   "top_region": [
+    "North West",
+    6.1,
+    0.775
+   ],
+   "regions": {
+    "East Midlands": 12,
+    "Eastern": 6,
+    "London": 3,
+    "North East": 2,
+    "North West": 396,
+    "Northern Ireland": 6,
+    "Scotland": 2,
+    "South East": 23,
+    "South West": 11,
+    "Wales": 3,
+    "West Midlands": 3,
+    "Yorkshire and the Humber": 44
+   },
+   "top_councils": [
+    [
+     "Ribble Valley",
+     22,
+     167.6
+    ],
+    [
+     "Chorley",
+     31,
+     160.0
+    ],
+    [
+     "Westmorland and Furness",
+     57,
+     136.0
+    ],
+    [
+     "Cumberland",
+     54,
+     132.9
+    ],
+    [
+     "West Lancashire",
+     15,
+     78.6
+    ]
+   ]
+  },
+  "r_hey": {
+   "label": "Hey",
+   "group": "regional",
+   "note": "",
+   "n": 146,
+   "per_10k": 1.6,
+   "nation": {
+    "England": 146,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "North West",
+    7.2,
+    0.9178
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 2,
+    "London": 0,
+    "North East": 0,
+    "North West": 134,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 2,
+    "South West": 3,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 5
+   },
+   "top_councils": [
+    [
+     "Knowsley",
+     20,
+     86.8
+    ],
+    [
+     "South Ribble",
+     11,
+     58.2
+    ],
+    [
+     "Sefton",
+     16,
+     45.5
+    ],
+    [
+     "Wirral",
+     17,
+     36.6
+    ],
+    [
+     "Cheshire West and Chester",
+     14,
+     22.8
+    ]
+   ]
+  },
+  "r_croft": {
+   "label": "Croft",
+   "group": "regional",
+   "note": "",
+   "n": 3133,
+   "per_10k": 34.3,
+   "nation": {
+    "England": 3042,
+    "Scotland": 62,
+    "Wales": 26,
+    "Northern Ireland": 3
+   },
+   "top_region": [
+    "West Midlands",
+    3.6,
+    0.2952
+   ],
+   "regions": {
+    "East Midlands": 252,
+    "Eastern": 225,
+    "London": 26,
+    "North East": 40,
+    "North West": 355,
+    "Northern Ireland": 3,
+    "Scotland": 62,
+    "South East": 266,
+    "South West": 109,
+    "Wales": 26,
+    "West Midlands": 925,
+    "Yorkshire and the Humber": 844
+   },
+   "top_councils": [
+    [
+     "Solihull",
+     143,
+     638.4
+    ],
+    [
+     "Birmingham",
+     309,
+     349.6
+    ],
+    [
+     "Lichfield",
+     65,
+     347.0
+    ],
+    [
+     "Harlow",
+     14,
+     222.2
+    ],
+    [
+     "Barnsley",
+     81,
+     189.3
+    ]
+   ]
+  },
+  "r_carr": {
+   "label": "Carr",
+   "group": "regional",
+   "note": "names starting with Carr",
+   "n": 479,
+   "per_10k": 5.24,
+   "nation": {
+    "England": 473,
+    "Scotland": 4,
+    "Wales": 1,
+    "Northern Ireland": 1
+   },
+   "top_region": [
+    "Yorkshire and the Humber",
+    5.4,
+    0.5449
+   ],
+   "regions": {
+    "East Midlands": 42,
+    "Eastern": 13,
+    "London": 5,
+    "North East": 16,
+    "North West": 125,
+    "Northern Ireland": 1,
+    "Scotland": 4,
+    "South East": 2,
+    "South West": 3,
+    "Wales": 1,
+    "West Midlands": 6,
+    "Yorkshire and the Humber": 261
+   },
+   "top_councils": [
+    [
+     "North Lincolnshire",
+     17,
+     57.4
+    ],
+    [
+     "West Lancashire",
+     10,
+     52.4
+    ],
+    [
+     "Wyre",
+     11,
+     49.2
+    ],
+    [
+     "Rossendale",
+     7,
+     45.6
+    ],
+    [
+     "Chorley",
+     8,
+     41.3
+    ]
+   ]
+  },
+  "r_ings": {
+   "label": "Ings",
+   "group": "regional",
+   "note": "names starting with Ings",
+   "n": 169,
+   "per_10k": 1.85,
+   "nation": {
+    "England": 169,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Yorkshire and the Humber",
+    8.0,
+    0.8107
+   ],
+   "regions": {
+    "East Midlands": 24,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 4,
+    "North West": 3,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 1,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 137
+   },
+   "top_councils": [
+    [
+     "East Lindsey",
+     16,
+     51.3
+    ],
+    [
+     "Boston",
+     5,
+     43.7
+    ],
+    [
+     "North Yorkshire",
+     50,
+     36.1
+    ],
+    [
+     "East Riding of Yorkshire",
+     22,
+     29.5
+    ],
+    [
+     "Kirklees",
+     16,
+     22.6
+    ]
+   ]
+  },
+  "r_ginnel": {
+   "label": "Ginnel, Gennel or Jennel",
+   "group": "regional",
+   "note": "",
+   "n": 10,
+   "per_10k": 0.11,
+   "nation": {
+    "England": 10,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Yorkshire and the Humber",
+    5.9,
+    0.6
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 4,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 6
+   },
+   "top_councils": [
+    [
+     "Leeds",
+     3,
+     2.3
+    ]
+   ]
+  },
+  "r_snicket": {
+   "label": "Snicket",
+   "group": "regional",
+   "note": "",
+   "n": 0
+  },
+  "r_twitten": {
+   "label": "Twitten",
+   "group": "regional",
+   "note": "",
+   "n": 18,
+   "per_10k": 0.2,
+   "nation": {
+    "England": 18,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "South East",
+    6.5,
+    0.8889
+   ],
+   "regions": {
+    "East Midlands": 1,
+    "Eastern": 1,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 16,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Mid Sussex",
+     5,
+     22.4
+    ],
+    [
+     "Lewes",
+     3,
+     19.6
+    ]
+   ]
+  },
+  "r_loke": {
+   "label": "Loke",
+   "group": "regional",
+   "note": "",
+   "n": 187,
+   "per_10k": 2.05,
+   "nation": {
+    "England": 187,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Eastern",
+    9.9,
+    0.9893
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 185,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 2,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "North Norfolk",
+     52,
+     202.3
+    ],
+    [
+     "Broadland",
+     39,
+     159.6
+    ],
+    [
+     "South Norfolk",
+     39,
+     119.9
+    ],
+    [
+     "Great Yarmouth",
+     20,
+     115.0
+    ],
+    [
+     "Breckland",
+     17,
+     57.6
+    ]
+   ]
+  },
+  "r_drove": {
+   "label": "Drove",
+   "group": "regional",
+   "note": "",
+   "n": 1792,
+   "per_10k": 19.62,
+   "nation": {
+    "England": 1791,
+    "Scotland": 0,
+    "Wales": 1,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Eastern",
+    4.3,
+    0.4269
+   ],
+   "regions": {
+    "East Midlands": 241,
+    "Eastern": 765,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 141,
+    "South West": 644,
+    "Wales": 1,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "East Cambridgeshire",
+     228,
+     1292.5
+    ],
+    [
+     "Fenland",
+     146,
+     785.8
+    ],
+    [
+     "South Holland",
+     119,
+     588.5
+    ],
+    [
+     "King's Lynn and West Norfolk",
+     138,
+     441.9
+    ],
+    [
+     "Somerset",
+     479,
+     402.2
+    ]
+   ]
+  },
+  "r_chase": {
+   "label": "Chase",
+   "group": "regional",
+   "note": "",
+   "n": 1137,
+   "per_10k": 12.45,
+   "nation": {
+    "England": 1106,
+    "Scotland": 2,
+    "Wales": 8,
+    "Northern Ireland": 21
+   },
+   "top_region": [
+    "Eastern",
+    3.6,
+    0.3571
+   ],
+   "regions": {
+    "East Midlands": 68,
+    "Eastern": 406,
+    "London": 36,
+    "North East": 37,
+    "North West": 91,
+    "Northern Ireland": 21,
+    "Scotland": 2,
+    "South East": 209,
+    "South West": 50,
+    "Wales": 8,
+    "West Midlands": 10,
+    "Yorkshire and the Humber": 199
+   },
+   "top_councils": [
+    [
+     "Maldon",
+     48,
+     402.0
+    ],
+    [
+     "Brentwood",
+     17,
+     172.9
+    ],
+    [
+     "Rochford",
+     19,
+     170.1
+    ],
+    [
+     "Colchester",
+     47,
+     169.4
+    ],
+    [
+     "Chelmsford",
+     35,
+     160.6
+    ]
+   ]
+  },
+  "r_tye": {
+   "label": "Tye",
+   "group": "regional",
+   "note": "",
+   "n": 14,
+   "per_10k": 0.15,
+   "nation": {
+    "England": 14,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Eastern",
+    8.6,
+    0.8571
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 12,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 2,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Chelmsford",
+     8,
+     36.7
+    ]
+   ]
+  },
+  "r_ope": {
+   "label": "Ope",
+   "group": "regional",
+   "note": "",
+   "n": 28,
+   "per_10k": 0.31,
+   "nation": {
+    "England": 28,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "South West",
+    9.9,
+    0.9643
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 1,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 27,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Plymouth",
+     15,
+     46.9
+    ],
+    [
+     "Cornwall",
+     8,
+     8.8
+    ],
+    [
+     "Dorset",
+     3,
+     4.1
+    ]
+   ]
+  },
+  "r_combe": {
+   "label": "Coombe or Combe",
+   "group": "regional",
+   "note": "",
+   "n": 44,
+   "per_10k": 0.48,
+   "nation": {
+    "England": 44,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "South West",
+    6.1,
+    0.5909
+   ],
+   "regions": {
+    "East Midlands": 1,
+    "Eastern": 2,
+    "London": 1,
+    "North East": 1,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 12,
+    "South West": 26,
+    "Wales": 0,
+    "West Midlands": 1,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "North Somerset",
+     8,
+     23.4
+    ],
+    [
+     "Bracknell Forest",
+     3,
+     17.8
+    ],
+    [
+     "Bath and North East Somerset",
+     3,
+     11.6
+    ],
+    [
+     "Somerset",
+     5,
+     4.2
+    ]
+   ]
+  },
+  "r_twitchel": {
+   "label": "Twitchell or Jitty",
+   "group": "regional",
+   "note": "",
+   "n": 16,
+   "per_10k": 0.18,
+   "nation": {
+    "England": 16,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "West Midlands",
+    5.4,
+    0.4375
+   ],
+   "regions": {
+    "East Midlands": 4,
+    "Eastern": 4,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 7,
+    "Yorkshire and the Humber": 1
+   },
+   "top_councils": [
+    [
+     "Shropshire",
+     6,
+     11.9
+    ]
+   ]
+  },
+  "r_entry": {
+   "label": "Entry",
+   "group": "regional",
+   "note": "",
+   "n": 69,
+   "per_10k": 0.76,
+   "nation": {
+    "England": 31,
+    "Scotland": 32,
+    "Wales": 1,
+    "Northern Ireland": 5
+   },
+   "top_region": [
+    "Scotland",
+    5.3,
+    0.4638
+   ],
+   "regions": {
+    "East Midlands": 5,
+    "Eastern": 5,
+    "London": 1,
+    "North East": 1,
+    "North West": 7,
+    "Northern Ireland": 5,
+    "Scotland": 32,
+    "South East": 1,
+    "South West": 2,
+    "Wales": 1,
+    "West Midlands": 8,
+    "Yorkshire and the Humber": 1
+   },
+   "top_councils": [
+    [
+     "Scottish Borders",
+     5,
+     24.4
+    ],
+    [
+     "Perth and Kinross",
+     6,
+     22.6
+    ],
+    [
+     "City of Edinburgh",
+     8,
+     15.6
+    ],
+    [
+     "Dundee City",
+     3,
+     14.1
+    ],
+    [
+     "Dumfries and Galloway",
+     3,
+     11.1
+    ]
+   ]
+  },
+  "cy_heol": {
+   "label": "Heol",
+   "group": "welsh",
+   "note": "Welsh: road",
+   "n": 1418,
+   "per_10k": 15.53,
+   "nation": {
+    "England": 0,
+    "Scotland": 0,
+    "Wales": 1418,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Wales",
+    20.9,
+    1.0
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 1418,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Carmarthenshire",
+     250,
+     1079.0
+    ],
+    [
+     "Bridgend",
+     139,
+     682.7
+    ],
+    [
+     "Ceredigion",
+     45,
+     583.7
+    ],
+    [
+     "Neath Port Talbot",
+     103,
+     510.4
+    ],
+    [
+     "Rhondda Cynon Taf",
+     145,
+     454.3
+    ]
+   ]
+  },
+  "cy_ffordd": {
+   "label": "Ffordd",
+   "group": "welsh",
+   "note": "Welsh: way, road",
+   "n": 971,
+   "per_10k": 10.63,
+   "nation": {
+    "England": 0,
+    "Scotland": 0,
+    "Wales": 971,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Wales",
+    20.9,
+    1.0
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 971,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Gwynedd",
+     171,
+     993.0
+    ],
+    [
+     "Isle of Anglesey",
+     66,
+     630.4
+    ],
+    [
+     "Denbighshire",
+     90,
+     582.1
+    ],
+    [
+     "Flintshire",
+     138,
+     518.2
+    ],
+    [
+     "Wrexham",
+     115,
+     497.6
+    ]
+   ]
+  },
+  "cy_stryd": {
+   "label": "Stryd",
+   "group": "welsh",
+   "note": "Welsh: street",
+   "n": 214,
+   "per_10k": 2.34,
+   "nation": {
+    "England": 0,
+    "Scotland": 0,
+    "Wales": 214,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Wales",
+    20.9,
+    1.0
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 214,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Gwynedd",
+     60,
+     348.4
+    ],
+    [
+     "Isle of Anglesey",
+     21,
+     200.6
+    ],
+    [
+     "Ceredigion",
+     13,
+     168.6
+    ],
+    [
+     "Denbighshire",
+     20,
+     129.4
+    ],
+    [
+     "Neath Port Talbot",
+     25,
+     123.9
+    ]
+   ]
+  },
+  "cy_lon": {
+   "label": "Lôn",
+   "group": "welsh",
+   "note": "Welsh: lane",
+   "n": 663,
+   "per_10k": 7.26,
+   "nation": {
+    "England": 0,
+    "Scotland": 0,
+    "Wales": 663,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Wales",
+    20.9,
+    1.0
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 663,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Isle of Anglesey",
+     122,
+     1165.2
+    ],
+    [
+     "Gwynedd",
+     137,
+     795.6
+    ],
+    [
+     "Denbighshire",
+     69,
+     446.3
+    ],
+    [
+     "Ceredigion",
+     28,
+     363.2
+    ],
+    [
+     "Conwy",
+     50,
+     250.6
+    ]
+   ]
+  },
+  "cy_clos": {
+   "label": "Clos",
+   "group": "welsh",
+   "note": "Welsh: close",
+   "n": 784,
+   "per_10k": 8.58,
+   "nation": {
+    "England": 1,
+    "Scotland": 0,
+    "Wales": 783,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Wales",
+    20.9,
+    0.9987
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 1,
+    "Wales": 783,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Carmarthenshire",
+     110,
+     474.8
+    ],
+    [
+     "Ceredigion",
+     31,
+     402.1
+    ],
+    [
+     "Cardiff",
+     128,
+     344.8
+    ],
+    [
+     "Swansea",
+     105,
+     337.4
+    ],
+    [
+     "Monmouthshire",
+     35,
+     232.4
+    ]
+   ]
+  },
+  "cy_maes": {
+   "label": "Maes",
+   "group": "welsh",
+   "note": "Welsh: field, square",
+   "n": 623,
+   "per_10k": 6.82,
+   "nation": {
+    "England": 3,
+    "Scotland": 0,
+    "Wales": 620,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Wales",
+    20.8,
+    0.9952
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 2,
+    "Wales": 620,
+    "West Midlands": 1,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Isle of Anglesey",
+     52,
+     496.7
+    ],
+    [
+     "Denbighshire",
+     76,
+     491.6
+    ],
+    [
+     "Ceredigion",
+     27,
+     350.2
+    ],
+    [
+     "Gwynedd",
+     53,
+     307.8
+    ],
+    [
+     "Carmarthenshire",
+     63,
+     271.9
+    ]
+   ]
+  },
+  "cy_llys": {
+   "label": "Llys",
+   "group": "welsh",
+   "note": "Welsh: court",
+   "n": 530,
+   "per_10k": 5.8,
+   "nation": {
+    "England": 6,
+    "Scotland": 0,
+    "Wales": 524,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Wales",
+    20.7,
+    0.9887
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 524,
+    "West Midlands": 6,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Denbighshire",
+     83,
+     536.9
+    ],
+    [
+     "Flintshire",
+     88,
+     330.5
+    ],
+    [
+     "Carmarthenshire",
+     68,
+     293.5
+    ],
+    [
+     "Conwy",
+     55,
+     275.7
+    ],
+    [
+     "Bridgend",
+     29,
+     142.4
+    ]
+   ]
+  },
+  "cy_bryn": {
+   "label": "Bryn",
+   "group": "welsh",
+   "note": "Welsh: hill",
+   "n": 606,
+   "per_10k": 6.64,
+   "nation": {
+    "England": 25,
+    "Scotland": 0,
+    "Wales": 581,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Wales",
+    20.0,
+    0.9587
+   ],
+   "regions": {
+    "East Midlands": 1,
+    "Eastern": 2,
+    "London": 0,
+    "North East": 0,
+    "North West": 11,
+    "Northern Ireland": 0,
+    "Scotland": 0,
+    "South East": 1,
+    "South West": 2,
+    "Wales": 581,
+    "West Midlands": 8,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Conwy",
+     82,
+     411.0
+    ],
+    [
+     "Isle of Anglesey",
+     36,
+     343.8
+    ],
+    [
+     "Flintshire",
+     65,
+     244.1
+    ],
+    [
+     "Denbighshire",
+     34,
+     219.9
+    ],
+    [
+     "Gwynedd",
+     37,
+     214.9
+    ]
+   ]
+  },
+  "gd_rathad": {
+   "label": "Rathad",
+   "group": "gaelic",
+   "note": "Scottish Gaelic: road",
+   "n": 31,
+   "per_10k": 0.34,
+   "nation": {
+    "England": 0,
+    "Scotland": 31,
+    "Wales": 0,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Scotland",
+    11.5,
+    1.0
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 31,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Na h-Eileanan Siar",
+     15,
+     597.6
+    ],
+    [
+     "Highland",
+     16,
+     41.2
+    ]
+   ]
+  },
+  "cy_any": {
+   "label": "Any Welsh name",
+   "group": "welsh",
+   "note": "Welsh as the main or second name in OS Open Names, or a Welsh street word first (in Wales)",
+   "n": 9480,
+   "per_10k": 103.8,
+   "nation": {
+    "England": 1,
+    "Scotland": 1,
+    "Wales": 9478,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Wales",
+    20.9,
+    0.9998
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 1,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 9478,
+    "West Midlands": 1,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Gwynedd",
+     886,
+     5145.2
+    ],
+    [
+     "Ceredigion",
+     338,
+     4383.9
+    ],
+    [
+     "Isle of Anglesey",
+     427,
+     4078.3
+    ],
+    [
+     "Denbighshire",
+     601,
+     3887.5
+    ],
+    [
+     "Carmarthenshire",
+     839,
+     3621.1
+    ]
+   ]
+  },
+  "gd_any": {
+   "label": "Any Gaelic name",
+   "group": "gaelic",
+   "note": "a Scottish Gaelic name in OS Open Names",
+   "n": 146,
+   "per_10k": 1.6,
+   "nation": {
+    "England": 0,
+    "Scotland": 145,
+    "Wales": 1,
+    "Northern Ireland": 0
+   },
+   "top_region": [
+    "Scotland",
+    11.5,
+    0.9932
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 0,
+    "Scotland": 145,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 1,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Na h-Eileanan Siar",
+     29,
+     1155.4
+    ],
+    [
+     "Highland",
+     115,
+     295.9
+    ]
+   ]
+  },
+  "ga_any": {
+   "label": "Irish name in OSM",
+   "group": "gaelic",
+   "note": "Northern Ireland streets with an Irish name (name:ga) in OpenStreetMap",
+   "n": 2399,
+   "per_10k": 26.27,
+   "nation": {
+    "England": 0,
+    "Scotland": 0,
+    "Wales": 0,
+    "Northern Ireland": 2399
+   },
+   "top_region": [
+    "Northern Ireland",
+    31.3,
+    1.0
+   ],
+   "regions": {
+    "East Midlands": 0,
+    "Eastern": 0,
+    "London": 0,
+    "North East": 0,
+    "North West": 0,
+    "Northern Ireland": 2399,
+    "Scotland": 0,
+    "South East": 0,
+    "South West": 0,
+    "Wales": 0,
+    "West Midlands": 0,
+    "Yorkshire and the Humber": 0
+   },
+   "top_councils": [
+    [
+     "Newry, Mourne and Down",
+     659,
+     1987.3
+    ],
+    [
+     "Belfast",
+     535,
+     1162.3
+    ],
+    [
+     "Fermanagh and Omagh",
+     169,
+     888.1
+    ],
+    [
+     "Mid Ulster",
+     144,
+     699.4
+    ],
+    [
+     "Armagh City, Banbridge and Craigavon",
+     193,
+     635.5
+    ]
+   ]
+  }
+ },
+ "regional_words_top": [
+  {
+   "word": "Heol",
+   "kind": "first word",
+   "n": 1418,
+   "region": "Wales",
+   "lq": 20.9,
+   "share": 1.0
+  },
+  {
+   "word": "Stryd",
+   "kind": "first word",
+   "n": 214,
+   "region": "Wales",
+   "lq": 20.9,
+   "share": 1.0
+  },
+  {
+   "word": "Ffordd",
+   "kind": "first word",
+   "n": 971,
+   "region": "Wales",
+   "lq": 20.9,
+   "share": 1.0
+  },
+  {
+   "word": "Clos",
+   "kind": "first word",
+   "n": 784,
+   "region": "Wales",
+   "lq": 20.9,
+   "share": 0.9987
+  },
+  {
+   "word": "Lon",
+   "kind": "first word",
+   "n": 577,
+   "region": "Wales",
+   "lq": 20.9,
+   "share": 1.0
+  },
+  {
+   "word": "Maes",
+   "kind": "first word",
+   "n": 623,
+   "region": "Wales",
+   "lq": 20.8,
+   "share": 0.9952
+  },
+  {
+   "word": "Rhodfa",
+   "kind": "first word",
+   "n": 173,
+   "region": "Wales",
+   "lq": 20.8,
+   "share": 0.9942
+  },
+  {
+   "word": "Llys",
+   "kind": "first word",
+   "n": 530,
+   "region": "Wales",
+   "lq": 20.7,
+   "share": 0.9887
+  },
+  {
+   "word": "Cwrt",
+   "kind": "first word",
+   "n": 251,
+   "region": "Wales",
+   "lq": 20.7,
+   "share": 0.992
+  },
+  {
+   "word": "Cae",
+   "kind": "first word",
+   "n": 351,
+   "region": "Wales",
+   "lq": 20.7,
+   "share": 0.9886
+  },
+  {
+   "word": "Bryn",
+   "kind": "first word",
+   "n": 606,
+   "region": "Wales",
+   "lq": 20.0,
+   "share": 0.9587
+  },
+  {
+   "word": "Parc",
+   "kind": "first word",
+   "n": 267,
+   "region": "Wales",
+   "lq": 17.5,
+   "share": 0.839
+  },
+  {
+   "word": "Lodge",
+   "kind": "ending",
+   "n": 229,
+   "region": "Northern Ireland",
+   "lq": 14.3,
+   "share": 0.4585
+  },
+  {
+   "word": "Front",
+   "kind": "first word",
+   "n": 202,
+   "region": "North East",
+   "lq": 12.2,
+   "share": 0.5297
+  },
+  {
+   "word": "Loan",
+   "kind": "ending",
+   "n": 369,
+   "region": "Scotland",
+   "lq": 11.5,
+   "share": 0.9946
+  },
+  {
+   "word": "Park",
+   "kind": "ending",
+   "n": 9055,
+   "region": "Northern Ireland",
+   "lq": 11.0,
+   "share": 0.3505
+  },
+  {
+   "word": "Glen",
+   "kind": "ending",
+   "n": 272,
+   "region": "Northern Ireland",
+   "lq": 10.7,
+   "share": 0.3419
+  },
+  {
+   "word": "Wynd",
+   "kind": "ending",
+   "n": 981,
+   "region": "Scotland",
+   "lq": 10.3,
+   "share": 0.8919
+  },
+  {
+   "word": "Loke",
+   "kind": "ending",
+   "n": 187,
+   "region": "Eastern",
+   "lq": 9.9,
+   "share": 0.9893
+  },
+  {
+   "word": "Brae",
+   "kind": "ending",
+   "n": 789,
+   "region": "Scotland",
+   "lq": 9.8,
+   "share": 0.8479
+  },
+  {
+   "word": "Fore",
+   "kind": "first word",
+   "n": 199,
+   "region": "South West",
+   "lq": 8.5,
+   "share": 0.8291
+  },
+  {
+   "word": "Dene",
+   "kind": "first word",
+   "n": 225,
+   "region": "North East",
+   "lq": 8.3,
+   "share": 0.36
+  },
+  {
+   "word": "Manse",
+   "kind": "first word",
+   "n": 268,
+   "region": "Scotland",
+   "lq": 8.0,
+   "share": 0.6978
+  },
+  {
+   "word": "Ings",
+   "kind": "first word",
+   "n": 169,
+   "region": "Yorkshire and the Humber",
+   "lq": 8.0,
+   "share": 0.8107
+  },
+  {
+   "word": "Garth",
+   "kind": "ending",
+   "n": 883,
+   "region": "Yorkshire and the Humber",
+   "lq": 7.4,
+   "share": 0.752
+  },
+  {
+   "word": "Pleasant",
+   "kind": "first word",
+   "n": 151,
+   "region": "Wales",
+   "lq": 6.8,
+   "share": 0.3245
+  },
+  {
+   "word": "Kirk",
+   "kind": "first word",
+   "n": 245,
+   "region": "Scotland",
+   "lq": 6.6,
+   "share": 0.5714
+  },
+  {
+   "word": "Cottages",
+   "kind": "ending",
+   "n": 389,
+   "region": "Northern Ireland",
+   "lq": 6.5,
+   "share": 0.2082
+  },
+  {
+   "word": "Burnside",
+   "kind": "first word",
+   "n": 331,
+   "region": "Scotland",
+   "lq": 6.4,
+   "share": 0.5589
+  },
+  {
+   "word": "Mount",
+   "kind": "ending",
+   "n": 1095,
+   "region": "Yorkshire and the Humber",
+   "lq": 6.3,
+   "share": 0.6374
+  },
+  {
+   "word": "Higher",
+   "kind": "first word",
+   "n": 463,
+   "region": "South West",
+   "lq": 6.2,
+   "share": 0.6069
+  },
+  {
+   "word": "Passage",
+   "kind": "ending",
+   "n": 590,
+   "region": "London",
+   "lq": 6.2,
+   "share": 0.3763
+  },
+  {
+   "word": "Brow",
+   "kind": "ending",
+   "n": 511,
+   "region": "North West",
+   "lq": 6.1,
+   "share": 0.775
+  },
+  {
+   "word": "Bruce",
+   "kind": "first word",
+   "n": 195,
+   "region": "Scotland",
+   "lq": 6.1,
+   "share": 0.5282
+  },
+  {
+   "word": "Circle",
+   "kind": "ending",
+   "n": 288,
+   "region": "Scotland",
+   "lq": 6.0,
+   "share": 0.5174
+  },
+  {
+   "word": "Percy",
+   "kind": "first word",
+   "n": 205,
+   "region": "North East",
+   "lq": 6.0,
+   "share": 0.2585
+  },
+  {
+   "word": "Hillview",
+   "kind": "first word",
+   "n": 211,
+   "region": "Northern Ireland",
+   "lq": 5.9,
+   "share": 0.3744
+  },
+  {
+   "word": "Garth",
+   "kind": "first word",
+   "n": 212,
+   "region": "Wales",
+   "lq": 5.9,
+   "share": 0.283
+  },
+  {
+   "word": "Cameron",
+   "kind": "first word",
+   "n": 185,
+   "region": "Scotland",
+   "lq": 5.7,
+   "share": 0.4973
+  },
+  {
+   "word": "Northumberland",
+   "kind": "first word",
+   "n": 154,
+   "region": "North East",
+   "lq": 5.5,
+   "share": 0.2403
+  }
+ ],
+ "regional_words_by_region": {
+  "East Midlands": [
+   {
+    "word": "Ashby",
+    "kind": "first word",
+    "n": 153,
+    "lq": 5.1,
+    "share": 0.4379
+   },
+   {
+    "word": "Hardwick",
+    "kind": "first word",
+    "n": 189,
+    "lq": 4.5,
+    "share": 0.381
+   },
+   {
+    "word": "Spinney",
+    "kind": "first word",
+    "n": 226,
+    "lq": 3.8,
+    "share": 0.323
+   },
+   {
+    "word": "Charnwood",
+    "kind": "first word",
+    "n": 153,
+    "lq": 3.8,
+    "share": 0.3268
+   },
+   {
+    "word": "Leicester",
+    "kind": "first word",
+    "n": 178,
+    "lq": 3.6,
+    "share": 0.3034
+   },
+   {
+    "word": "Trent",
+    "kind": "first word",
+    "n": 239,
+    "lq": 3.5,
+    "share": 0.2971
+   }
+  ],
+  "Eastern": [
+   {
+    "word": "Loke",
+    "kind": "ending",
+    "n": 187,
+    "lq": 9.9,
+    "share": 0.9893
+   },
+   {
+    "word": "Norwich",
+    "kind": "first word",
+    "n": 178,
+    "lq": 5.0,
+    "share": 0.5
+   },
+   {
+    "word": "Bury",
+    "kind": "first word",
+    "n": 198,
+    "lq": 4.7,
+    "share": 0.4697
+   },
+   {
+    "word": "Drove",
+    "kind": "ending",
+    "n": 1792,
+    "lq": 4.3,
+    "share": 0.4269
+   },
+   {
+    "word": "Chase",
+    "kind": "ending",
+    "n": 1137,
+    "lq": 3.6,
+    "share": 0.3571
+   },
+   {
+    "word": "Common",
+    "kind": "first word",
+    "n": 439,
+    "lq": 2.8,
+    "share": 0.2756
+   }
+  ],
+  "London": [
+   {
+    "word": "Passage",
+    "kind": "ending",
+    "n": 590,
+    "lq": 6.2,
+    "share": 0.3763
+   },
+   {
+    "word": "Mews",
+    "kind": "ending",
+    "n": 6878,
+    "lq": 3.5,
+    "share": 0.2137
+   },
+   {
+    "word": "Connaught",
+    "kind": "first word",
+    "n": 182,
+    "lq": 3.2,
+    "share": 0.2363
+   },
+   {
+    "word": "Alley",
+    "kind": "ending",
+    "n": 385,
+    "lq": 3.0,
+    "share": 0.2805
+   },
+   {
+    "word": "Approach",
+    "kind": "ending",
+    "n": 711,
+    "lq": 2.8,
+    "share": 0.2208
+   },
+   {
+    "word": "Devonshire",
+    "kind": "first word",
+    "n": 308,
+    "lq": 2.8,
+    "share": 0.2078
+   }
+  ],
+  "North East": [
+   {
+    "word": "Front",
+    "kind": "first word",
+    "n": 202,
+    "lq": 12.2,
+    "share": 0.5297
+   },
+   {
+    "word": "Dene",
+    "kind": "first word",
+    "n": 225,
+    "lq": 8.3,
+    "share": 0.36
+   },
+   {
+    "word": "Percy",
+    "kind": "first word",
+    "n": 205,
+    "lq": 6.0,
+    "share": 0.2585
+   },
+   {
+    "word": "Northumberland",
+    "kind": "first word",
+    "n": 154,
+    "lq": 5.5,
+    "share": 0.2403
+   },
+   {
+    "word": "Durham",
+    "kind": "first word",
+    "n": 298,
+    "lq": 4.7,
+    "share": 0.2047
+   },
+   {
+    "word": "Cheviot",
+    "kind": "first word",
+    "n": 216,
+    "lq": 4.5,
+    "share": 0.1944
+   }
+  ],
+  "North West": [
+   {
+    "word": "Brow",
+    "kind": "ending",
+    "n": 511,
+    "lq": 6.1,
+    "share": 0.775
+   },
+   {
+    "word": "Moss",
+    "kind": "first word",
+    "n": 556,
+    "lq": 4.1,
+    "share": 0.5306
+   },
+   {
+    "word": "Rydal",
+    "kind": "first word",
+    "n": 248,
+    "lq": 3.2,
+    "share": 0.4113
+   },
+   {
+    "word": "Egerton",
+    "kind": "first word",
+    "n": 170,
+    "lq": 3.2,
+    "share": 0.4118
+   },
+   {
+    "word": "Thirlmere",
+    "kind": "first word",
+    "n": 212,
+    "lq": 3.0,
+    "share": 0.3868
+   },
+   {
+    "word": "Smithy",
+    "kind": "first word",
+    "n": 271,
+    "lq": 2.9,
+    "share": 0.369
+   }
+  ],
+  "Northern Ireland": [
+   {
+    "word": "Lodge",
+    "kind": "ending",
+    "n": 229,
+    "lq": 14.3,
+    "share": 0.4585
+   },
+   {
+    "word": "Park",
+    "kind": "ending",
+    "n": 9055,
+    "lq": 11.0,
+    "share": 0.3505
+   },
+   {
+    "word": "Glen",
+    "kind": "ending",
+    "n": 272,
+    "lq": 10.7,
+    "share": 0.3419
+   },
+   {
+    "word": "Cottages",
+    "kind": "ending",
+    "n": 389,
+    "lq": 6.5,
+    "share": 0.2082
+   },
+   {
+    "word": "Hillview",
+    "kind": "first word",
+    "n": 211,
+    "lq": 5.9,
+    "share": 0.3744
+   },
+   {
+    "word": "Parade",
+    "kind": "ending",
+    "n": 1064,
+    "lq": 5.3,
+    "share": 0.1682
+   }
+  ],
+  "Scotland": [
+   {
+    "word": "Loan",
+    "kind": "ending",
+    "n": 369,
+    "lq": 11.5,
+    "share": 0.9946
+   },
+   {
+    "word": "Wynd",
+    "kind": "ending",
+    "n": 981,
+    "lq": 10.3,
+    "share": 0.8919
+   },
+   {
+    "word": "Brae",
+    "kind": "ending",
+    "n": 789,
+    "lq": 9.8,
+    "share": 0.8479
+   },
+   {
+    "word": "Manse",
+    "kind": "first word",
+    "n": 268,
+    "lq": 8.0,
+    "share": 0.6978
+   },
+   {
+    "word": "Kirk",
+    "kind": "first word",
+    "n": 245,
+    "lq": 6.6,
+    "share": 0.5714
+   },
+   {
+    "word": "Burnside",
+    "kind": "first word",
+    "n": 331,
+    "lq": 6.4,
+    "share": 0.5589
+   }
+  ],
+  "South East": [
+   {
+    "word": "Copse",
+    "kind": "ending",
+    "n": 347,
+    "lq": 4.2,
+    "share": 0.5648
+   },
+   {
+    "word": "Downs",
+    "kind": "first word",
+    "n": 163,
+    "lq": 3.8,
+    "share": 0.5215
+   },
+   {
+    "word": "Copse",
+    "kind": "first word",
+    "n": 168,
+    "lq": 3.2,
+    "share": 0.4405
+   },
+   {
+    "word": "Ride",
+    "kind": "ending",
+    "n": 304,
+    "lq": 2.8,
+    "share": 0.3816
+   },
+   {
+    "word": "Hurst",
+    "kind": "first word",
+    "n": 222,
+    "lq": 2.7,
+    "share": 0.3649
+   },
+   {
+    "word": "Shepherds",
+    "kind": "first word",
+    "n": 239,
+    "lq": 2.4,
+    "share": 0.3264
+   }
+  ],
+  "South West": [
+   {
+    "word": "Fore",
+    "kind": "first word",
+    "n": 199,
+    "lq": 8.5,
+    "share": 0.8291
+   },
+   {
+    "word": "Higher",
+    "kind": "first word",
+    "n": 463,
+    "lq": 6.2,
+    "share": 0.6069
+   },
+   {
+    "word": "Coombe",
+    "kind": "first word",
+    "n": 273,
+    "lq": 4.3,
+    "share": 0.4176
+   },
+   {
+    "word": "Stoke",
+    "kind": "first word",
+    "n": 179,
+    "lq": 3.5,
+    "share": 0.3408
+   },
+   {
+    "word": "Steps",
+    "kind": "ending",
+    "n": 194,
+    "lq": 3.5,
+    "share": 0.3402
+   },
+   {
+    "word": "Cross",
+    "kind": "ending",
+    "n": 302,
+    "lq": 3.3,
+    "share": 0.3245
+   }
+  ],
+  "Wales": [
+   {
+    "word": "Heol",
+    "kind": "first word",
+    "n": 1418,
+    "lq": 20.9,
+    "share": 1.0
+   },
+   {
+    "word": "Stryd",
+    "kind": "first word",
+    "n": 214,
+    "lq": 20.9,
+    "share": 1.0
+   },
+   {
+    "word": "Ffordd",
+    "kind": "first word",
+    "n": 971,
+    "lq": 20.9,
+    "share": 1.0
+   },
+   {
+    "word": "Clos",
+    "kind": "first word",
+    "n": 784,
+    "lq": 20.9,
+    "share": 0.9987
+   },
+   {
+    "word": "Lon",
+    "kind": "first word",
+    "n": 577,
+    "lq": 20.9,
+    "share": 1.0
+   },
+   {
+    "word": "Maes",
+    "kind": "first word",
+    "n": 623,
+    "lq": 20.8,
+    "share": 0.9952
+   }
+  ],
+  "West Midlands": [
+   {
+    "word": "Pool",
+    "kind": "first word",
+    "n": 178,
+    "lq": 3.9,
+    "share": 0.3146
+   },
+   {
+    "word": "Arden",
+    "kind": "first word",
+    "n": 168,
+    "lq": 3.9,
+    "share": 0.3214
+   },
+   {
+    "word": "Croft",
+    "kind": "ending",
+    "n": 3133,
+    "lq": 3.6,
+    "share": 0.2952
+   },
+   {
+    "word": "Lichfield",
+    "kind": "first word",
+    "n": 171,
+    "lq": 3.4,
+    "share": 0.2807
+   },
+   {
+    "word": "Aston",
+    "kind": "first word",
+    "n": 209,
+    "lq": 3.4,
+    "share": 0.2775
+   },
+   {
+    "word": "Stafford",
+    "kind": "first word",
+    "n": 255,
+    "lq": 3.1,
+    "share": 0.2549
+   }
+  ],
+  "Yorkshire and the Humber": [
+   {
+    "word": "Ings",
+    "kind": "first word",
+    "n": 169,
+    "lq": 8.0,
+    "share": 0.8107
+   },
+   {
+    "word": "Garth",
+    "kind": "ending",
+    "n": 883,
+    "lq": 7.4,
+    "share": 0.752
+   },
+   {
+    "word": "Mount",
+    "kind": "ending",
+    "n": 1095,
+    "lq": 6.3,
+    "share": 0.6374
+   },
+   {
+    "word": "Carr",
+    "kind": "first word",
+    "n": 479,
+    "lq": 5.4,
+    "share": 0.5449
+   },
+   {
+    "word": "Fold",
+    "kind": "ending",
+    "n": 953,
+    "lq": 4.3,
+    "share": 0.4428
+   },
+   {
+    "word": "Pasture",
+    "kind": "first word",
+    "n": 199,
+    "lq": 4.3,
+    "share": 0.4322
+   }
+  ]
+ },
+ "royal": {
+  "w_victoria": 2032,
+  "w_albert": 962,
+  "w_queen": 2378,
+  "w_king": 2735,
+  "w_george": 1215,
+  "w_elizabeth": 605,
+  "w_coronation": 535,
+  "w_jubilee": 808
+ },
+ "council_top_names": [
+  [
+   "High Street",
+   90
+  ],
+  [
+   "Main Street",
+   41
+  ],
+  [
+   "Station Road",
+   37
+  ],
+  [
+   "Church Lane",
+   32
+  ],
+  [
+   "Church Street",
+   15
+  ],
+  [
+   "The Street",
+   15
+  ],
+  [
+   "Church Road",
+   14
+  ],
+  [
+   "Mill Lane",
+   11
+  ],
+  [
+   "Green Lane",
+   11
+  ],
+  [
+   "New Road",
+   6
+  ],
+  [
+   "Fore Street",
+   5
+  ],
+  [
+   "Station Approach",
+   5
+  ]
+ ],
+ "council_top_names_n": 75,
+ "signature_examples": {
+  "Maldon": [
+   "Maldon Road",
+   7,
+   27,
+   198.3
+  ],
+  "King's Lynn and West Norfolk": [
+   "Lynn Road",
+   20,
+   33,
+   177.2
+  ],
+  "North Devon": [
+   "Down Lane",
+   12,
+   28,
+   175.0
+  ],
+  "East Cambridgeshire": [
+   "Ely Road",
+   8,
+   25,
+   165.7
+  ],
+  "Highland": [
+   "General Wade's Military Road",
+   32,
+   50,
+   150.4
+  ],
+  "North Norfolk": [
+   "The Loke",
+   10,
+   25,
+   142.1
+  ],
+  "North Warwickshire": [
+   "Tamworth Road",
+   4,
+   25,
+   141.6
+  ],
+  "Melton": [
+   "Melton Road",
+   6,
+   34,
+   138.6
+  ],
+  "Argyll and Bute": [
+   "Pier Road",
+   8,
+   38,
+   134.7
+  ],
+  "Scottish Borders": [
+   "Drove Road",
+   9,
+   32,
+   125.5
+  ],
+  "Perth and Kinross": [
+   "General Wade's Military Road",
+   18,
+   50,
+   123.7
+  ],
+  "Rugby": [
+   "Rugby Road",
+   12,
+   51,
+   122.7
+  ],
+  "Moray": [
+   "Mid Street",
+   6,
+   25,
+   117.9
+  ],
+  "North West Leicestershire": [
+   "Ashby Road",
+   13,
+   54,
+   116.9
+  ],
+  "Wychavon": [
+   "Evesham Road",
+   8,
+   31,
+   102.4
+  ],
+  "Pendle": [
+   "Colne Road",
+   5,
+   25,
+   101.5
+  ],
+  "Babergh": [
+   "Ipswich Road",
+   6,
+   30,
+   99.8
+  ],
+  "West Dunbartonshire": [
+   "Alexander Street",
+   4,
+   32,
+   97.8
+  ],
+  "Tunbridge Wells": [
+   "Cranbrook Road",
+   4,
+   25,
+   97.2
+  ],
+  "Harborough": [
+   "Mere Road",
+   6,
+   30,
+   95.1
+  ],
+  "Newark and Sherwood": [
+   "Newark Road",
+   9,
+   37,
+   95.1
+  ],
+  "Rutland": [
+   "Stamford Road",
+   4,
+   44,
+   91.8
+  ],
+  "West Suffolk": [
+   "Bury Road",
+   19,
+   61,
+   90.5
+  ],
+  "Peterborough": [
+   "Peterborough Road",
+   6,
+   25,
+   88.5
+  ],
+  "East Lindsey": [
+   "Sea Lane",
+   9,
+   31,
+   85.0
+  ],
+  "Derbyshire Dales": [
+   "The Dale",
+   4,
+   25,
+   85.0
+  ],
+  "Hyndburn": [
+   "Blackburn Road",
+   4,
+   30,
+   84.7
+  ],
+  "Monmouthshire": [
+   "Monmouth Road",
+   5,
+   36,
+   84.2
+  ],
+  "Lisburn and Castlereagh": [
+   "Beechwood Grove",
+   6,
+   26,
+   83.5
+  ],
+  "Doncaster": [
+   "Doncaster Road",
+   15,
+   37,
+   77.1
+  ],
+  "Fenland": [
+   "Long Drove",
+   5,
+   32,
+   76.8
+  ],
+  "West Oxfordshire": [
+   "Burford Road",
+   4,
+   25,
+   76.7
+  ],
+  "Redcar and Cleveland": [
+   "Cleveland Street",
+   7,
+   36,
+   76.4
+  ],
+  "Rother": [
+   "Sea Road",
+   4,
+   33,
+   75.8
+  ],
+  "South Norfolk": [
+   "Wash Lane",
+   14,
+   52,
+   75.6
+  ],
+  "Ashfield": [
+   "Sherwood Street",
+   4,
+   27,
+   75.0
+  ],
+  "Broadland": [
+   "The Loke",
+   5,
+   25,
+   74.8
+  ],
+  "Uttlesford": [
+   "Chelmsford Road",
+   4,
+   31,
+   74.5
+  ],
+  "West Lancashire": [
+   "Mere Lane",
+   4,
+   26,
+   73.6
+  ],
+  "Bromsgrove": [
+   "Birmingham Road",
+   4,
+   35,
+   73.4
+  ],
+  "Colchester": [
+   "Colchester Road",
+   9,
+   41,
+   72.3
+  ],
+  "Tendring": [
+   "Colchester Road",
+   8,
+   41,
+   71.1
+  ],
+  "Wealden": [
+   "Eastbourne Road",
+   7,
+   35,
+   71.1
+  ],
+  "Antrim and Newtownabbey": [
+   "Belfast Road",
+   6,
+   34,
+   69.2
+  ],
+  "Mid Ulster": [
+   "Hillhead Road",
+   5,
+   33,
+   67.2
+  ],
+  "Arun": [
+   "Sea Lane",
+   6,
+   31,
+   66.8
+  ],
+  "Dumfries and Galloway": [
+   "Old Military Road",
+   18,
+   91,
+   66.7
+  ],
+  "North Kesteven": [
+   "Fen Road",
+   6,
+   33,
+   66.7
+  ],
+  "Newry, Mourne and Down": [
+   "Mountain Road",
+   7,
+   29,
+   66.5
+  ],
+  "Rhondda Cynon Taf": [
+   "Cardiff Road",
+   6,
+   26,
+   66.0
+  ],
+  "South Kesteven": [
+   "Village Street",
+   5,
+   26,
+   66.0
+  ],
+  "Maidstone": [
+   "Maidstone Road",
+   6,
+   33,
+   65.5
+  ],
+  "South Oxfordshire": [
+   "Reading Road",
+   5,
+   28,
+   64.6
+  ],
+  "Stirling": [
+   "Old Military Road",
+   9,
+   91,
+   64.4
+  ],
+  "West Berkshire": [
+   "Reading Road",
+   5,
+   28,
+   64.3
+  ],
+  "Mid Suffolk": [
+   "Ipswich Road",
+   5,
+   30,
+   63.7
+  ],
+  "Blaby": [
+   "Leicester Road",
+   7,
+   65,
+   62.1
+  ],
+  "Dover": [
+   "Dover Road",
+   5,
+   39,
+   61.3
+  ],
+  "South Cambridgeshire": [
+   "Royston Road",
+   5,
+   26,
+   61.1
+  ],
+  "Cherwell": [
+   "Banbury Road",
+   7,
+   42,
+   60.5
+  ],
+  "Braintree": [
+   "Colne Road",
+   4,
+   25,
+   60.5
+  ],
+  "Isle of Wight": [
+   "Esplanade",
+   9,
+   58,
+   59.8
+  ],
+  "Breckland": [
+   "Stone Road",
+   5,
+   26,
+   59.5
+  ],
+  "Huntingdonshire": [
+   "Ramsey Road",
+   6,
+   27,
+   59.5
+  ],
+  "Bassetlaw": [
+   "Top Street",
+   4,
+   25,
+   59.5
+  ],
+  "Aberdeenshire": [
+   "Mid Street",
+   7,
+   25,
+   58.6
+  ],
+  "Armagh City, Banbridge and Craigavon": [
+   "Kensington Avenue",
+   6,
+   31,
+   58.2
+  ],
+  "North East Derbyshire": [
+   "Chesterfield Road",
+   6,
+   48,
+   57.3
+  ],
+  "Mid Devon": [
+   "Coombe Lane",
+   5,
+   47,
+   57.0
+  ],
+  "Caerphilly": [
+   "Hillside Terrace",
+   4,
+   27,
+   55.7
+  ],
+  "Shropshire": [
+   "Shrewsbury Road",
+   15,
+   49,
+   55.6
+  ],
+  "York": [
+   "Cinder Lane",
+   5,
+   28,
+   55.2
+  ],
+  "West Northamptonshire": [
+   "Northampton Road",
+   13,
+   34,
+   55.2
+  ],
+  "Vale of White Horse": [
+   "Abingdon Road",
+   6,
+   41,
+   55.0
+  ],
+  "Stratford-on-Avon": [
+   "Stratford Road",
+   10,
+   62,
+   54.9
+  ],
+  "Swansea": [
+   "Bryn Road",
+   7,
+   38,
+   54.1
+  ],
+  "Tonbridge and Malling": [
+   "Pilgrims Way",
+   6,
+   54,
+   53.6
+  ],
+  "Bolsover": [
+   "Chesterfield Road",
+   4,
+   48,
+   53.0
+  ],
+  "Derry City and Strabane": [
+   "Pelham Road",
+   5,
+   43,
+   52.6
+  ],
+  "South Hams": [
+   "Vicarage Hill",
+   4,
+   35,
+   52.6
+  ],
+  "New Forest": [
+   "Ringwood Road",
+   6,
+   33,
+   52.5
+  ],
+  "Broxtowe": [
+   "Nottingham Road",
+   5,
+   54,
+   52.2
+  ],
+  "Bath and North East Somerset": [
+   "Bristol Road",
+   8,
+   54,
+   52.2
+  ],
+  "Mid and East Antrim": [
+   "Broadlands",
+   5,
+   38,
+   51.8
+  ],
+  "Ards and North Down": [
+   "Belfast Road",
+   5,
+   34,
+   51.5
+  ],
+  "East Suffolk": [
+   "Wash Lane",
+   14,
+   52,
+   51.4
+  ],
+  "Conwy": [
+   "St David's Road",
+   5,
+   45,
+   50.9
+  ],
+  "Ashford": [
+   "Ashford Road",
+   5,
+   49,
+   50.4
+  ],
+  "High Peak": [
+   "Buxton Road",
+   5,
+   56,
+   50.3
+  ],
+  "Amber Valley": [
+   "Slack Lane",
+   4,
+   33,
+   49.1
+  ],
+  "Rushcliffe": [
+   "Nottingham Road",
+   6,
+   54,
+   48.0
+  ],
+  "Stafford": [
+   "Newcastle Road",
+   4,
+   31,
+   46.3
+  ],
+  "South Derbyshire": [
+   "Burton Road",
+   7,
+   72,
+   46.1
+  ],
+  "East Devon": [
+   "Greenway Lane",
+   4,
+   27,
+   46.0
+  ],
+  "Basingstoke and Deane": [
+   "White Lane",
+   4,
+   31,
+   45.7
+  ],
+  "Bridgend": [
+   "Meadow Street",
+   6,
+   59,
+   45.6
+  ],
+  "Wigan": [
+   "Holt Street",
+   7,
+   25,
+   45.4
+  ],
+  "Hinckley and Bosworth": [
+   "Ashby Road",
+   5,
+   54,
+   44.6
+  ],
+  "Warwick": [
+   "Coventry Road",
+   5,
+   45,
+   44.1
+  ],
+  "Bedford": [
+   "Bedford Road",
+   12,
+   100,
+   43.9
+  ],
+  "West Lindsey": [
+   "Sand Lane",
+   5,
+   47,
+   43.8
+  ],
+  "North Lincolnshire": [
+   "Beck Lane",
+   5,
+   36,
+   42.8
+  ],
+  "Waverley": [
+   "Guildford Road",
+   5,
+   53,
+   42.7
+  ],
+  "Merthyr Tydfil": [
+   "Mary Street",
+   4,
+   100,
+   42.6
+  ],
+  "County Durham": [
+   "Front Street",
+   61,
+   168,
+   42.4
+  ],
+  "Reigate and Banstead": [
+   "Brighton Road",
+   4,
+   49,
+   41.8
+  ],
+  "West Devon": [
+   "Fore Street",
+   8,
+   181,
+   40.4
+  ],
+  "Lichfield": [
+   "Lichfield Road",
+   5,
+   61,
+   40.0
+  ],
+  "Great Yarmouth": [
+   "Marsh Road",
+   6,
+   80,
+   39.4
+  ],
+  "Cornwall": [
+   "Fore Street",
+   70,
+   181,
+   38.7
+  ],
+  "Medway": [
+   "Maidstone Road",
+   4,
+   33,
+   38.2
+  ],
+  "Cardiff": [
+   "Cardiff Road",
+   4,
+   26,
+   37.9
+  ],
+  "South Staffordshire": [
+   "Hawthorne Road",
+   4,
+   49,
+   37.6
+  ],
+  "Kingston upon Hull, City of": [
+   "Albert Avenue",
+   5,
+   39,
+   37.4
+  ],
+  "Na h-Eileanan Siar": [
+   "New Street",
+   5,
+   491,
+   37.1
+  ],
+  "Warrington": [
+   "Warrington Road",
+   4,
+   32,
+   36.9
+  ],
+  "Dorset": [
+   "Duck Street",
+   9,
+   31,
+   36.3
+  ],
+  "Cumberland": [
+   "Lawson Street",
+   4,
+   25,
+   36.0
+  ],
+  "Somerset": [
+   "Combe Lane",
+   15,
+   32,
+   35.9
+  ],
+  "Guildford": [
+   "Guildford Road",
+   4,
+   53,
+   35.4
+  ],
+  "Torridge": [
+   "Fore Street",
+   8,
+   181,
+   35.0
+  ],
+  "North Somerset": [
+   "Bristol Road",
+   7,
+   54,
+   34.6
+  ],
+  "Burnley": [
+   "Cobden Street",
+   4,
+   66,
+   34.6
+  ],
+  "East Staffordshire": [
+   "Hollow Lane",
+   4,
+   60,
+   34.5
+  ],
+  "Rossendale": [
+   "Elm Street",
+   5,
+   87,
+   34.2
+  ],
+  "South Holland": [
+   "Marsh Road",
+   6,
+   80,
+   33.9
+  ],
+  "North Northamptonshire": [
+   "Northampton Road",
+   7,
+   34,
+   33.7
+  ],
+  "Rochdale": [
+   "Hartley Street",
+   5,
+   37,
+   32.5
+  ],
+  "Causeway Coast and Glens": [
+   "Meadow Park",
+   4,
+   45,
+   32.4
+  ],
+  "Tameside": [
+   "Bennett Street",
+   4,
+   30,
+   32.4
+  ],
+  "Westmorland and Furness": [
+   "Nook Lane",
+   4,
+   27,
+   32.3
+  ],
+  "Charnwood": [
+   "Leicester Road",
+   6,
+   65,
+   31.6
+  ],
+  "Winchester": [
+   "The Drove",
+   4,
+   52,
+   31.0
+  ],
+  "Erewash": [
+   "Derby Road",
+   6,
+   110,
+   31.0
+  ],
+  "Wyre": [
+   "Coniston Avenue",
+   5,
+   66,
+   30.9
+  ],
+  "East Riding of Yorkshire": [
+   "Southfield Lane",
+   7,
+   28,
+   30.7
+  ],
+  "North Tyneside": [
+   "Holly Avenue",
+   4,
+   43,
+   30.5
+  ],
+  "Calderdale": [
+   "Shaw Lane",
+   8,
+   52,
+   30.3
+  ],
+  "Trafford": [
+   "Green Walk",
+   4,
+   38,
+   30.2
+  ],
+  "Torfaen": [
+   "Commercial Street",
+   5,
+   114,
+   30.2
+  ],
+  "Wakefield": [
+   "Wakefield Road",
+   7,
+   36,
+   30.1
+  ],
+  "Gateshead": [
+   "Holly Avenue",
+   4,
+   43,
+   30.0
+  ],
+  "Tandridge": [
+   "The Copse",
+   4,
+   101,
+   29.5
+  ],
+  "Teignbridge": [
+   "Exeter Road",
+   6,
+   76,
+   29.0
+  ],
+  "Stroud": [
+   "Bath Road",
+   6,
+   106,
+   28.4
+  ],
+  "Rotherham": [
+   "Sheffield Road",
+   4,
+   31,
+   28.1
+  ],
+  "Milton Keynes": [
+   "Newport Road",
+   9,
+   71,
+   27.7
+  ],
+  "Thanet": [
+   "Promenade",
+   4,
+   67,
+   27.6
+  ],
+  "North Lanarkshire": [
+   "Stirling Street",
+   4,
+   26,
+   27.0
+  ],
+  "Birmingham": [
+   "Frederick Road",
+   7,
+   27,
+   26.8
+  ],
+  "Test Valley": [
+   "Winchester Road",
+   5,
+   83,
+   26.7
+  ],
+  "South Lanarkshire": [
+   "Glasgow Road",
+   7,
+   42,
+   26.6
+  ],
+  "Central Bedfordshire": [
+   "Leighton Road",
+   5,
+   41,
+   26.2
+  ],
+  "North Yorkshire": [
+   "Low Lane",
+   30,
+   76,
+   26.0
+  ],
+  "Powys": [
+   "Broad Street",
+   9,
+   165,
+   26.0
+  ],
+  "Kirklees": [
+   "Beaumont Street",
+   6,
+   30,
+   25.7
+  ],
+  "East Lothian": [
+   "Edinburgh Road",
+   4,
+   87,
+   25.4
+  ],
+  "Fife": [
+   "Mid Street",
+   4,
+   25,
+   24.9
+  ],
+  "Belfast": [
+   "Ross Road",
+   4,
+   32,
+   24.8
+  ],
+  "Herefordshire, County of": [
+   "Hereford Road",
+   4,
+   51,
+   24.3
+  ],
+  "Walsall": [
+   "Lichfield Road",
+   5,
+   61,
+   24.2
+  ],
+  "Wiltshire": [
+   "Duck Street",
+   7,
+   31,
+   24.1
+  ],
+  "Pembrokeshire": [
+   "West Lane",
+   8,
+   137,
+   24.1
+  ],
+  "Dudley": [
+   "Dudley Road",
+   6,
+   61,
+   23.7
+  ],
+  "Forest of Dean": [
+   "Woodland Road",
+   4,
+   98,
+   23.5
+  ],
+  "Neath Port Talbot": [
+   "Woodland Road",
+   5,
+   98,
+   23.1
+  ],
+  "Flintshire": [
+   "Chester Road",
+   7,
+   107,
+   22.4
+  ],
+  "Lancaster": [
+   "Lancaster Road",
+   7,
+   116,
+   22.3
+  ],
+  "Sefton": [
+   "Liverpool Road",
+   4,
+   47,
+   22.1
+  ],
+  "Gwynedd": [
+   "Beach Road",
+   5,
+   121,
+   21.9
+  ],
+  "Epping Forest": [
+   "High Road",
+   5,
+   130,
+   21.7
+  ],
+  "Buckinghamshire": [
+   "Marlow Road",
+   5,
+   26,
+   21.4
+  ],
+  "Thurrock": [
+   "High Road",
+   5,
+   130,
+   21.3
+  ],
+  "Cheshire West and Chester": [
+   "Pool Lane",
+   4,
+   28,
+   21.3
+  ],
+  "Staffordshire Moorlands": [
+   "Well Street",
+   4,
+   103,
+   21.2
+  ],
+  "Oldham": [
+   "Booth Street",
+   4,
+   45,
+   21.0
+  ],
+  "South Ribble": [
+   "Moss Lane",
+   6,
+   140,
+   20.7
+  ],
+  "Fylde": [
+   "Lodge Lane",
+   4,
+   117,
+   20.6
+  ],
+  "Northumberland": [
+   "Chapel Row",
+   4,
+   33,
+   20.5
+  ],
+  "East Hampshire": [
+   "Winchester Road",
+   4,
+   83,
+   20.4
+  ],
+  "Telford and Wrekin": [
+   "Woodhouse Lane",
+   4,
+   66,
+   20.3
+  ],
+  "West Lothian": [
+   "Union Road",
+   4,
+   79,
+   20.3
+  ],
+  "Epsom and Ewell": [
+   "Station Approach",
+   4,
+   230,
+   20.1
+  ],
+  "Leeds": [
+   "Leeds Road",
+   9,
+   31,
+   19.9
+  ],
+  "Brentwood": [
+   "The Chase",
+   4,
+   191,
+   19.5
+  ],
+  "Stockport": [
+   "Hartington Road",
+   4,
+   44,
+   19.3
+  ],
+  "Sandwell": [
+   "Florence Road",
+   4,
+   56,
+   19.3
+  ],
+  "Renfrewshire": [
+   "Canal Street",
+   4,
+   76,
+   19.0
+  ],
+  "Carmarthenshire": [
+   "Water Street",
+   7,
+   147,
+   18.8
+  ],
+  "Wirral": [
+   "Village Road",
+   4,
+   42,
+   18.7
+  ],
+  "Cheshire East": [
+   "Moss Lane",
+   21,
+   140,
+   18.5
+  ],
+  "Swale": [
+   "Lower Road",
+   5,
+   122,
+   18.3
+  ],
+  "Bury": [
+   "Spring Street",
+   5,
+   76,
+   18.1
+  ],
+  "North Hertfordshire": [
+   "Church Path",
+   4,
+   111,
+   17.8
+  ],
+  "South Gloucestershire": [
+   "Bristol Road",
+   4,
+   54,
+   17.6
+  ],
+  "Richmond upon Thames": [
+   "Gloucester Road",
+   4,
+   126,
+   17.5
+  ],
+  "Chorley": [
+   "Moss Lane",
+   5,
+   140,
+   16.8
+  ],
+  "Adur": [
+   "The Drive",
+   4,
+   317,
+   16.7
+  ],
+  "Salford": [
+   "St John Street",
+   4,
+   57,
+   16.6
+  ],
+  "Barnsley": [
+   "Southgate",
+   4,
+   53,
+   16.1
+  ],
+  "Bradford": [
+   "Greenfield Lane",
+   4,
+   25,
+   16.0
+  ],
+  "Spelthorne": [
+   "Station Approach",
+   4,
+   230,
+   15.4
+  ],
+  "East Hertfordshire": [
+   "The Causeway",
+   5,
+   143,
+   15.0
+  ],
+  "Ceredigion": [
+   "Bridge Street",
+   7,
+   567,
+   14.6
+  ],
+  "Bromley": [
+   "Edward Road",
+   4,
+   83,
+   14.3
+  ],
+  "Bolton": [
+   "Bolton Road",
+   4,
+   47,
+   14.3
+  ],
+  "Boston": [
+   "Hall Lane",
+   4,
+   240,
+   13.3
+  ],
+  "Isle of Anglesey": [
+   "Chapel Street",
+   9,
+   609,
+   12.9
+  ],
+  "Mole Valley": [
+   "Rectory Lane",
+   4,
+   221,
+   12.2
+  ],
+  "Bristol, City of": [
+   "Beaufort Road",
+   4,
+   60,
+   12.1
+  ],
+  "Derby": [
+   "South Drive",
+   4,
+   91,
+   12.0
+  ],
+  "Wolverhampton": [
+   "Mount Road",
+   4,
+   111,
+   11.7
+  ],
+  "Barnet": [
+   "The Ridgeway",
+   4,
+   113,
+   11.6
+  ],
+  "South Tyneside": [
+   "Front Street",
+   4,
+   168,
+   11.3
+  ],
+  "Chelmsford": [
+   "The Chase",
+   5,
+   191,
+   11.0
+  ],
+  "Horsham": [
+   "Riverside",
+   4,
+   156,
+   10.5
+  ],
+  "Basildon": [
+   "The Chase",
+   5,
+   191,
+   10.4
+  ],
+  "Wrexham": [
+   "Hill Street",
+   7,
+   269,
+   10.3
+  ],
+  "Ribble Valley": [
+   "Moor Lane",
+   5,
+   340,
+   10.2
+  ],
+  "Tewkesbury": [
+   "Orchard Road",
+   4,
+   215,
+   9.9
+  ],
+  "Mid Sussex": [
+   "Orchard Way",
+   5,
+   211,
+   9.7
+  ],
+  "Fermanagh and Omagh": [
+   "Main Street",
+   27,
+   1336,
+   9.7
+  ],
+  "Angus": [
+   "Union Street",
+   6,
+   301,
+   9.6
+  ],
+  "Blaenau Gwent": [
+   "King Street",
+   5,
+   536,
+   9.4
+  ],
+  "Cotswold": [
+   "London Road",
+   5,
+   306,
+   9.3
+  ],
+  "Malvern Hills": [
+   "Church Walk",
+   4,
+   329,
+   8.8
+  ],
+  "Bexley": [
+   "Station Approach",
+   4,
+   230,
+   8.6
+  ],
+  "Sevenoaks": [
+   "Main Road",
+   6,
+   417,
+   8.6
+  ],
+  "Chichester": [
+   "Marsh Lane",
+   5,
+   229,
+   8.5
+  ],
+  "Hillingdon": [
+   "Station Approach",
+   5,
+   230,
+   8.1
+  ],
+  "Newcastle-under-Lyme": [
+   "Mount Pleasant",
+   4,
+   233,
+   8.1
+  ],
+  "Hart": [
+   "Church View",
+   4,
+   287,
+   8.0
+  ],
+  "Windsor and Maidenhead": [
+   "Windsor Road",
+   4,
+   247,
+   7.7
+  ],
+  "Canterbury": [
+   "The Street",
+   11,
+   606,
+   7.6
+  ],
+  "Denbighshire": [
+   "Mill Street",
+   4,
+   334,
+   7.1
+  ],
+  "Elmbridge": [
+   "Church Walk",
+   4,
+   329,
+   6.6
+  ],
+  "Knowsley": [
+   "Hall Lane",
+   4,
+   240,
+   6.6
+  ],
+  "Lewes": [
+   "South Street",
+   4,
+   376,
+   6.3
+  ],
+  "North Ayrshire": [
+   "Hill Street",
+   4,
+   269,
+   6.1
+  ],
+  "Vale of Glamorgan": [
+   "Ash Grove",
+   4,
+   320,
+   5.9
+  ],
+  "Croydon": [
+   "Station Approach",
+   4,
+   230,
+   5.9
+  ],
+  "Falkirk": [
+   "James Street",
+   4,
+   260,
+   5.8
+  ],
+  "Sunderland": [
+   "Front Street",
+   4,
+   168,
+   5.2
+  ],
+  "Manchester": [
+   "York Street",
+   6,
+   148,
+   5.0
+  ],
+  "Gedling": [
+   "Park Avenue",
+   4,
+   458,
+   4.9
+  ],
+  "South Ayrshire": [
+   "Main Street",
+   13,
+   1336,
+   4.8
+  ],
+  "East Dunbartonshire": [
+   "Park Avenue",
+   4,
+   458,
+   4.8
+  ],
+  "Clackmannanshire": [
+   "Main Street",
+   5,
+   1336,
+   4.4
+  ],
+  "Wyre Forest": [
+   "Park Lane",
+   4,
+   596,
+   4.3
+  ],
+  "East Ayrshire": [
+   "Main Road",
+   4,
+   417,
+   4.2
+  ],
+  "Mansfield": [
+   "George Street",
+   4,
+   505,
+   4.1
+  ],
+  "Hertsmere": [
+   "New Road",
+   5,
+   949,
+   4.0
+  ],
+  "Folkestone and Hythe": [
+   "The Street",
+   4,
+   606,
+   3.7
+  ],
+  "Wokingham": [
+   "School Road",
+   4,
+   441,
+   3.6
+  ],
+  "Sheffield": [
+   "Brook Lane",
+   4,
+   159,
+   3.4
+  ],
+  "Darlington": [
+   "Back Lane",
+   5,
+   834,
+   3.2
+  ],
+  "Rochford": [
+   "Church Road",
+   5,
+   1280,
+   3.2
+  ],
+  "Liverpool": [
+   "South Road",
+   4,
+   195,
+   3.1
+  ],
+  "Midlothian": [
+   "Main Street",
+   6,
+   1336,
+   2.9
+  ],
+  "Welwyn Hatfield": [
+   "New Road",
+   4,
+   949,
+   2.8
+  ],
+  "Hounslow": [
+   "New Road",
+   5,
+   949,
+   2.8
+  ],
+  "Solihull": [
+   "The Crescent",
+   4,
+   624,
+   2.6
+  ],
+  "North East Lincolnshire": [
+   "Church Lane",
+   13,
+   2005,
+   2.6
+  ],
+  "Bracknell Forest": [
+   "Church Road",
+   6,
+   1280,
+   2.5
+  ],
+  "Newcastle upon Tyne": [
+   "George Street",
+   5,
+   505,
+   2.5
+  ],
+  "Dacorum": [
+   "New Road",
+   5,
+   949,
+   2.3
+  ],
+  "Surrey Heath": [
+   "Church Road",
+   4,
+   1280,
+   2.2
+  ],
+  "East Renfrewshire": [
+   "Main Street",
+   4,
+   1336,
+   2.1
+  ],
+  "Stockton-on-Tees": [
+   "The Green",
+   5,
+   717,
+   1.9
+  ],
+  "Cannock Chase": [
+   "Church Street",
+   4,
+   1573,
+   1.6
+  ],
+  "Dartford": [
+   "Station Road",
+   4,
+   2074,
+   1.5
+  ],
+  "Inverclyde": [
+   "Station Road",
+   4,
+   2074,
+   1.4
+  ],
+  "St Albans": [
+   "High Street",
+   7,
+   2507,
+   1.4
+  ],
+  "Ealing": [
+   "Church Road",
+   4,
+   1280,
+   1.4
+  ],
+  "Slough": [
+   "High Street",
+   4,
+   2507,
+   1.4
+  ],
+  "Chesterfield": [
+   "Station Road",
+   5,
+   2074,
+   1.3
+  ],
+  "St. Helens": [
+   "Mill Lane",
+   5,
+   1415,
+   1.2
+  ],
+  "Woking": [
+   "High Street",
+   4,
+   2507,
+   1.1
+  ],
+  "Eastleigh": [
+   "High Street",
+   5,
+   2507,
+   1.0
+  ],
+  "Swindon": [
+   "High Street",
+   8,
+   2507,
+   1.0
+  ],
+  "Aberdeen City": [
+   "Station Road",
+   6,
+   2074,
+   0.9
+  ],
+  "City of Edinburgh": [
+   "Main Street",
+   5,
+   1336,
+   0.7
+  ],
+  "Blackburn with Darwen": [
+   "High Street",
+   4,
+   2507,
+   0.6
+  ]
+ },
+ "cells": {
+  "n10": 2513,
+  "n20": 776,
+  "main_word_20km": {
+   "high_street": 240,
+   "main_street": 110,
+   "the_street": 38,
+   "fore_street": 19,
+   "front_street": 9
+  },
+  "main_word_20km_n": 416,
+  "top_name_20km": [
+   [
+    "High Street",
+    137
+   ],
+   [
+    "Station Road",
+    65
+   ],
+   [
+    "Main Street",
+    63
+   ],
+   [
+    "Church Lane",
+    48
+   ],
+   [
+    "The Street",
+    22
+   ],
+   [
+    "Church Road",
+    20
+   ],
+   [
+    "Church Street",
+    20
+   ],
+   [
+    "Green Lane",
+    19
+   ],
+   [
+    "Back Lane",
+    15
+   ],
+   [
+    "Fore Street",
+    12
+   ],
+   [
+    "Mill Lane",
+    11
+   ],
+   [
+    "Chapel Street",
+    8
+   ]
+  ],
+  "top_name_20km_n": 602
+ },
+ "stories": {
+  "the_street_east": 0.8581,
+  "fore_street_sw": 0.9006,
+  "front_street_ne": 0.5952,
+  "wynd_scot": 0.8919,
+  "brae_scot": 0.8479,
+  "loke_east": 0.9893,
+  "twitten_se": 0.8889,
+  "gate_yorks_em": 0.5496,
+  "garth_yorks": 0.752,
+  "fold_nw": 0.8762,
+  "brow_nw": 0.775,
+  "drove_east": 0.5614,
+  "chare_ne": 1.0,
+  "manse_scot_ni": 0.9524,
+  "kirk_scot": 0.4028,
+  "welsh_any_wales": 0.2169,
+  "welsh_any_n": 9480,
+  "irish_ni_share": 0.0821,
+  "gaelic_n": 146,
+  "close_share": 0.1422,
+  "close_ni": 0.0222,
+  "park_ni": 0.1086,
+  "park_gb": 0.0067
+ },
+ "term_keys": [
+  "high_street",
+  "main_street",
+  "the_street",
+  "fore_street",
+  "front_street",
+  "station_road",
+  "church_lane",
+  "church_street",
+  "mill_lane",
+  "back_lane",
+  "green_lane",
+  "manse_road",
+  "london_road",
+  "belfast_road",
+  "w_church",
+  "w_kirk",
+  "w_chapel",
+  "w_mill",
+  "w_station",
+  "w_school",
+  "w_back",
+  "w_victoria",
+  "w_albert",
+  "w_queen",
+  "w_king",
+  "w_george",
+  "w_elizabeth",
+  "w_coronation",
+  "w_jubilee",
+  "g_street",
+  "g_road",
+  "g_lane",
+  "g_close",
+  "g_avenue",
+  "g_drive",
+  "g_way",
+  "g_gardens",
+  "g_crescent",
+  "g_terrace",
+  "g_park",
+  "g_mews",
+  "g_row",
+  "r_wynd",
+  "r_vennel",
+  "r_brae",
+  "r_loan",
+  "r_gait",
+  "r_pend",
+  "r_chare",
+  "r_gate",
+  "r_garth",
+  "r_fold",
+  "r_brow",
+  "r_hey",
+  "r_croft",
+  "r_carr",
+  "r_ings",
+  "r_ginnel",
+  "r_snicket",
+  "r_twitten",
+  "r_loke",
+  "r_drove",
+  "r_chase",
+  "r_tye",
+  "r_ope",
+  "r_combe",
+  "r_twitchel",
+  "r_entry",
+  "cy_heol",
+  "cy_ffordd",
+  "cy_stryd",
+  "cy_lon",
+  "cy_clos",
+  "cy_maes",
+  "cy_llys",
+  "cy_bryn",
+  "gd_rathad",
+  "cy_any",
+  "gd_any",
+  "ga_any"
+ ],
+ "page": {
+  "n_terms": 79,
+  "gen_road_pct": 0.18914199061680545,
+  "gen_close_pct": 0.142220543393169,
+  "gen_street_pct": 0.08710714031543738,
+  "gen_lane_pct": 0.08435240081678683,
+  "wales_share": 0.04784991268264109,
+  "lq_wales_max": 20.89867972450404,
+  "n_generics": 128,
+  "retrieved_gb": "2026-10-29",
+  "retrieved_ni": "2026-10-29",
+  "ni_before_bridges": 29660
+ }
+}
