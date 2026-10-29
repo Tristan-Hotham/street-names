@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>High Street or Main Street?</title>
+<meta name="description" content="All 913,335 named streets in the UK mapped by name: where High Street gives way to Main Street, and the regional street words from Wynd to Loke, Twitten, Garth and Chare.">
+<meta property="og:title" content="High Street or Main Street? The UK's street-name map">
+<meta property="og:description" content="2,507 High Streets, 1,336 Main Streets and 913,335 named streets in all. Where the names change, and the words only one region uses.">
+<meta property="og:image" content="https://maps.tristanhotham.com/street-names/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/street-names/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Enamel street-sign palette: white sign, black letters, High Street brick red, Main Street sign blue. */
+:root{
+  --bg:#F6F3EC; --panel:#ECE7DC; --fg:#16181D; --muted:#5F6168; --rule:#DCD6C9; --card:#FDFBF7; --border:#C9C2B3;
+  --high:#B5322B; --main:#1F4E8C; --mid:#7A4A8C; --acc:#B5322B; --sea:#E3E8EC; --land:#EFEBE2; --none:#E2DDD2;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#15171B; --panel:#1F2227; --fg:#EDEEF0; --muted:#A3A6AE; --rule:#33363D; --card:#1D2025; --border:#474B54;
+  --high:#E2675E; --main:#6D9BDB; --mid:#B48AC6; --acc:#E2675E; --sea:#1A1E24; --land:#272A30; --none:#30333A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15171B; --panel:#1F2227; --fg:#EDEEF0; --muted:#A3A6AE; --rule:#33363D; --card:#1D2025; --border:#474B54;
+  --high:#E2675E; --main:#6D9BDB; --mid:#B48AC6; --acc:#E2675E; --sea:#1A1E24; --land:#272A30; --none:#30333A; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:680px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1120px,calc(100vw - 32px));margin-left:calc((100% - min(1120px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--acc);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--main);color:#fff;padding:5px 8px;font-weight:500}
+header.hero{border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+.signs{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 14px}
+.sign{display:inline-block;background:#fff;color:#111;border:3px solid #111;border-radius:6px;padding:6px 14px 4px;font:800 clamp(28px,7vw,58px)/1 var(--display);letter-spacing:-.01em;box-shadow:0 0 0 3px #fff,0 3px 0 4px rgba(0,0,0,.15)}
+.sign small{display:block;font:600 11px/1.3 var(--mono);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+.sign.h small{color:#B5322B}.sign.m{background:#1F4E8C;color:#fff;border-color:#fff;box-shadow:0 0 0 3px #1F4E8C,0 3px 0 4px rgba(0,0,0,.15)}.sign.m small{color:#CFE0F6}
+h1{font:900 clamp(40px,10vw,84px)/.95 var(--display);letter-spacing:-.02em;margin:10px 0 0;text-wrap:balance}
+h1 .h{color:var(--high)} h1 .m{color:var(--main)}
+.dek{font-size:21px;line-height:1.42;margin:14px 0 0;max-width:52ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:52px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--acc);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--high)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(26px,5.6vw,38px)/1 var(--display);color:var(--fg)}
+.stats b.h{color:var(--high)} .stats b.m{color:var(--main)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 8px}
+.controls label.l{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:2px;white-space:nowrap}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:36px;white-space:nowrap}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;max-width:100%;flex:0 0 auto}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+select{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 8px;min-height:36px;max-width:100%}
+.searchbox{position:relative;flex:1 1 220px;min-width:0}
+input[type=search]{font:400 15px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:9px 11px;min-height:38px;width:100%}
+.suggest{position:absolute;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:var(--card);border:1px solid var(--border);z-index:1001;font:400 13px/1.3 var(--mono);display:none;max-height:300px;overflow:auto}
+.suggest li{padding:8px 10px;cursor:pointer;border-bottom:1px solid var(--rule)}
+.suggest li span{color:var(--muted)}
+.suggest li[aria-selected="true"],.suggest li:hover{background:var(--panel)}
+@media (max-width:700px){
+  .controls.scroll{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:thin}
+}
+.mapgrid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:16px;align-items:start}
+@media (max-width:900px){.mapgrid{grid-template-columns:1fr}}
+#lmap{height:760px;border:1px solid var(--border);background:var(--sea);border-radius:2px}
+@media (max-width:900px){#lmap{height:600px}}
+@media (max-width:600px){#lmap{height:min(68vh,520px)}}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea)}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+@media (max-width:600px){.leaflet-control-attribution{font-size:10px;line-height:1.25}}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)}
+.leaflet-control-attribution a{color:var(--fg)}
+.city{font:500 11px/1 var(--mono);color:var(--fg);white-space:nowrap;text-shadow:0 0 3px var(--bg),0 0 3px var(--bg),0 0 2px var(--bg);pointer-events:none}
+.city.r1{font-size:10px;font-weight:400}
+.city i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--fg);margin-right:4px;vertical-align:1px}
+.city.r1 i{width:4px;height:4px}
+.lyrBtn{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;font:600 12px/1 var(--mono);padding:8px 10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.lyrBtn[aria-expanded="true"]{background:var(--fg);color:var(--bg)}
+.lyrPanel{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 12px 8px;margin-top:6px;width:236px;box-shadow:0 2px 10px rgba(0,0,0,.15);font:400 12px/1.3 var(--mono)}
+.lyrPanel[hidden]{display:none}
+.lyrPanel .row{display:grid;grid-template-columns:auto 1fr;gap:4px 8px;align-items:center;margin:0 0 9px}
+.lyrPanel label{display:flex;gap:6px;align-items:center;cursor:pointer;font-weight:600}
+.lyrPanel input[type=range]{width:100%;accent-color:var(--fg)}
+.lyrPanel select{font:400 12px var(--mono);background:var(--bg);color:var(--fg);border:1px solid var(--border);border-radius:2px;padding:2px 4px;width:100%;min-height:0}
+.lyrPanel .sub{grid-column:1/-1;display:flex;gap:6px;align-items:center;color:var(--muted);font-size:11px}
+.lyrPanel .sub span{flex:0 0 52px}
+.lyrPanel .reset{font:400 11px var(--mono);color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.pin{width:16px;height:16px;border:3px solid var(--fg);border-radius:50%;background:transparent;box-shadow:0 0 0 2px var(--bg)}
+.side{background:var(--card);border:1px solid var(--border);padding:14px 14px 10px}
+.side h4{font:500 11px/1.2 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+#legend{font:400 12px/1.35 var(--mono)}
+.lg{display:flex;flex-wrap:wrap;gap:4px 12px;margin:4px 0}
+.lg span{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.sw{display:inline-block;width:13px;height:13px;border:1px solid var(--border);flex:0 0 auto}
+.ramp{display:flex;height:14px;border:1px solid var(--border);margin:6px 0 2px}
+.ramp i{flex:1}
+.rampl{display:flex;justify-content:space-between;font:400 11px/1.2 var(--mono);color:var(--muted)}
+#info{font:400 13px/1.45 var(--mono);border-top:1px solid var(--rule);padding-top:10px;margin-top:10px;min-height:80px}
+#info b{font-weight:600}
+#info .big{font:800 22px/1.15 var(--display);margin:0 0 4px}
+#info ol{margin:6px 0 8px;padding-left:22px}
+#info .hmbar{display:flex;height:12px;margin:4px 0;border:1px solid var(--border)}
+.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:20px 0}
+@media (max-width:700px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:420px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-top:8px solid var(--acc);padding:10px 12px;font:400 12.5px/1.45 var(--mono);cursor:pointer;text-align:left;color:var(--fg)}
+.card b{font:700 21px/1.1 var(--display);display:block;margin-bottom:2px}
+.card .big{font:900 26px/1.05 var(--display);margin:4px 0 2px}
+.card .big span{color:var(--muted);font:400 12px/1 var(--mono)}
+.card:hover{background:var(--panel)}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--main);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right;white-space:nowrap}
+table.t td small{display:block}
+table.t tr.go{cursor:pointer}
+table.t tr.go:hover td{background:var(--panel)}
+.tablewrap{overflow-x:auto}
+@media (max-width:600px){table.t .wide{display:none}}
+details{margin:14px 0}
+summary{font:500 13px/1.4 var(--mono);cursor:pointer;color:var(--fg);padding:8px 0}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--main);border-color:var(--main);color:#fff}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1002}
+.loading{font:400 12px/1.4 var(--mono);color:var(--muted)}
+@media print{.theme,.controls{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Place names</span><span>United Kingdom, 2026</span></div>
+<header class="hero">
+  <div class="signs" aria-hidden="true"><span class="sign h">HIGH STREET<small>2,507 in the UK</small></span><span class="sign m">MAIN STREET<small>1,336 in the UK</small></span></div>
+  <h1><span class="h">High Street</span> or <span class="m">Main Street</span>?</h1>
+  <p class="dek">Every named street in the United Kingdom, 913,335 of them, mapped by its name. Where does High Street give way to Main Street, and which street words belong to only one corner of the country?</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · 2026 · Data: OS Open Names (Open Government Licence v3); OpenStreetMap (ODbL); ONS boundaries</div>
+
+<div class="stats">
+  <div><b>913,335</b><span>named streets: 884,116 in Great Britain (Ordnance Survey) and 29,219 in Northern Ireland (OpenStreetMap)</span></div>
+  <div><b class="h">2,507</b><span>High Streets, the commonest street name in the UK</span></div>
+  <div><b class="m">1,336</b><span>Main Streets, sixth. Main beats High in Scotland (309 to 206) and Northern Ireland (132 to 32)</span></div>
+  <div><b>62%</b><span>of the High or Main Streets in East Midlands and Yorkshire villages are Main Streets; in their towns, 13%</span></div>
+</div>
+
+<p class="lede">Every town in Britain seems to have a High Street, and every village in Scotland a Main Street. Somewhere between the two, the name changes. Ordnance Survey publishes the name and position of every named road in Great Britain as open data, and OpenStreetMap's volunteers have mapped the streets of Northern Ireland, so the line can be drawn rather than guessed. I took all 913,335 named streets and sorted them by name, by the word at the end (Road, Lane, Close, Wynd) and by the word at the start (Heol, Back, Church).</p>
+<p>The map below starts with the big question: in each 20 km square, how many of its High Streets and Main Streets are Main Streets? Then switch to the most common name in each square, pick any of 79 street words to see where it lives, or type your own street's name and see where its namesakes are.</p>
+
+<h2><span class="n">01 · The map</span>Where the street names change</h2>
+<div class="figure bleed" id="mapfig">
+  <div class="controls scroll">
+    <label class="l">Show</label>
+    <div class="seg" role="group" aria-label="What the map shows" id="modeBtns"><button class="btn" data-m="hm" aria-pressed="true">High or Main</button><button class="btn" data-m="top" aria-pressed="false">Top name</button><button class="btn" data-m="word" aria-pressed="false">A street word</button><button class="btn" data-m="name" aria-pressed="false">Your street name</button></div>
+    <label class="l">Areas</label>
+    <div class="seg" role="group" aria-label="Map areas" id="unitBtns"><button class="btn" data-u="c20" aria-pressed="true">20 km</button><button class="btn" data-u="c10" aria-pressed="false">10 km</button><button class="btn" data-u="la" aria-pressed="false">Councils</button></div>
+  </div>
+  <div class="controls" id="wordRow" hidden>
+    <label class="l" for="word">Word</label>
+    <select id="word" aria-label="Street word to map"></select>
+  </div>
+  <div class="controls" id="nameRow" hidden>
+    <div class="searchbox"><input type="search" id="sname" placeholder="A street name, e.g. Coronation Street" aria-label="Street name to map" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="snSug"><ul class="suggest" id="snSug" role="listbox"></ul></div>
+  </div>
+  <div class="controls">
+    <div class="searchbox"><input type="search" id="q" placeholder="Go to a town or village" aria-label="Go to a place" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="sug"><ul class="suggest" id="sug" role="listbox"></ul></div>
+    <span class="loading" id="msg">Loading the map data...</span>
+  </div>
+  <div class="mapgrid">
+    <div id="lmap" role="region" aria-label="Map of street names across the United Kingdom"></div>
+    <div class="side">
+      <h4 id="keyTitle">Key</h4>
+      <div id="legend"></div>
+      <div id="info">Tap or click any square or council to see its commonest street names.</div>
+    </div>
+  </div>
+  <div class="src" id="mapNote">Squares are on the British National Grid. Northern Ireland's streets come from OpenStreetMap and Great Britain's from Ordnance Survey, so compare shares across the Irish Sea rather than raw counts. Grey areas have streets but none of the names on show.</div>
+</div>
+
+<h2><span class="n">02 · The divide</span>High Street in the south, Main Street in the north, and in the villages</h2>
+<p>Across the UK there are 2,507 High Streets and 1,336 Main Streets. High Street is the commonest street name in the country, and in England (2,103) and Wales (166, against just 9 Main Streets). Scotland has 309 Main Streets to 206 High Streets, and Northern Ireland 132 to 32.</p>
+<p>But the divide is not a clean north and south. London has 54 High Streets and one Main Street. The South West, the East of England and Wales all keep Main Street under 8% of the pair. The surprise is the middle of England: in the East Midlands Main Street wins, 414 to 324, and in Yorkshire and the Humber 244 to 208. The North East, closer to Scotland, has only 18 Main Streets.</p>
+<div class="figure">
+  <div class="fig-h">Main Street's share of each region's High and Main Streets</div>
+  <div class="fig-sub">Number of streets named exactly "Main Street" divided by those named "High Street" or "Main Street". England by region.</div>
+  <div class="chart" id="regChart"></div>
+</div>
+<p>Of England's 296 councils, 33 have more Main Streets than High Streets. Most lie in a belt from Leicestershire and Rutland through Nottinghamshire and Lincolnshire into Yorkshire and on to Cumbria: North Yorkshire (94 Main, 61 High), the East Riding (72 to 22), Harborough (49 to 11) and Melton (33 to 4). In Scotland it is the other way round: only 6 of 32 councils have more High Streets than Main Streets, led by Highland, East Lothian and Moray.</p>
+<h3>A village word</h3>
+<p>The clearest pattern is not about latitude at all. Ordnance Survey records the town or village each street belongs to, so I matched each street to that settlement's type. In England's towns, Main Street makes up 8% of the pair; in England's villages, 38%. In the East Midlands and Yorkshire the gap is wider still: 13% in towns, 62% in villages. Even in Scotland, towns lean to High Street more than villages do (27% Main against 78%).</p>
+<div class="figure">
+  <div class="fig-h">Main Street's share, by size of place</div>
+  <div class="fig-sub">Streets matched to their Ordnance Survey town or village (86% of Great Britain's streets matched). Cities are left out: they have too few of either.</div>
+  <div class="chart" id="kindChart"></div>
+</div>
+<p class="pull">High Street is a town name. Main Street, across the Midlands, the north and Scotland, is a village name.</p>
+<p>This fits the usual reading of the names, though the map cannot prove it: "high" in High Street once meant chief or principal, as in high road, and the name was used for the main street of a market town; a village's one street was simply its main street. The data show where each name survives, not when it was given.</p>
+<div class="figure">
+  <div class="fig-h">Main Street's share from south to north</div>
+  <div class="fig-sub">Great Britain in 50 km bands of the National Grid, from the south coast (0 km) to Shetland. Bar height: Main Street share; the dot above each bar is sized by the number of High plus Main Streets.</div>
+  <div class="chart" id="bandChart"></div>
+</div>
+
+<h2><span class="n">03 · Other main streets</span>The Street, Fore Street and Front Street</h2>
+<p>High and Main are not the only names for the main street. Three others belong almost wholly to one region each. Click a card to map it.</p>
+<div class="cards" id="mainCards">
+  <button class="card" data-w="the_street" style="border-top-color:#C27C0E"><b>The Street</b><div class="big">606</div>86% in the East of England and the South East, most in North Norfolk (46) and Suffolk. A village's only street needs no other name.</button>
+  <button class="card" data-w="fore_street" style="border-top-color:#2E7D5B"><b>Fore Street</b><div class="big">181</div>90% in the South West, 70 of them in Cornwall. The front or main street of a Devon or Cornish town.</button>
+  <button class="card" data-w="front_street" style="border-top-color:#6B4BA0"><b>Front Street</b><div class="big">168</div>60% in the North East, 61 in County Durham alone: the main street of the pit villages.</button>
+</div>
+<p>Put the five together and give each 20 km square the one it has most of. Of the 416 squares with at least three, High Street wins 240, Main Street 110, The Street 38, Fore Street 19 and Front Street 9.</p>
+
+<h2><span class="n">04 · Regional words</span>Wynds, lokes, twittens and garths</h2>
+<p>Most street names end in a handful of words. Road ends 19% of all names, Close 14%, Street 9% and Lane 8%. The rare ones are the interesting ones, because many of them belong to one place. The table ranks every ending and first word used at least 150 times by how concentrated it is in one region, compared with that region's share of all streets. Click a row to map it.</p>
+<div class="cards" id="wordCards">
+  <button class="card" data-w="r_wynd" style="border-top-color:#1F4E8C"><b>Wynd</b><div class="big">981</div>89% in Scotland, 148 in Fife. A narrow lane between houses.</button>
+  <button class="card" data-w="r_loan" style="border-top-color:#1F4E8C"><b>Loan</b><div class="big">369</div>99% in Scotland, 118 in Edinburgh.</button>
+  <button class="card" data-w="r_brae" style="border-top-color:#1F4E8C"><b>Brae</b><div class="big">789</div>85% in Scotland: a street up a slope.</button>
+  <button class="card" data-w="r_chare" style="border-top-color:#6B4BA0"><b>Chare</b><div class="big">42</div>All in the North East, 13 in Newcastle upon Tyne.</button>
+  <button class="card" data-w="r_garth" style="border-top-color:#6B4BA0"><b>Garth</b><div class="big">883</div>75% in Yorkshire and the Humber.</button>
+  <button class="card" data-w="r_brow" style="border-top-color:#6B4BA0"><b>Brow</b><div class="big">511</div>78% in the North West; Ribble Valley and Chorley lead.</button>
+  <button class="card" data-w="r_fold" style="border-top-color:#6B4BA0"><b>Fold</b><div class="big">953</div>88% in the North West and Yorkshire.</button>
+  <button class="card" data-w="r_loke" style="border-top-color:#C27C0E"><b>Loke</b><div class="big">187</div>99% in the East of England, 52 in North Norfolk.</button>
+  <button class="card" data-w="r_twitten" style="border-top-color:#C27C0E"><b>Twitten</b><div class="big">18</div>Rare, and 89% of them in the South East, mostly Sussex.</button>
+</div>
+<div class="figure">
+  <div class="fig-h">The most regional street words</div>
+  <div class="fig-sub">Endings and first words used at least 150 times, ranked by concentration: how many times more common in their top region than across the UK. The three most concentrated per region are shown; the full list is in the data.</div>
+  <div class="tablewrap"><table class="t" id="rwt"></table></div>
+  <div class="src">Concentration is a location quotient: the region's share of all streets with the word divided by its share of all streets. Wales and Northern Ireland count as regions. Welsh first words reach about 20.9, the most possible, because Wales holds 4.8% of the UK's streets and almost all of them.</div>
+</div>
+<p>Some of the patterns are about history, some about landscape, and some about how a place was built. Drove (1,792) is the fen and marsh word for a track for driving stock, and 228 are in East Cambridgeshire. Names ending in -gate as one word, or in Gate, number 3,490; 55% are in the north of England and the East Midlands, where gate in a street name is usually traced to the Old Norse word for a street, as in York's Micklegate. Bolton has 667 names starting with Back, the named back streets behind its terraces. In Northern Ireland, 11% of streets end in Park, against 0.7% in Great Britain: the housing estate is a Park there, where in England it is a Close.</p>
+
+<h2><span class="n">05 · Other languages</span>Heol, Rathad and Bóthar</h2>
+<p>Ordnance Survey records Welsh and Scottish Gaelic names alongside English ones. 9,480 streets have a Welsh name or start with a Welsh street word, 22% of the streets in Wales. Heol, road, is the most common (1,418, with 250 in Carmarthenshire), then Ffordd (971), Clos (784) and Lôn (663). Gwynedd has the most and Ceredigion the next highest share. Scottish Gaelic street names are far rarer in the data: 146, mostly in the Western Isles and Highland. In Northern Ireland, 2,399 streets (8%) carry an Irish name in OpenStreetMap, 659 of them in Newry, Mourne and Down; that measures where mappers have added the bilingual signs, not where Irish is spoken.</p>
+
+<h2><span class="n">06 · The commonest names</span>Station Road, Church Lane and the king</h2>
+<p>After High Street come Station Road (2,074), Church Lane (2,005), Church Street (1,573) and Mill Lane (1,415). Yet most names are rare: the UK's streets share 388,197 different names, and 75% of those names belong to one street only.</p>
+<div class="figure">
+  <div class="fig-h">The 25 commonest street names in the UK</div>
+  <div class="fig-sub">Named streets, Ordnance Survey for Great Britain and OpenStreetMap for Northern Ireland.</div>
+  <div class="chart" id="topChart"></div>
+</div>
+<p>Royalty is everywhere. Names with King or King's number 2,735, Queen or Queen's 2,378, Victoria 2,032, George 1,215 and Albert 962. Celebrations leave their own traces: Jubilee 808, Elizabeth 605 and Coronation 535. Not every George or King is a monarch, of course; many are people or pubs.</p>
+
+<h2><span class="n">07 · Your council</span>Every council's commonest and most characteristic name</h2>
+<p>High Street is the commonest name in 90 of the UK's 361 councils, Main Street in 41, Station Road in 37 and Church Lane in 32. More revealing is each council's signature name: the name, used at least four times there and 25 times in the UK, that is most over-represented compared with the UK as a whole. These are usually the road to the next town (Lynn Road in King's Lynn and West Norfolk), a landscape word (The Loke in North Norfolk) or history (General Wade's Military Road in Highland, Perth and Kinross).</p>
+<div class="figure">
+  <div class="controls"><label class="l" for="laSel">Council</label><select id="laSel" aria-label="Choose a council"></select></div>
+  <div class="tablewrap"><table class="t" id="lat"></table></div>
+  <div class="src">Click a row to show the council on the map.</div>
+</div>
+
+<h2><span class="n">08 · Method</span>How I did this, and what to watch for</h2>
+<p><b>Great Britain.</b> OS Open Names lists every named road in Great Britain as a point, with the town or village it belongs to. I kept the 884,116 features of type Named Road. Ordnance Survey also lists sections of named roads inside settlements; those duplicate a road already counted, so I left them out. A Named Road is Ordnance Survey's grouping of road stretches that share a name, so a very long road may appear more than once and two short streets of the same name may be one.</p>
+<p><b>Northern Ireland.</b> Ordnance Survey's open data stop at Great Britain, so for Northern Ireland I used OpenStreetMap: 66,824 named road ways (residential to trunk roads; no paths, tracks or service roads). OpenStreetMap splits a street into many pieces, so I joined pieces with the same name that share an end or have ends within 50 m, giving 29,219 streets, and dropped 441 short pieces named as bridges. The two sources group streets differently, so I compare shares rather than counts across the Irish Sea.</p>
+<p><b>Places.</b> Each street is placed in a current council area (ONS local authority districts) by its point, and on 10 km and 20 km squares of the British National Grid. Regions in England are those of Ordnance Survey. For the town and village comparison, each street's Ordnance Survey settlement name was matched to the nearest settlement of that name in OS Open Names, within 8 km.</p>
+<p><b>Words.</b> The ending is the last word when it is one of 128 common street words (Road, Lane, Wynd, Loke and so on); otherwise a name has no ending (The Green, Briggate). Exact names (High Street) are counted exactly, so High Road, Upper High Street and Main Road are not included. Welsh names are those Ordnance Survey marks as Welsh, plus names in Wales starting with a Welsh street word. Origins of words in the text are the usual dictionary readings; the data show only where names are, not why.</p>
+<p><b>Limits.</b> Street names change, and new estates bring names chosen by developers and councils, so this is a map of today's names, not of when they were given. Counts depend on how Ordnance Survey and OpenStreetMap divide streets. OpenStreetMap coverage in Northern Ireland is good on named roads but not complete.</p>
+<div class="note"><h3>Data and code</h3><p>All the numbers on this page, the tables by council and by 10 km square, and the code are in the <a href="https://github.com/Tristan-Hotham/street-names">GitHub repository</a> and archived with the paper at <a href="https://doi.org/10.5281/zenodo.23757702">doi.org/10.5281/zenodo.23757702</a>.</p></div>
+<div class="cta"><a class="p" href="https://doi.org/10.5281/zenodo.23757702">Read the paper</a><a href="https://github.com/Tristan-Hotham/street-names">Data and code</a><a href="https://blog.tristanhotham.com/">More data studies</a></div>
+<p>Related: <a href="https://maps.tristanhotham.com/dale-down-fell-beck/">Beck, brook or burn?</a>, the same idea for Britain's streams, valleys and hills.</p>
+
+<footer>
+  <p><b>Sources.</b> OS Open Names, Ordnance Survey, retrieved 2026-10-29: contains OS data © Crown copyright and database right 2026, Open Government Licence v3.0. OpenStreetMap, via the Overpass API, retrieved 2026-10-29: © OpenStreetMap contributors, Open Database Licence 1.0. Local authority district boundaries: Office for National Statistics, Open Government Licence v3.0 (contains OS data © Crown copyright and database right). Map tiles © Esri.</p>
+  <p><b>Licences.</b> Code MIT. Data derived from OpenStreetMap (all files that include Northern Ireland) ODbL 1.0; text and figures CC BY 4.0.</p>
+  <p><b>Cite.</b> Hotham, T. (2026) High Street or Main Street? The UK's street-name divide. Zenodo. <a href="https://doi.org/10.5281/zenodo.23757702">https://doi.org/10.5281/zenodo.23757702</a></p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+  <p>Dr Tristan Hotham, Independent researcher, ORCID <a href="https://orcid.org/0000-0003-4931-9349">0000-0003-4931-9349</a> · <a href="https://blog.tristanhotham.com/">blog.tristanhotham.com</a> · <a href="https://maps.tristanhotham.com/street-names/">maps.tristanhotham.com/street-names</a></p>
+</footer>
+</div>
+<button class="btn theme" id="themeBtn" aria-label="Switch light or dark theme">Theme</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const R = {"meta":{"n_streets":913335},"hm":{"region":{"East Midlands":{"high":324,"main":414,"main_share":0.561},"Eastern":{"high":400,"main":31,"main_share":0.0719},"London":{"high":54,"main":1,"main_share":0.0182},"North East":{"high":57,"main":18,"main_share":0.24},"North West":{"high":100,"main":57,"main_share":0.3631},"Northern Ireland":{"high":32,"main":132,"main_share":0.8049},"Scotland":{"high":206,"main":309,"main_share":0.6},"South East":{"high":443,"main":52,"main_share":0.1051},"South West":{"high":337,"main":18,"main_share":0.0507},"Wales":{"high":166,"main":9,"main_share":0.0514},"West Midlands":{"high":180,"main":51,"main_share":0.2208},"Yorkshire and the Humber":{"high":208,"main":244,"main_share":0.5398}},"bands_gb":[{"high":6,"main":1,"main_share":0.1429,"y0_km":0},{"high":66,"main":4,"main_share":0.0571,"y0_km":50},{"high":282,"main":9,"main_share":0.0309,"y0_km":100},{"high":420,"main":22,"main_share":0.0498,"y0_km":150},{"high":381,"main":62,"main_share":0.14,"y0_km":200},{"high":376,"main":144,"main_share":0.2769,"y0_km":250},{"high":210,"main":237,"main_share":0.5302,"y0_km":300},{"high":218,"main":114,"main_share":0.3434,"y0_km":350},{"high":175,"main":146,"main_share":0.4548,"y0_km":400},{"high":52,"main":116,"main_share":0.6905,"y0_km":450},{"high":69,"main":31,"main_share":0.31,"y0_km":500},{"high":30,"main":29,"main_share":0.4915,"y0_km":550},{"high":28,"main":51,"main_share":0.6456,"y0_km":600},{"high":64,"main":153,"main_share":0.7051,"y0_km":650},{"high":34,"main":39,"main_share":0.5342,"y0_km":700},{"high":11,"main":6,"main_share":0.3529,"y0_km":750},{"high":17,"main":16,"main_share":0.4848,"y0_km":800},{"high":30,"main":18,"main_share":0.375,"y0_km":850},{"high":1,"main":3,"main_share":0.75,"y0_km":900},{"high":3,"main":1,"main_share":0.25,"y0_km":950},{"high":1,"main":1,"main_share":0.5,"y0_km":1000},{"high":0,"main":0,"main_share":null,"y0_km":1050},{"high":1,"main":1,"main_share":0.5,"y0_km":1100},{"high":0,"main":0,"main_share":null,"y0_km":1150},{"high":0,"main":0,"main_share":null,"y0_km":1200}],"by_kind_england":{"City":{"high":72,"main":15,"main_share":0.1724},"Town":{"high":664,"main":55,"main_share":0.0765},"Village":{"high":1238,"main":764,"main_share":0.3816},"Hamlet or other":{"high":58,"main":26,"main_share":0.3095}},"by_kind_midlands_north":{"City":{"high":11,"main":12,"main_share":0.5217},"Town":{"high":134,"main":20,"main_share":0.1299},"Village":{"high":363,"main":583,"main_share":0.6163},"Hamlet or other":{"high":5,"main":25,"main_share":0.8333}},"by_kind_scotland":{"City":{"high":7,"main":7,"main_share":0.5},"Town":{"high":129,"main":47,"main_share":0.267},"Village":{"high":62,"main":225,"main_share":0.784},"Hamlet or other":{"high":1,"main":6,"main_share":0.8571}}},"top_uk":[["High Street",2507],["Station Road",2074],["Church Lane",2005],["Church Street",1573],["Mill Lane",1415],["Main Street",1336],["Green Lane",1288],["Church Road",1280],["School Lane",981],["New Road",949],["Back Lane",834],["Park Road",782],["Chapel Lane",752],["The Green",717],["Orchard Close",626],["The Crescent",624],["The Avenue",619],["Chapel Street",609],["The Street",606],["Park Lane",596],["Bridge Street",567],["Queen Street",558],["Manor Road",548],["King Street",536],["Victoria Road",529]],"regional_words_top":[{"word":"Heol","kind":"first word","n":1418,"region":"Wales","lq":20.9,"share":1.0},{"word":"Stryd","kind":"first word","n":214,"region":"Wales","lq":20.9,"share":1.0},{"word":"Ffordd","kind":"first word","n":971,"region":"Wales","lq":20.9,"share":1.0},{"word":"Clos","kind":"first word","n":784,"region":"Wales","lq":20.9,"share":0.9987},{"word":"Lon","kind":"first word","n":577,"region":"Wales","lq":20.9,"share":1.0},{"word":"Maes","kind":"first word","n":623,"region":"Wales","lq":20.8,"share":0.9952},{"word":"Rhodfa","kind":"first word","n":173,"region":"Wales","lq":20.8,"share":0.9942},{"word":"Llys","kind":"first word","n":530,"region":"Wales","lq":20.7,"share":0.9887},{"word":"Cwrt","kind":"first word","n":251,"region":"Wales","lq":20.7,"share":0.992},{"word":"Cae","kind":"first word","n":351,"region":"Wales","lq":20.7,"share":0.9886},{"word":"Bryn","kind":"first word","n":606,"region":"Wales","lq":20.0,"share":0.9587},{"word":"Parc","kind":"first word","n":267,"region":"Wales","lq":17.5,"share":0.839},{"word":"Lodge","kind":"ending","n":229,"region":"Northern Ireland","lq":14.3,"share":0.4585},{"word":"Front","kind":"first word","n":202,"region":"North East","lq":12.2,"share":0.5297},{"word":"Loan","kind":"ending","n":369,"region":"Scotland","lq":11.5,"share":0.9946},{"word":"Park","kind":"ending","n":9055,"region":"Northern Ireland","lq":11.0,"share":0.3505},{"word":"Glen","kind":"ending","n":272,"region":"Northern Ireland","lq":10.7,"share":0.3419},{"word":"Wynd","kind":"ending","n":981,"region":"Scotland","lq":10.3,"share":0.8919},{"word":"Loke","kind":"ending","n":187,"region":"Eastern","lq":9.9,"share":0.9893},{"word":"Brae","kind":"ending","n":789,"region":"Scotland","lq":9.8,"share":0.8479},{"word":"Fore","kind":"first word","n":199,"region":"South West","lq":8.5,"share":0.8291},{"word":"Dene","kind":"first word","n":225,"region":"North East","lq":8.3,"share":0.36},{"word":"Manse","kind":"first word","n":268,"region":"Scotland","lq":8.0,"share":0.6978},{"word":"Ings","kind":"first word","n":169,"region":"Yorkshire and the Humber","lq":8.0,"share":0.8107},{"word":"Garth","kind":"ending","n":883,"region":"Yorkshire and the Humber","lq":7.4,"share":0.752},{"word":"Pleasant","kind":"first word","n":151,"region":"Wales","lq":6.8,"share":0.3245},{"word":"Kirk","kind":"first word","n":245,"region":"Scotland","lq":6.6,"share":0.5714},{"word":"Cottages","kind":"ending","n":389,"region":"Northern Ireland","lq":6.5,"share":0.2082},{"word":"Burnside","kind":"first word","n":331,"region":"Scotland","lq":6.4,"share":0.5589},{"word":"Mount","kind":"ending","n":1095,"region":"Yorkshire and the Humber","lq":6.3,"share":0.6374},{"word":"Higher","kind":"first word","n":463,"region":"South West","lq":6.2,"share":0.6069},{"word":"Passage","kind":"ending","n":590,"region":"London","lq":6.2,"share":0.3763},{"word":"Brow","kind":"ending","n":511,"region":"North West","lq":6.1,"share":0.775},{"word":"Bruce","kind":"first word","n":195,"region":"Scotland","lq":6.1,"share":0.5282},{"word":"Circle","kind":"ending","n":288,"region":"Scotland","lq":6.0,"share":0.5174},{"word":"Percy","kind":"first word","n":205,"region":"North East","lq":6.0,"share":0.2585},{"word":"Hillview","kind":"first word","n":211,"region":"Northern Ireland","lq":5.9,"share":0.3744},{"word":"Garth","kind":"first word","n":212,"region":"Wales","lq":5.9,"share":0.283},{"word":"Cameron","kind":"first word","n":185,"region":"Scotland","lq":5.7,"share":0.4973},{"word":"Northumberland","kind":"first word","n":154,"region":"North East","lq":5.5,"share":0.2403},{"word":"Wallace","kind":"first word","n":244,"region":"Scotland","lq":5.4,"share":0.4672},{"word":"Carr","kind":"first word","n":479,"region":"Yorkshire and the Humber","lq":5.4,"share":0.5449},{"word":"Stewart","kind":"first word","n":195,"region":"Scotland","lq":5.4,"share":0.4667},{"word":"Parade","kind":"ending","n":1064,"region":"Northern Ireland","lq":5.3,"share":0.1682},{"word":"Anderson","kind":"first word","n":212,"region":"Scotland","lq":5.3,"share":0.4623},{"word":"Murray","kind":"first word","n":198,"region":"Scotland","lq":5.2,"share":0.4495},{"word":"Golf","kind":"first word","n":192,"region":"Scotland","lq":5.2,"share":0.4531},{"word":"Pentland","kind":"first word","n":159,"region":"Scotland","lq":5.2,"share":0.4528},{"word":"Ashby","kind":"first word","n":153,"region":"East Midlands","lq":5.1,"share":0.4379},{"word":"Thornhill","kind":"first word","n":239,"region":"Northern Ireland","lq":5.1,"share":0.1925},{"word":"Glen","kind":"first word","n":625,"region":"Scotland","lq":5.1,"share":0.4432},{"word":"Norwich","kind":"first word","n":178,"region":"Eastern","lq":5.0,"share":0.5},{"word":"Shore","kind":"first word","n":183,"region":"Scotland","lq":4.9,"share":0.4262},{"word":"Bury","kind":"first word","n":198,"region":"Eastern","lq":4.7,"share":0.4697},{"word":"Meadows","kind":"ending","n":1166,"region":"Northern Ireland","lq":4.7,"share":0.1518},{"word":"Durham","kind":"first word","n":298,"region":"North East","lq":4.7,"share":0.2047},{"word":"Villas","kind":"ending","n":495,"region":"Northern Ireland","lq":4.7,"share":0.2808},{"word":"Fraser","kind":"first word","n":176,"region":"Scotland","lq":4.7,"share":0.4034},{"word":"Broomhill","kind":"first word","n":177,"region":"Scotland","lq":4.6,"share":0.3955},{"word":"Cheviot","kind":"first word","n":216,"region":"North East","lq":4.5,"share":0.1944},{"word":"Hardwick","kind":"first word","n":189,"region":"East Midlands","lq":4.5,"share":0.381},{"word":"Fairview","kind":"first word","n":253,"region":"Northern Ireland","lq":4.4,"share":0.1621},{"word":"Commercial","kind":"first word","n":265,"region":"Wales","lq":4.3,"share":0.2075},{"word":"Cleveland","kind":"first word","n":258,"region":"North East","lq":4.3,"share":0.186},{"word":"Coombe","kind":"first word","n":273,"region":"South West","lq":4.3,"share":0.4176},{"word":"Fold","kind":"ending","n":953,"region":"Yorkshire and the Humber","lq":4.3,"share":0.4428},{"word":"Pasture","kind":"first word","n":199,"region":"Yorkshire and the Humber","lq":4.3,"share":0.4322},{"word":"Drove","kind":"ending","n":1792,"region":"Eastern","lq":4.3,"share":0.4269},{"word":"Copse","kind":"ending","n":347,"region":"South East","lq":4.2,"share":0.5648},{"word":"Beck","kind":"first word","n":175,"region":"Yorkshire and the Humber","lq":4.2,"share":0.4286},{"word":"Wood","kind":"ending","n":613,"region":"Northern Ireland","lq":4.2,"share":0.2741},{"word":"Lewis","kind":"first word","n":258,"region":"Wales","lq":4.1,"share":0.1977},{"word":"Moss","kind":"first word","n":556,"region":"North West","lq":4.1,"share":0.5306},{"word":"Harbour","kind":"first word","n":230,"region":"Scotland","lq":4.1,"share":0.3522},{"word":"Maxwell","kind":"first word","n":150,"region":"Scotland","lq":4.1,"share":0.3533},{"word":"Low","kind":"first word","n":692,"region":"Yorkshire and the Humber","lq":4.0,"share":0.4061},{"word":"Estate","kind":"ending","n":320,"region":"Northern Ireland","lq":4.0,"share":0.15},{"word":"Clyde","kind":"first word","n":171,"region":"Scotland","lq":3.9,"share":0.3392},{"word":"Pool","kind":"first word","n":178,"region":"West Midlands","lq":3.9,"share":0.3146},{"word":"Arden","kind":"first word","n":168,"region":"West Midlands","lq":3.9,"share":0.3214},{"word":"Place","kind":"ending","n":25208,"region":"Scotland","lq":3.8,"share":0.331},{"word":"Spinney","kind":"first word","n":226,"region":"East Midlands","lq":3.8,"share":0.323},{"word":"Collingwood","kind":"first word","n":175,"region":"North East","lq":3.8,"share":0.1886},{"word":"Downs","kind":"first word","n":163,"region":"South East","lq":3.8,"share":0.5215},{"word":"Charnwood","kind":"first word","n":153,"region":"East Midlands","lq":3.8,"share":0.3268},{"word":"Drummond","kind":"first word","n":158,"region":"Northern Ireland","lq":3.8,"share":0.3228},{"word":"Douglas","kind":"first word","n":446,"region":"Scotland","lq":3.7,"share":0.3229},{"word":"Miller","kind":"first word","n":221,"region":"Scotland","lq":3.6,"share":0.3122},{"word":"Leicester","kind":"first word","n":178,"region":"East Midlands","lq":3.6,"share":0.3034},{"word":"Thistle","kind":"first word","n":188,"region":"Scotland","lq":3.6,"share":0.3138},{"word":"Eskdale","kind":"first word","n":159,"region":"North East","lq":3.6,"share":0.3082},{"word":"Chase","kind":"ending","n":1137,"region":"Eastern","lq":3.6,"share":0.3571},{"word":"Croft","kind":"ending","n":3133,"region":"West Midlands","lq":3.6,"share":0.2952},{"word":"Ross","kind":"first word","n":204,"region":"Scotland","lq":3.6,"share":0.3088},{"word":"Lyndhurst","kind":"first word","n":251,"region":"Northern Ireland","lq":3.6,"share":0.1713},{"word":"Holme","kind":"first word","n":250,"region":"Yorkshire and the Humber","lq":3.6,"share":0.364},{"word":"Trent","kind":"first word","n":239,"region":"East Midlands","lq":3.5,"share":0.2971},{"word":"Plantation","kind":"first word","n":206,"region":"Northern Ireland","lq":3.5,"share":0.1845},{"word":"Stoke","kind":"first word","n":179,"region":"South West","lq":3.5,"share":0.3408},{"word":"Moor","kind":"first word","n":892,"region":"Yorkshire and the Humber","lq":3.5,"share":0.3543},{"word":"Pinfold","kind":"first word","n":276,"region":"East Midlands","lq":3.5,"share":0.3514},{"word":"Mews","kind":"ending","n":6878,"region":"London","lq":3.5,"share":0.2137},{"word":"Steps","kind":"ending","n":194,"region":"South West","lq":3.5,"share":0.3402},{"word":"Main","kind":"first word","n":1842,"region":"East Midlands","lq":3.5,"share":0.2953},{"word":"Lichfield","kind":"first word","n":171,"region":"West Midlands","lq":3.4,"share":0.2807},{"word":"Aston","kind":"first word","n":209,"region":"West Midlands","lq":3.4,"share":0.2775},{"word":"Rosedale","kind":"first word","n":194,"region":"North East","lq":3.4,"share":0.2629},{"word":"Stanhope","kind":"first word","n":179,"region":"North East","lq":3.4,"share":0.1732},{"word":"Ashbourne","kind":"first word","n":174,"region":"Northern Ireland","lq":3.4,"share":0.2184},{"word":"Glendale","kind":"first word","n":168,"region":"North East","lq":3.3,"share":0.1726},{"word":"Stephenson","kind":"first word","n":175,"region":"North East","lq":3.3,"share":0.1486},{"word":"Cross","kind":"ending","n":302,"region":"South West","lq":3.3,"share":0.3245},{"word":"Back","kind":"first word","n":3090,"region":"Yorkshire and the Humber","lq":3.3,"share":0.3994},{"word":"Orchard","kind":"ending","n":949,"region":"South West","lq":3.3,"share":0.3203},{"word":"Seaton","kind":"first word","n":162,"region":"North East","lq":3.3,"share":0.142},{"word":"Kensington","kind":"first word","n":302,"region":"Northern Ireland","lq":3.3,"share":0.202},{"word":"Bracken","kind":"first word","n":336,"region":"Northern Ireland","lq":3.3,"share":0.1607},{"word":"Burns","kind":"first word","n":293,"region":"Scotland","lq":3.3,"share":0.2901},{"word":"Campbell","kind":"first word","n":293,"region":"Scotland","lq":3.3,"share":0.2833},{"word":"Top","kind":"first word","n":190,"region":"East Midlands","lq":3.3,"share":0.2842},{"word":"Rydal","kind":"first word","n":248,"region":"North West","lq":3.2,"share":0.4113},{"word":"Harewood","kind":"first word","n":173,"region":"Yorkshire and the Humber","lq":3.2,"share":0.3295},{"word":"Hunter","kind":"first word","n":168,"region":"Scotland","lq":3.2,"share":0.2798},{"word":"Copse","kind":"first word","n":168,"region":"South East","lq":3.2,"share":0.4405},{"word":"Barton","kind":"first word","n":429,"region":"South West","lq":3.2,"share":0.3077},{"word":"Greenfield","kind":"first word","n":397,"region":"Wales","lq":3.2,"share":0.2015},{"word":"David","kind":"first word","n":192,"region":"Scotland","lq":3.2,"share":0.2812},{"word":"Fountain","kind":"first word","n":183,"region":"Northern Ireland","lq":3.2,"share":0.1858},{"word":"Connaught","kind":"first word","n":182,"region":"London","lq":3.2,"share":0.2363},{"word":"Watery","kind":"first word","n":205,"region":"South West","lq":3.2,"share":0.3122},{"word":"Terrace","kind":"ending","n":10049,"region":"Scotland","lq":3.2,"share":0.2815},{"word":"Egerton","kind":"first word","n":170,"region":"North West","lq":3.2,"share":0.4118},{"word":"Fleming","kind":"first word","n":167,"region":"Scotland","lq":3.2,"share":0.2814},{"word":"Promenade","kind":"ending","n":150,"region":"Wales","lq":3.1,"share":0.18},{"word":"Thorpe","kind":"first word","n":257,"region":"East Midlands","lq":3.1,"share":0.2763},{"word":"Leys","kind":"ending","n":206,"region":"East Midlands","lq":3.1,"share":0.2621},{"word":"Sunny","kind":"first word","n":210,"region":"Yorkshire and the Humber","lq":3.1,"share":0.3143},{"word":"Stafford","kind":"first word","n":255,"region":"West Midlands","lq":3.1,"share":0.2549},{"word":"Sunnyside","kind":"first word","n":238,"region":"Scotland","lq":3.1,"share":0.2731},{"word":"Oval","kind":"ending","n":201,"region":"Yorkshire and the Humber","lq":3.1,"share":0.3134},{"word":"Norwood","kind":"first word","n":211,"region":"Yorkshire and the Humber","lq":3.0,"share":0.3033},{"word":"Sutherland","kind":"first word","n":216,"region":"Scotland","lq":3.0,"share":0.2639},{"word":"Graham","kind":"first word","n":233,"region":"Scotland","lq":3.0,"share":0.2618},{"word":"Dene","kind":"ending","n":222,"region":"North East","lq":3.0,"share":0.2568},{"word":"Thirlmere","kind":"first word","n":212,"region":"North West","lq":3.0,"share":0.3868},{"word":"Path","kind":"ending","n":1538,"region":"Scotland","lq":3.0,"share":0.2633},{"word":"Alley","kind":"ending","n":385,"region":"London","lq":3.0,"share":0.2805},{"word":"Crawford","kind":"first word","n":158,"region":"Scotland","lq":3.0,"share":0.2595},{"word":"Woodhouse","kind":"first word","n":202,"region":"Yorkshire and the Humber","lq":3.0,"share":0.302},{"word":"Pound","kind":"first word","n":397,"region":"South West","lq":3.0,"share":0.2997}],"terms_list":[{"key":"high_street","label":"High Street","group":"name","note":"","n":2507},{"key":"main_street","label":"Main Street","group":"name","note":"","n":1336},{"key":"the_street","label":"The Street","group":"name","note":"","n":606},{"key":"fore_street","label":"Fore Street","group":"name","note":"","n":181},{"key":"front_street","label":"Front Street","group":"name","note":"","n":168},{"key":"station_road","label":"Station Road","group":"name","note":"","n":2074},{"key":"church_lane","label":"Church Lane","group":"name","note":"","n":2005},{"key":"church_street","label":"Church Street","group":"name","note":"","n":1573},{"key":"mill_lane","label":"Mill Lane","group":"name","note":"","n":1415},{"key":"back_lane","label":"Back Lane","group":"name","note":"","n":834},{"key":"green_lane","label":"Green Lane","group":"name","note":"","n":1288},{"key":"manse_road","label":"Manse Road","group":"name","note":"","n":105},{"key":"london_road","label":"London Road","group":"name","note":"","n":306},{"key":"belfast_road","label":"Belfast Road","group":"name","note":"","n":34},{"key":"w_church","label":"Church","group":"word","note":"any street with the word Church","n":8268},{"key":"w_kirk","label":"Kirk","group":"word","note":"Kirk as a word or at the start of the name","n":1497},{"key":"w_chapel","label":"Chapel","group":"word","note":"","n":2695},{"key":"w_mill","label":"Mill","group":"word","note":"","n":5317},{"key":"w_station","label":"Station","group":"word","note":"","n":3384},{"key":"w_school","label":"School","group":"word","note":"","n":2768},{"key":"w_back","label":"Back","group":"word","note":"names starting with Back","n":3090},{"key":"w_victoria","label":"Victoria","group":"royal","note":"","n":2032},{"key":"w_albert","label":"Albert","group":"royal","note":"","n":962},{"key":"w_queen","label":"Queen or Queen's","group":"royal","note":"","n":2378},{"key":"w_king","label":"King or King's","group":"royal","note":"","n":2735},{"key":"w_george","label":"George","group":"royal","note":"","n":1215},{"key":"w_elizabeth","label":"Elizabeth","group":"royal","note":"","n":605},{"key":"w_coronation","label":"Coronation","group":"royal","note":"","n":535},{"key":"w_jubilee","label":"Jubilee","group":"royal","note":"","n":808},{"key":"g_street","label":"... Street","group":"ending","note":"","n":79558},{"key":"g_road","label":"... Road","group":"ending","note":"","n":172750},{"key":"g_lane","label":"... Lane","group":"ending","note":"","n":77042},{"key":"g_close","label":"... Close","group":"ending","note":"","n":129895},{"key":"g_avenue","label":"... Avenue","group":"ending","note":"","n":56423},{"key":"g_drive","label":"... Drive","group":"ending","note":"","n":49678},{"key":"g_way","label":"... Way","group":"ending","note":"","n":38443},{"key":"g_gardens","label":"... Gardens","group":"ending","note":"","n":23178},{"key":"g_crescent","label":"... Crescent","group":"ending","note":"","n":21693},{"key":"g_terrace","label":"... Terrace","group":"ending","note":"","n":10049},{"key":"g_park","label":"... Park","group":"ending","note":"","n":9055},{"key":"g_mews","label":"... Mews","group":"ending","note":"","n":6878},{"key":"g_row","label":"... Row","group":"ending","note":"","n":2301},{"key":"r_wynd","label":"Wynd","group":"regional","note":"","n":981},{"key":"r_vennel","label":"Vennel","group":"regional","note":"","n":41},{"key":"r_brae","label":"Brae","group":"regional","note":"","n":789},{"key":"r_loan","label":"Loan","group":"regional","note":"","n":369},{"key":"r_gait","label":"Gait","group":"regional","note":"","n":92},{"key":"r_pend","label":"Pend","group":"regional","note":"","n":16},{"key":"r_chare","label":"Chare","group":"regional","note":"","n":42},{"key":"r_gate","label":"-gate (one word) or ... Gate","group":"regional","note":"e.g. Briggate, Kirkgate, Castle Gate","n":3490},{"key":"r_garth","label":"Garth","group":"regional","note":"","n":883},{"key":"r_fold","label":"Fold","group":"regional","note":"","n":953},{"key":"r_brow","label":"Brow","group":"regional","note":"","n":511},{"key":"r_hey","label":"Hey","group":"regional","note":"","n":146},{"key":"r_croft","label":"Croft","group":"regional","note":"","n":3133},{"key":"r_carr","label":"Carr","group":"regional","note":"names starting with Carr","n":479},{"key":"r_ings","label":"Ings","group":"regional","note":"names starting with Ings","n":169},{"key":"r_ginnel","label":"Ginnel, Gennel or Jennel","group":"regional","note":"","n":10},{"key":"r_snicket","label":"Snicket","group":"regional","note":"","n":0},{"key":"r_twitten","label":"Twitten","group":"regional","note":"","n":18},{"key":"r_loke","label":"Loke","group":"regional","note":"","n":187},{"key":"r_drove","label":"Drove","group":"regional","note":"","n":1792},{"key":"r_chase","label":"Chase","group":"regional","note":"","n":1137},{"key":"r_tye","label":"Tye","group":"regional","note":"","n":14},{"key":"r_ope","label":"Ope","group":"regional","note":"","n":28},{"key":"r_combe","label":"Coombe or Combe","group":"regional","note":"","n":44},{"key":"r_twitchel","label":"Twitchell or Jitty","group":"regional","note":"","n":16},{"key":"r_entry","label":"Entry","group":"regional","note":"","n":69},{"key":"cy_heol","label":"Heol","group":"welsh","note":"Welsh: road","n":1418},{"key":"cy_ffordd","label":"Ffordd","group":"welsh","note":"Welsh: way, road","n":971},{"key":"cy_stryd","label":"Stryd","group":"welsh","note":"Welsh: street","n":214},{"key":"cy_lon","label":"Lôn","group":"welsh","note":"Welsh: lane","n":663},{"key":"cy_clos","label":"Clos","group":"welsh","note":"Welsh: close","n":784},{"key":"cy_maes","label":"Maes","group":"welsh","note":"Welsh: field, square","n":623},{"key":"cy_llys","label":"Llys","group":"welsh","note":"Welsh: court","n":530},{"key":"cy_bryn","label":"Bryn","group":"welsh","note":"Welsh: hill","n":606},{"key":"gd_rathad","label":"Rathad","group":"gaelic","note":"Scottish Gaelic: road","n":31},{"key":"cy_any","label":"Any Welsh name","group":"welsh","note":"Welsh as the main or second name in OS Open Names, or a Welsh street word first (in Wales)","n":9480},{"key":"gd_any","label":"Any Gaelic name","group":"gaelic","note":"a Scottish Gaelic name in OS Open Names","n":146},{"key":"ga_any","label":"Irish name in OSM","group":"gaelic","note":"Northern Ireland streets with an Irish name (name:ga) in OpenStreetMap","n":2399}],"cells10_keys":["0_51","0_52","10_47","10_48","10_49","10_50","10_51","10_52","10_53","10_54","10_55","10_56","10_57","10_58","10_59","10_60","10_74","10_88","10_89","10_90","10_93","11_47","11_48","11_49","11_50","11_51","11_52","11_54","11_55","11_56","11_57","11_58","11_59","11_60","11_65","11_89","11_90","11_94","12_47","12_48","12_49","12_50","12_51","12_52","12_53","12_54","12_55","12_56","12_57","12_58","12_59","12_60","12_65","12_72","12_75","12_84","12_89","12_92","12_93","12_94","13_2","13_3","13_46","13_47","13_48","13_49","13_50","13_51","13_52","13_53","13_54","13_55","13_56","13_57","13_58","13_59","13_60","13_64","13_65","13_66","13_69","13_72","13_83","13_85","13_86","13_92","13_94","13_95","14_2","14_3","14_47","14_48","14_49","14_50","14_51","14_52","14_53","14_54","14_55","14_56","14_57","14_58","14_59","14_64","14_66","14_67","14_72","14_76","14_78","14_83","14_84","14_86","14_87","14_93","14_94","14_95","14_96","15_2","15_3","15_4","15_49","15_50","15_51","15_52","15_53","15_54","15_55","15_56","15_66","15_67","15_74","15_75","15_83","15_93","15_94","15_96","16_1","16_2","16_3","16_4","16_48","16_49","16_50","16_51","16_52","16_53","16_54","16_55","16_60","16_61","16_62","16_63","16_64","16_74","16_76","16_77","16_78","16_79","16_80","16_82","17_1","17_2","17_20","17_22","17_3","17_4","17_5","17_50","17_51","17_52","17_53","17_6","17_61","17_62","17_65","17_68","17_70","17_71","17_73","17_77","17_80","17_82","17_83","17_84","17_87","18_20","18_21","18_22","18_23","18_3","18_4","18_5","18_6","18_62","18_63","18_64","18_66","18_67","18_68","18_69","18_7","18_70","18_71","18_72","18_73","18_74","18_76","18_81","18_82","18_83","18_85","18_87","18_88","19_19","19_20","19_21","19_22","19_23","19_24","19_3","19_4","19_5","19_55","19_6","19_62","19_63","19_65","19_67","19_69","19_7","19_71","19_73","19_74","19_75","19_8","19_81","19_82","19_83","19_84","19_85","19_86","19_89","1_50","1_51","1_52","1_53","20_19","20_20","20_21","20_22","20_23","20_24","20_4","20_5","20_54","20_55","20_56","20_58","20_6","20_62","20_63","20_64","20_65","20_66","20_67","20_69","20_7","20_70","20_71","20_72","20_73","20_75","20_76","20_77","20_8","20_86","20_9","20_90","20_92","21_10","21_19","21_20","21_21","21_22","21_23","21_24","21_32","21_33","21_5","21_53","21_54","21_55","21_56","21_57","21_58","21_59","21_6","21_64","21_65","21_66","21_67","21_68","21_7","21_70","21_71","21_72","21_75","21_76","21_77","21_78","21_8","21_89","21_9","21_92","21_93","21_94","22_10","22_11","22_12","22_20","22_21","22_22","22_23","22_24","22_25","22_33","22_34","22_37","22_38","22_5","22_55","22_56","22_58","22_59","22_6","22_60","22_61","22_63","22_64","22_65","22_66","22_67","22_68","22_69","22_7","22_70","22_73","22_74","22_75","22_78","22_79","22_8","22_9","22_95","23_10","23_11","23_12","23_20","23_21","23_22","23_23","23_24","23_25","23_26","23_32","23_33","23_34","23_36","23_37","23_38","23_39","23_5","23_54","23_56","23_59","23_6","23_60","23_61","23_62","23_63","23_64","23_65","23_66","23_67","23_68","23_69","23_7","23_70","23_71","23_72","23_73","23_8","23_80","23_81","23_83","23_86","23_9","24_10","24_11","24_12","24_13","24_14","24_18","24_19","24_20","24_21","24_22","24_23","24_24","24_25","24_26","24_33","24_34","24_35","24_36","24_37","24_38","24_39","24_4","24_5","24_53","24_54","24_55","24_56","24_57","24_59","24_6","24_60","24_61","24_62","24_63","24_64","24_65","24_66","24_67","24_68","24_69","24_7","24_70","24_72","24_8","24_81","24_82","24_83","24_85","24_9","24_90","24_95","24_96","25_10","25_11","25_12","25_13","25_14","25_18","25_19","25_20","25_21","25_22","25_24","25_25","25_26","25_27","25_28","25_30","25_31","25_32","25_33","25_34","25_35","25_36","25_37","25_38","25_4","25_5","25_55","25_57","25_58","25_59","25_6","25_61","25_62","25_63","25_65","25_66","25_67","25_68","25_69","25_7","25_70","25_71","25_72","25_73","25_79","25_8","25_81","25_82","25_83","25_84","25_85","25_86","25_89","25_9","25_90","25_93","25_95","25_96","26_10","26_11","26_12","26_13","26_14","26_18","26_19","26_20","26_21","26_22","26_23","26_24","26_25","26_26","26_27","26_28","26_29","26_3","26_30","26_31","26_32","26_33","26_34","26_35","26_36","26_37","26_4","26_5","26_55","26_56","26_57","26_58","26_59","26_6","26_61","26_62","26_63","26_64","26_65","26_66","26_67","26_68","26_69","26_7","26_70","26_72","26_73","26_75","26_78","26_79","26_8","26_83","26_84","26_85","26_86","26_87","26_89","26_9","27_10","27_11","27_12","27_13","27_14","27_18","27_19","27_20","27_21","27_22","27_23","27_24","27_26","27_27","27_28","27_29","27_3","27_30","27_31","27_32","27_33","27_34","27_35","27_36","27_37","27_38","27_4","27_5","27_54","27_55","27_56","27_57","27_58","27_59","27_6","27_60","27_61","27_62","27_64","27_65","27_66","27_67","27_68","27_69","27_7","27_70","27_72","27_74","27_75","27_76","27_78","27_79","27_8","27_80","27_83","27_84","27_85","27_86","27_87","27_88","27_89","27_9","27_90","27_96","28_10","28_11","28_12","28_13","28_14","28_17","28_18","28_19","28_20","28_21","28_22","28_23","28_24","28_29","28_30","28_31","28_32","28_33","28_34","28_35","28_36","28_37","28_38","28_4","28_5","28_55","28_56","28_57","28_58","28_59","28_6","28_60","28_61","28_62","28_63","28_64","28_65","28_66","28_67","28_68","28_69","28_7","28_70","28_71","28_72","28_73","28_74","28_76","28_8","28_80","28_81","28_82","28_83","28_84","28_85","28_87","28_88","28_89","28_9","28_90","28_96","29_10","29_11","29_12","29_13","29_14","29_16","29_17","29_18","29_19","29_20","29_21","29_22","29_24","29_25","29_26","29_27","29_28","29_29","29_31","29_33","29_34","29_36","29_37","29_38","29_5","29_50","29_51","29_52","29_53","29_55","29_56","29_57","29_58","29_59","29_6","29_60","29_61","29_62","29_63","29_64","29_65","29_66","29_67","29_68","29_69","29_7","29_70","29_71","29_72","29_73","29_74","29_75","29_76","29_8","29_81","29_82","29_83","29_84","29_85","29_88","29_9","29_90","29_96","2_49","2_50","2_51","2_52","2_53","2_54","2_55","30_10","30_11","30_12","30_13","30_14","30_16","30_17","30_18","30_19","30_20","30_22","30_23","30_24","30_25","30_26","30_27","30_28","30_29","30_30","30_31","30_32","30_33","30_34","30_35","30_36","30_37","30_38","30_48","30_49","30_50","30_51","30_52","30_53","30_54","30_56","30_57","30_58","30_59","30_60","30_61","30_63","30_64","30_65","30_66","30_67","30_68","30_69","30_7","30_70","30_71","30_72","30_73","30_74","30_75","30_8","30_81","30_82","30_83","30_84","30_85","30_86","30_9","30_91","30_95","30_96","30_97","31_10","31_11","31_12","31_13","31_14","31_16","31_17","31_18","31_19","31_20","31_21","31_22","31_23","31_24","31_26","31_27","31_28","31_29","31_30","31_31","31_32","31_33","31_34","31_35","31_36","31_37","31_38","31_46","31_47","31_48","31_49","31_50","31_51","31_52","31_53","31_54","31_55","31_56","31_57","31_58","31_59","31_62","31_63","31_64","31_65","31_66","31_67","31_68","31_69","31_70","31_71","31_72","31_73","31_74","31_75","31_77","31_78","31_79","31_8","31_81","31_82","31_83","31_84","31_85","31_86","31_9","31_92","31_93","31_95","31_96","31_97","32_10","32_100","32_101","32_102","32_11","32_12","32_13","32_14","32_15","32_17","32_18","32_19","32_20","32_21","32_22","32_23","32_24","32_25","32_26","32_27","32_28","32_29","32_30","32_31","32_32","32_33","32_34","32_35","32_36","32_37","32_38","32_39","32_40","32_41","32_46","32_47","32_48","32_49","32_50","32_51","32_52","32_53","32_54","32_55","32_56","32_57","32_58","32_59","32_61","32_63","32_64","32_65","32_66","32_67","32_68","32_69","32_70","32_71","32_72","32_73","32_74","32_77","32_78","32_79","32_8","32_80","32_81","32_82","32_84","32_85","32_86","32_87","32_9","32_93","32_94","32_95","32_96","32_97","33_10","33_100","33_101","33_102","33_11","33_12","33_13","33_14","33_15","33_16","33_17","33_18","33_19","33_20","33_21","33_22","33_23","33_24","33_25","33_26","33_27","33_28","33_29","33_30","33_31","33_32","33_33","33_34","33_35","33_36","33_37","33_38","33_39","33_40","33_41","33_42","33_43","33_44","33_47","33_48","33_49","33_50","33_51","33_52","33_53","33_54","33_55","33_56","33_57","33_58","33_61","33_62","33_63","33_64","33_65","33_66","33_67","33_69","33_70","33_71","33_72","33_73","33_74","33_75","33_76","33_79","33_80","33_81","33_82","33_83","33_84","33_85","33_86","33_9","33_94","33_95","33_96","33_97","33_99","34_10","34_100","34_101","34_102","34_104","34_105","34_11","34_12","34_13","34_14","34_15","34_16","34_17","34_18","34_19","34_20","34_21","34_22","34_23","34_24","34_25","34_26","34_27","34_28","34_29","34_30","34_31","34_32","34_33","34_34","34_35","34_36","34_37","34_38","34_39","34_40","34_41","34_42","34_43","34_44","34_45","34_46","34_47","34_48","34_49","34_50","34_51","34_52","34_53","34_54","34_55","34_56","34_57","34_58","34_60","34_61","34_62","34_63","34_64","34_65","34_66","34_67","34_68","34_69","34_70","34_71","34_72","34_73","34_74","34_75","34_76","34_78","34_79","34_8","34_80","34_81","34_82","34_84","34_85","34_86","34_9","34_99","35_10","35_100","35_101","35_102","35_11","35_12","35_13","35_14","35_15","35_16","35_17","35_18","35_19","35_20","35_21","35_22","35_23","35_24","35_25","35_26","35_27","35_28","35_29","35_30","35_31","35_32","35_33","35_34","35_35","35_36","35_37","35_38","35_39","35_40","35_41","35_42","35_43","35_44","35_45","35_46","35_47","35_48","35_49","35_50","35_51","35_52","35_53","35_54","35_55","35_56","35_57","35_59","35_61","35_62","35_63","35_64","35_65","35_66","35_67","35_68","35_70","35_71","35_73","35_74","35_75","35_76","35_78","35_79","35_8","35_80","35_81","35_82","35_83","35_84","35_85","35_86","35_9","36_10","36_104","36_11","36_12","36_13","36_14","36_15","36_16","36_17","36_18","36_19","36_20","36_21","36_22","36_23","36_24","36_25","36_26","36_27","36_28","36_29","36_30","36_31","36_32","36_33","36_34","36_35","36_36","36_37","36_38","36_39","36_40","36_41","36_42","36_43","36_44","36_45","36_46","36_47","36_48","36_49","36_50","36_51","36_52","36_53","36_54","36_55","36_56","36_58","36_59","36_6","36_60","36_61","36_62","36_63","36_64","36_65","36_66","36_67","36_68","36_69","36_7","36_70","36_73","36_74","36_75","36_76","36_77","36_78","36_79","36_8","36_80","36_81","36_82","36_83","36_85","36_86","36_9","37_10","37_11","37_12","37_13","37_14","37_15","37_16","37_17","37_18","37_19","37_20","37_21","37_22","37_23","37_24","37_25","37_26","37_27","37_28","37_29","37_30","37_31","37_32","37_33","37_34","37_35","37_36","37_37","37_38","37_39","37_40","37_41","37_42","37_43","37_44","37_45","37_46","37_47","37_48","37_49","37_50","37_51","37_52","37_54","37_55","37_56","37_58","37_59","37_60","37_62","37_63","37_64","37_65","37_66","37_67","37_7","37_75","37_76","37_77","37_78","37_79","37_8","37_80","37_81","37_82","37_83","37_84","37_85","37_86","37_9","38_10","38_11","38_12","38_13","38_14","38_15","38_16","38_17","38_18","38_19","38_20","38_21","38_22","38_23","38_24","38_25","38_26","38_27","38_28","38_29","38_30","38_31","38_32","38_33","38_34","38_35","38_36","38_37","38_38","38_39","38_40","38_41","38_42","38_43","38_44","38_45","38_46","38_47","38_48","38_49","38_50","38_51","38_53","38_54","38_55","38_56","38_57","38_58","38_59","38_60","38_61","38_62","38_63","38_64","38_65","38_66","38_76","38_77","38_78","38_79","38_8","38_80","38_81","38_82","38_83","38_84","38_85","38_86","38_9","39_10","39_11","39_12","39_13","39_14","39_15","39_16","39_17","39_18","39_19","39_20","39_21","39_22","39_23","39_24","39_25","39_26","39_27","39_28","39_29","39_30","39_31","39_32","39_33","39_34","39_35","39_36","39_37","39_38","39_39","39_40","39_41","39_42","39_43","39_44","39_45","39_46","39_47","39_48","39_49","39_50","39_51","39_52","39_53","39_54","39_55","39_56","39_57","39_58","39_59","39_60","39_61","39_62","39_63","39_64","39_65","39_66","39_7","39_79","39_8","39_80","39_81","39_82","39_83","39_84","39_85","39_86","39_9","3_48","3_49","3_50","3_51","3_52","3_53","3_54","3_55","40_10","40_11","40_12","40_13","40_14","40_15","40_16","40_17","40_18","40_19","40_20","40_21","40_22","40_23","40_24","40_25","40_26","40_27","40_28","40_29","40_30","40_31","40_32","40_33","40_34","40_35","40_36","40_37","40_38","40_39","40_40","40_41","40_42","40_43","40_44","40_45","40_46","40_47","40_48","40_49","40_50","40_51","40_52","40_53","40_54","40_55","40_56","40_57","40_58","40_59","40_60","40_61","40_62","40_63","40_64","40_65","40_7","40_8","40_82","40_83","40_84","40_85","40_86","40_9","41_10","41_11","41_115","41_12","41_13","41_14","41_15","41_16","41_17","41_18","41_19","41_20","41_21","41_22","41_23","41_24","41_25","41_26","41_27","41_28","41_29","41_30","41_31","41_32","41_33","41_34","41_35","41_36","41_37","41_38","41_39","41_40","41_41","41_42","41_43","41_44","41_45","41_46","41_47","41_48","41_49","41_50","41_51","41_52","41_53","41_54","41_55","41_56","41_57","41_58","41_59","41_60","41_61","41_62","41_63","41_64","41_84","41_9","42_10","42_11","42_114","42_117","42_12","42_13","42_14","42_15","42_16","42_17","42_18","42_19","42_20","42_21","42_22","42_23","42_24","42_25","42_26","42_27","42_28","42_29","42_30","42_31","42_32","42_33","42_34","42_35","42_36","42_37","42_38","42_39","42_40","42_41","42_42","42_43","42_44","42_45","42_46","42_47","42_48","42_49","42_50","42_51","42_52","42_53","42_54","42_55","42_56","42_57","42_58","42_59","42_60","42_61","42_62","42_63","42_9","43_10","43_11","43_110","43_111","43_112","43_113","43_114","43_115","43_116","43_117","43_118","43_12","43_13","43_14","43_15","43_16","43_17","43_18","43_19","43_20","43_21","43_22","43_23","43_24","43_25","43_26","43_27","43_28","43_29","43_30","43_31","43_32","43_33","43_34","43_35","43_36","43_37","43_38","43_39","43_40","43_41","43_42","43_43","43_44","43_45","43_46","43_47","43_48","43_49","43_50","43_51","43_52","43_53","43_54","43_55","43_56","43_57","43_58","43_8","43_9","44_10","44_11","44_111","44_112","44_113","44_114","44_115","44_116","44_117","44_12","44_13","44_14","44_15","44_16","44_17","44_18","44_19","44_20","44_21","44_22","44_23","44_24","44_25","44_26","44_27","44_28","44_29","44_30","44_31","44_32","44_33","44_34","44_35","44_36","44_37","44_38","44_39","44_40","44_41","44_42","44_43","44_44","44_45","44_46","44_47","44_48","44_49","44_50","44_51","44_52","44_53","44_54","44_55","44_56","44_7","44_8","44_9","45_10","45_11","45_116","45_117","45_118","45_119","45_12","45_120","45_13","45_14","45_15","45_16","45_17","45_18","45_19","45_20","45_21","45_22","45_23","45_24","45_25","45_26","45_27","45_28","45_29","45_30","45_31","45_32","45_33","45_34","45_35","45_36","45_37","45_38","45_39","45_40","45_41","45_42","45_43","45_44","45_45","45_46","45_47","45_48","45_49","45_50","45_51","45_52","45_53","45_7","45_8","45_9","46_10","46_11","46_119","46_12","46_120","46_121","46_13","46_14","46_15","46_16","46_17","46_18","46_19","46_20","46_21","46_22","46_23","46_24","46_25","46_26","46_27","46_28","46_29","46_30","46_31","46_32","46_33","46_34","46_35","46_36","46_37","46_38","46_39","46_40","46_41","46_42","46_43","46_44","46_45","46_46","46_47","46_48","46_49","46_50","46_51","46_52","46_8","46_9","47_10","47_11","47_12","47_13","47_14","47_15","47_16","47_17","47_18","47_19","47_20","47_21","47_22","47_23","47_24","47_25","47_26","47_27","47_28","47_29","47_30","47_31","47_32","47_33","47_34","47_35","47_36","47_37","47_38","47_39","47_40","47_41","47_42","47_43","47_44","47_45","47_46","47_47","47_48","47_49","47_50","47_51","47_52","47_9","48_10","48_11","48_12","48_13","48_14","48_15","48_16","48_17","48_18","48_19","48_20","48_21","48_22","48_23","48_24","48_25","48_26","48_27","48_28","48_29","48_30","48_31","48_32","48_33","48_34","48_35","48_36","48_37","48_38","48_39","48_40","48_41","48_42","48_43","48_44","48_45","48_46","48_47","48_48","48_49","48_50","48_51","48_9","49_10","49_11","49_12","49_13","49_14","49_15","49_16","49_17","49_18","49_19","49_20","49_21","49_22","49_23","49_24","49_25","49_26","49_27","49_28","49_29","49_30","49_31","49_32","49_33","49_34","49_35","49_36","49_37","49_38","49_39","49_40","49_41","49_42","49_43","49_44","49_45","49_46","49_47","49_48","49_49","49_50","49_51","49_9","4_48","4_49","4_50","4_51","4_52","4_53","4_54","4_55","4_56","50_10","50_11","50_12","50_13","50_14","50_15","50_16","50_17","50_18","50_19","50_20","50_21","50_22","50_23","50_24","50_25","50_26","50_27","50_28","50_29","50_30","50_31","50_32","50_33","50_34","50_35","50_36","50_37","50_38","50_39","50_40","50_41","50_42","50_43","50_44","50_45","50_46","50_47","50_48","50_49","51_10","51_11","51_12","51_13","51_14","51_15","51_16","51_17","51_18","51_19","51_20","51_21","51_22","51_23","51_24","51_25","51_26","51_27","51_28","51_29","51_30","51_31","51_32","51_33","51_34","51_35","51_36","51_37","51_38","51_39","51_40","51_41","51_42","51_43","51_44","51_45","51_46","51_47","51_48","52_10","52_11","52_12","52_13","52_14","52_15","52_16","52_17","52_18","52_19","52_20","52_21","52_22","52_23","52_24","52_25","52_26","52_27","52_28","52_29","52_30","52_31","52_32","52_33","52_34","52_35","52_36","52_37","52_38","52_39","52_40","52_41","52_42","52_43","52_44","52_46","52_47","53_10","53_11","53_12","53_13","53_14","53_15","53_16","53_17","53_18","53_19","53_20","53_21","53_22","53_23","53_24","53_25","53_26","53_27","53_28","53_29","53_30","53_31","53_32","53_33","53_34","53_35","53_36","53_37","53_38","53_39","53_40","53_41","53_42","53_43","54_10","54_11","54_12","54_13","54_14","54_15","54_16","54_17","54_18","54_19","54_20","54_21","54_22","54_23","54_24","54_25","54_26","54_27","54_28","54_29","54_30","54_31","54_32","54_33","54_34","54_35","54_36","54_37","54_38","54_39","54_41","54_9","55_10","55_11","55_12","55_13","55_14","55_15","55_16","55_17","55_18","55_19","55_20","55_21","55_22","55_23","55_24","55_25","55_26","55_27","55_28","55_29","55_30","55_31","55_32","55_35","55_36","55_37","55_38","55_9","56_10","56_11","56_12","56_13","56_14","56_15","56_16","56_17","56_18","56_19","56_20","56_21","56_22","56_23","56_24","56_25","56_26","56_27","56_28","56_29","56_30","56_31","56_32","56_33","56_34","56_9","57_10","57_11","57_12","57_13","57_14","57_15","57_16","57_17","57_18","57_19","57_20","57_21","57_22","57_23","57_24","57_25","57_26","57_27","57_28","57_29","57_30","57_31","57_32","57_33","57_34","58_10","58_11","58_12","58_13","58_14","58_15","58_16","58_17","58_18","58_19","58_20","58_21","58_22","58_23","58_24","58_25","58_26","58_27","58_28","58_29","58_30","58_31","58_32","58_33","58_34","59_11","59_12","59_13","59_14","59_15","59_16","59_17","59_18","59_19","59_20","59_21","59_22","59_23","59_24","59_25","59_26","59_27","59_28","59_29","59_30","59_31","59_32","59_33","59_34","5_48","5_49","5_50","5_51","5_52","5_53","5_54","5_55","5_56","5_57","5_58","60_11","60_12","60_13","60_14","60_15","60_16","60_17","60_18","60_19","60_20","60_21","60_22","60_23","60_24","60_25","60_26","60_27","60_28","60_29","60_30","60_31","60_32","60_33","60_34","61_12","61_13","61_14","61_15","61_16","61_21","61_22","61_23","61_24","61_25","61_26","61_27","61_28","61_29","61_30","61_31","61_32","61_33","61_34","62_13","62_14","62_15","62_16","62_21","62_22","62_23","62_24","62_25","62_26","62_27","62_28","62_29","62_30","62_31","62_32","62_33","62_34","63_13","63_14","63_15","63_16","63_17","63_23","63_24","63_25","63_26","63_27","63_28","63_29","63_30","63_31","63_32","63_33","64_16","64_24","64_25","64_26","64_27","64_28","64_29","64_30","64_31","64_32","65_27","65_28","65_29","65_30","65_31","6_49","6_50","6_51","6_52","6_53","6_54","6_55","6_56","6_57","6_58","6_79","6_80","7_51","7_52","7_53","7_54","7_55","7_56","7_57","7_58","7_80","7_81","7_82","7_84","7_85","7_86","8_0","8_1","8_48","8_49","8_50","8_51","8_52","8_53","8_54","8_55","8_56","8_57","8_58","8_59","8_84","9_0","9_1","9_47","9_48","9_49","9_50","9_51","9_52","9_53","9_54","9_55","9_56","9_57","9_58","9_59","9_74","9_86","9_88"]};
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const fmt = n => Math.round(n).toLocaleString("en-GB");
+const pct = v => Math.round(v * 100) + "%";
+const isDark = () => { const t = document.documentElement.dataset.theme; return t ? t === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; };
+document.getElementById("themeBtn").onclick = () => { document.documentElement.dataset.theme = isDark() ? "light" : "dark"; redrawAll(); };
+
+/* ===== colour ===== */
+const lerp = (a, b, t) => a.map((v, k) => Math.round(v + (b[k] - v) * t));
+const hx = h => [1, 3, 5].map(k => parseInt(h.slice(k, k + 2), 16));
+const rgb = c => `rgb(${c[0]},${c[1]},${c[2]})`;
+function hmColour(s) {  // 0 = all High (red), 1 = all Main (blue), through a pale middle
+  const H = hx(isDark() ? "#E2675E" : "#B5322B"), M = hx(isDark() ? "#6D9BDB" : "#1F4E8C"), W = hx(isDark() ? "#5B5560" : "#E9E1EA");
+  return rgb(s < .5 ? lerp(H, W, s / .5) : lerp(W, M, (s - .5) / .5));
+}
+const TOPC = { "High Street": "#B5322B", "Main Street": "#1F4E8C", "Station Road": "#2E7D5B", "Church Lane": "#C27C0E", "Church Street": "#E0A33A", "Church Road": "#8C6D1F",
+  "The Street": "#D9622B", "Green Lane": "#7BAA4A", "Back Lane": "#6B4BA0", "Fore Street": "#1E9AA0", "Mill Lane": "#A0577A", "Chapel Street": "#5E7B96" };
+const WR = ["#F3E3C3", "#EDC07F", "#E0913F", "#C4572A", "#8E2F23", "#4D1B1B"], WRd = ["#4A3B2C", "#7A5A30", "#A9743A", "#D08B45", "#EBAA62", "#F7D39A"];
+const LQB = [.5, 1, 2, 5, 10];   // times the UK average
+const NR = ["#DCE6F2", "#A9C2E2", "#6E95C9", "#3B66A8", "#1F3F78"], NRd = ["#2A3850", "#3D5A86", "#5C83BC", "#8DAFE0", "#C9DCF6"];
+
+/* ===== state and data ===== */
+const S = { mode: "hm", unit: "c20", word: "r_wynd", name: null, nameData: null, sel: null };
+const D = { c10: null, c20: null, la: null, land: null, places: null, terms: null };
+let lmap, dataL = null, landL = null, borderL = null, nameL = null, baseL = null, hillL = null, pin = null, renderer;
+const msg = document.getElementById("msg");
+const TERMS = R.terms_list;
+const TIDX = Object.fromEntries(TERMS.map((t, j) => [t.key, j]));
+const UKN = R.meta.n_streets;
+
+function cellTerms(arr) { const o = {}; for (let k = 0; k < arr.length; k += 2) o[TERMS[arr[k]].key] = arr[k + 1]; return o; }
+function units() {
+  if (S.unit === "la") return D.la.features.map(f => ({ id: f.properties.c, nm: f.properties.nm, n: f.properties.n, top: f.properties.top, t: cellTerms(f.properties.t), sig: f.properties.sig, f }));
+  return D[S.unit].rows.map(r => ({ id: r[0], n: r[1], ll: r[2], top: r[3], t: cellTerms(r[4]), nat: r[5] }));
+}
+let U = [];  // current units with their layers
+
+function valueOf(u) {
+  if (S.mode === "hm") { const h = u.t.high_street || 0, m = u.t.main_street || 0; return h + m ? { v: m / (h + m), h, m } : null; }
+  if (S.mode === "top") { if (!u.top || !u.top.length) return null; const [nm, c] = u.top[0]; return { nm, c, tie: false }; }
+  if (S.mode === "word") { const c = u.t[S.word] || 0; const T = TERMS[TIDX[S.word]]; const exp = u.n * T.n / UKN; return c ? { c, lq: c / exp } : null; }
+  if (S.mode === "name") { const c = S.nameData ? (S.nameData.get(u.id) || 0) : 0; return c ? { c } : null; }
+}
+function colourOf(u) {
+  const v = valueOf(u), dk = isDark();
+  if (!v) return null;
+  if (S.mode === "hm") return hmColour(v.v);
+  if (S.mode === "top") return v.tie ? css("--none") : (TOPC[v.nm] || (dk ? "#8A8F99" : "#9AA0A8"));
+  if (S.mode === "word") { let k = 0; while (k < LQB.length && v.lq >= LQB[k]) k++; return (dk ? WRd : WR)[k]; }
+  if (S.mode === "name") { const b = [1, 2, 4, 8]; let k = 0; while (k < b.length && v.c > b[k]) k++; return (dk ? NRd : NR)[k]; }
+}
+function styleOf(u) {
+  const c = colourOf(u), o = LY.colour / 100, sel = S.sel === u.id;
+  return { renderer, weight: sel ? 2.5 : (S.unit === "la" ? .5 : .25), color: sel ? css("--fg") : (isDark() ? "#15171B" : "#ffffff"), opacity: sel ? 1 : .5,
+    fillColor: c || css("--none"), fillOpacity: c ? .88 * o : .35 * o };
+}
+
+function build() {
+  if (dataL) dataL.remove();
+  dataL = L.layerGroup().addTo(lmap);
+  U = units();
+  for (const u of U) {
+    let lyr;
+    if (S.unit === "la") lyr = L.geoJSON(u.f, { style: () => styleOf(u), renderer });
+    else { const p = u.ll; lyr = L.polygon([[p[0], p[1]], [p[2], p[3]], [p[4], p[5]], [p[6], p[7]]], styleOf(u)); }
+    lyr.on("click", () => select(u, false));
+    lyr.addTo(dataL); u.lyr = lyr;
+  }
+  nameDots(); legend(); if (S.sel) { const u = U.find(x => x.id === S.sel); if (u) info(u); else { S.sel = null; info(null); } } else info(null);
+}
+let dotL = null;
+function nameDots() {
+  if (dotL) { dotL.remove(); dotL = null; }
+  if (S.mode !== "name" || !S.nameData || S.unit !== "c10") return;
+  dotL = L.layerGroup().addTo(lmap);
+  for (const u of U) { const c = S.nameData.get(u.id); if (!c) continue;
+    L.circleMarker(centre(u), { renderer, radius: 2.5 + Math.sqrt(c) * 2.2, weight: 1, color: isDark() ? "#15171B" : "#fff", fillColor: isDark() ? "#8DB4EC" : "#1F3F78", fillOpacity: .85, interactive: false }).addTo(dotL); }
+}
+function restyle() { for (const u of U) u.lyr.setStyle(styleOf(u)); nameDots(); legend(); if (S.sel) { const u = U.find(x => x.id === S.sel); if (u) info(u); } }
+
+function legend() {
+  const box = document.getElementById("legend"), kt = document.getElementById("keyTitle");
+  if (S.mode === "hm") {
+    kt.textContent = "Main Street's share of High plus Main";
+    const st = [0, .1, .25, .5, .75, .9, 1];
+    box.innerHTML = `<div class="ramp">${st.map(s => `<i style="background:${hmColour(s)}"></i>`).join("")}</div><div class="rampl"><span>all High Street</span><span>half</span><span>all Main Street</span></div><div class="lg"><span><i class="sw" style="background:${css("--none")};opacity:.6"></i>neither name</span></div>`;
+  } else if (S.mode === "top") {
+    kt.textContent = "Commonest street name";
+    const seen = new Map(); for (const u of U) { const v = valueOf(u); if (v && !v.tie) seen.set(v.nm, (seen.get(v.nm) || 0) + 1); }
+    const list = [...seen.entries()].sort((a, b) => b[1] - a[1]);
+    const named = list.filter(([n]) => TOPC[n]), other = list.filter(([n]) => !TOPC[n]).reduce((s, x) => s + x[1], 0);
+    box.innerHTML = `<div class="lg">${named.map(([n, c]) => `<span><i class="sw" style="background:${TOPC[n]}"></i>${esc(n)} (${c})</span>`).join("")}<span><i class="sw" style="background:${isDark() ? "#8A8F99" : "#9AA0A8"}"></i>other names (${other})</span></div><div class="fig-sub" style="margin:4px 0 0">Counts are areas. A tie goes to the name that is commoner across the UK.</div>`;
+  } else if (S.mode === "word") {
+    const T = TERMS[TIDX[S.word]]; kt.textContent = `${T.label}: ${fmt(T.n)} streets`;
+    const lab = ["under 0.5x", "0.5 to 1x", "1 to 2x", "2 to 5x", "5 to 10x", "over 10x"];
+    box.innerHTML = `<div class="fig-sub" style="margin:0 0 4px">How common, against the UK average (${(T.n / UKN * 1000).toFixed(2)} per 1,000 streets)${T.note ? ". " + esc(T.note) : ""}</div><div class="lg">${(isDark() ? WRd : WR).map((c, k) => `<span><i class="sw" style="background:${c}"></i>${lab[k]}</span>`).join("")}<span><i class="sw" style="background:${css("--none")};opacity:.6"></i>none</span></div>`;
+  } else {
+    kt.textContent = S.name ? `${S.name}: ${fmt(S.nameTotal)} in the UK` : "Type a street name";
+    box.innerHTML = S.name ? `<div class="lg">${["1", "2", "3 to 4", "5 to 8", "9 or more"].map((l, k) => `<span><i class="sw" style="background:${(isDark() ? NRd : NR)[k]}"></i>${l}</span>`).join("")}</div><div class="fig-sub" style="margin:4px 0 0">Streets of that name in each 10 km square, shaded and marked with a dot sized by the count.</div>` : `<div class="fig-sub">Start typing above: every street name in the UK is here, with where it occurs.</div>`;
+  }
+}
+function hmBar(h, m) { const t = h + m || 1; return `<div class="hmbar"><i style="flex:${h / t};background:${hmColour(0)}"></i><i style="flex:${m / t};background:${hmColour(1)}"></i></div>`; }
+function info(u) {
+  const box = document.getElementById("info");
+  if (!u) { box.innerHTML = '<span class="muted">Tap or click any square or council to see its commonest street names.</span>'; return; }
+  const near = u.f ? "" : nearestPlace(u), h = u.t.high_street || 0, m = u.t.main_street || 0;
+  let s = `<div class="big">${esc(u.nm || (near ? "Around " + near : "This square"))}</div><div class="muted">${fmt(u.n)} named streets${u.f ? "" : " in this " + D[S.unit].size_km + " km square"}</div>`;
+  s += `<div style="margin-top:6px">High Street ${h} · Main Street ${m}</div>${h + m ? hmBar(h, m) : ""}`;
+  if (S.mode === "word") { const T = TERMS[TIDX[S.word]], v = valueOf(u); s += `<div><b>${esc(T.label)}</b>: ${v ? v.c + " (" + v.lq.toFixed(1) + "x the UK average)" : "none"}</div>`; }
+  if (S.mode === "name" && S.name) { const v = valueOf(u); s += `<div><b>${esc(S.name)}</b>: ${v ? v.c : "none"} here</div>`; }
+  s += `<div style="margin-top:6px"><b>Commonest names</b></div><ol>${(u.top || []).slice(0, 8).map(([n, c]) => `<li>${esc(n)} <span class="muted">${c}</span></li>`).join("")}</ol>`;
+  if (u.sig) s += `<div><b>Signature name:</b> ${esc(u.sig[0])} <span class="muted">(${u.sig[1]} here, ${u.sig[2]} in the UK)</span></div>`;
+  const reg = Object.entries(u.t).filter(([k]) => /^(r_|cy_|gd_|ga_)/.test(k) && !/_any$/.test(k)).map(([k, c]) => [TERMS[TIDX[k]].label, c, c / (u.n * TERMS[TIDX[k]].n / UKN)]).filter(x => x[2] >= 2).sort((a, b) => b[2] - a[2]).slice(0, 5);
+  if (reg.length) s += `<div style="margin-top:4px"><b>Local words:</b> ${reg.map(([l, c]) => `${esc(l)} ${c}`).join(", ")}</div>`;
+  box.innerHTML = s;
+}
+function select(u, scroll) {
+  const prev = S.sel; S.sel = u.id;
+  if (prev) { const p = U.find(x => x.id === prev); if (p) p.lyr.setStyle(styleOf(p)); }
+  u.lyr.setStyle(styleOf(u)); if (u.lyr.bringToFront) u.lyr.bringToFront();
+  info(u);
+  if (scroll) scrollToMap();
+}
+function scrollToMap() { const el = document.getElementById("lmap"), r = el.getBoundingClientRect(); if (r.top < 0 || r.bottom > innerHeight) el.scrollIntoView({ behavior: "smooth", block: innerWidth < 700 ? "start" : "center" }); }
+
+/* ===== nearest place for a square ===== */
+function centre(u) { if (u.f) { const b = L.geoJSON(u.f).getBounds(); return b.getCenter(); } const p = u.ll; return L.latLng((p[0] + p[2] + p[4] + p[6]) / 4, (p[1] + p[3] + p[5] + p[7]) / 4); }
+function nearestPlace(u) {
+  if (!D.places) return ""; const c = centre(u); let best = null, bd = 1e9;
+  for (const p of D.places) { if (p[4] < 3) continue; const d = (p[2] - c.lat) ** 2 + ((p[3] - c.lng) * .6) ** 2; if (d < bd) { bd = d; best = p; } }
+  return best && bd < .04 ? best[0] : "";
+}
+function inPoly(pt, ring) { let c = false; for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) { const [xi, yi] = ring[i], [xj, yj] = ring[j]; if ((yi > pt[1]) !== (yj > pt[1]) && pt[0] < (xj - xi) * (pt[1] - yi) / (yj - yi) + xi) c = !c; } return c; }
+function unitAt(lat, lng) {
+  for (const u of U) {
+    if (u.f) { const g = u.f.geometry, polys = g.type === "Polygon" ? [g.coordinates] : g.coordinates; if (polys.some(pl => inPoly([lng, lat], pl[0]))) return u; }
+    else { const p = u.ll, ring = [[p[1], p[0]], [p[3], p[2]], [p[5], p[4]], [p[7], p[6]]]; if (inPoly([lng, lat], ring)) return u; }
+  }
+  return null;
+}
+
+/* ===== map layers: base map, hills, place names, borders, colour strength ===== */
+const LY = { base: "auto", hills: true, hillK: 35, names: true, nameLvl: 1, lines: true, lineK: 45, colour: 100 };
+const LYDEF = { ...LY };
+try { Object.assign(LY, JSON.parse(localStorage.getItem("sn_layers") || "{}")); } catch (e) {}
+const saveLY = () => { try { localStorage.setItem("sn_layers", JSON.stringify(LY)); } catch (e) {} };
+const ESRI = "https://server.arcgisonline.com/ArcGIS/rest/services/";
+function initLayers() {
+  const Ctl = L.Control.extend({ options: { position: "topright" }, onAdd() {
+    const d = L.DomUtil.create("div"); L.DomEvent.disableClickPropagation(d); L.DomEvent.disableScrollPropagation(d);
+    d.innerHTML = `<button class="lyrBtn" aria-expanded="false" aria-controls="lyrPanel">Map layers</button>
+<div class="lyrPanel" id="lyrPanel" hidden>
+ <div class="row"><label style="font-weight:600">Base map</label><span></span><div class="sub"><span>style</span><select id="lyBase" aria-label="Base map"><option value="auto">Match the theme</option><option value="light">Light grey</option><option value="dark">Dark grey</option><option value="none">None (plain land)</option></select></div></div>
+ <div class="row"><label><input type="checkbox" id="lyHills"> Hills</label><span></span><div class="sub"><span>strength</span><input type="range" id="lyHillK" min="10" max="100" step="5" aria-label="Hill shading strength"></div></div>
+ <div class="row"><label><input type="checkbox" id="lyNames"> Place names</label><span></span><div class="sub"><span>how many</span><select id="lyNameLvl" aria-label="How many place names"><option value="0">Cities only</option><option value="1">Cities and towns</option><option value="2">Down to villages</option></select></div></div>
+ <div class="row"><label><input type="checkbox" id="lyLines"> Council borders</label><span></span><div class="sub"><span>strength</span><input type="range" id="lyLineK" min="10" max="100" step="5" aria-label="Border line strength"></div></div>
+ <div class="row"><label style="font-weight:600">Colour</label><span></span><div class="sub"><span>strength</span><input type="range" id="lyColour" min="20" max="100" step="5" aria-label="Colour strength"></div></div>
+ <button class="reset" id="lyReset">Reset layers</button>
+</div>`;
+    return d; } });
+  lmap.addControl(new Ctl());
+  const q = id => document.getElementById(id), btn = lmap.getContainer().querySelector(".lyrBtn"), pan = q("lyrPanel");
+  btn.onclick = () => { const o = pan.hidden; pan.hidden = !o; btn.setAttribute("aria-expanded", o); };
+  const sync = () => { q("lyBase").value = LY.base; q("lyHills").checked = LY.hills; q("lyHillK").value = LY.hillK; q("lyNames").checked = LY.names; q("lyNameLvl").value = LY.nameLvl; q("lyLines").checked = LY.lines; q("lyLineK").value = LY.lineK; q("lyColour").value = LY.colour; };
+  const on = (id, ev, f) => q(id).addEventListener(ev, e => { f(e.target); saveLY(); applyLayers(); });
+  on("lyBase", "change", t => LY.base = t.value);
+  on("lyHills", "change", t => LY.hills = t.checked); on("lyHillK", "input", t => { LY.hillK = +t.value; LY.hills = true; q("lyHills").checked = true; });
+  on("lyNames", "change", t => LY.names = t.checked); on("lyNameLvl", "change", t => { LY.nameLvl = +t.value; LY.names = true; q("lyNames").checked = true; });
+  on("lyLines", "change", t => LY.lines = t.checked); on("lyLineK", "input", t => { LY.lineK = +t.value; LY.lines = true; q("lyLines").checked = true; });
+  on("lyColour", "input", t => { LY.colour = +t.value; });
+  q("lyReset").onclick = () => { Object.assign(LY, LYDEF); saveLY(); sync(); applyLayers(); };
+  sync();
+  lmap.on("zoomend moveend", placeNames);
+}
+let baseKey = null;
+function applyLayers() {
+  if (!lmap) return;
+  const want = LY.base === "auto" ? (isDark() ? "dark" : "light") : LY.base;
+  if (want !== baseKey) {
+    if (baseL) baseL.remove(); baseL = null; baseKey = want;
+    if (want !== "none") baseL = L.tileLayer(ESRI + `Canvas/World_${want === "dark" ? "Dark" : "Light"}_Gray_Base/MapServer/tile/{z}/{y}/{x}`, { pane: "base", maxZoom: 16, attribution: "Tiles © Esri" }).addTo(lmap);
+  }
+  if (LY.hills) { if (!hillL) hillL = L.tileLayer(ESRI + "Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}", { pane: "hills", maxZoom: 16, attribution: "Hillshade © Esri" }); hillL.addTo(lmap); hillL.setOpacity(.1 + LY.hillK / 100 * .6); }
+  else if (hillL) hillL.remove();
+  lmap.getPane("hills").style.mixBlendMode = "multiply";
+  if (borderL) { if (LY.lines) { borderL.addTo(lmap); borderL.setStyle({ opacity: .15 + LY.lineK / 100 * .85 }); } else borderL.remove(); }
+  if (landL) landL.setStyle({ fillColor: css("--land"), color: css("--muted") });
+  if (U.length) for (const u of U) u.lyr.setStyle(styleOf(u));
+  placeNames();
+}
+const MAJOR = new Set(["London", "Birmingham", "Manchester", "Glasgow", "Edinburgh", "Cardiff", "Belfast", "Leeds", "Newcastle upon Tyne", "Bristol", "Liverpool", "Sheffield", "Aberdeen", "Inverness", "Norwich", "Plymouth", "Southampton", "Nottingham", "Leicester", "York", "Dundee", "Swansea", "Derry/Londonderry", "Hull", "Carlisle", "Exeter", "Cambridge", "Oxford", "Lincoln"]);
+function placeNames() {
+  if (!lmap || !nameL) return;
+  nameL.clearLayers(); if (!LY.names || !D.places) { nameL.remove(); return; } nameL.addTo(lmap);
+  const z = lmap.getZoom(), bb = lmap.getBounds().pad(.05), lvl = LY.nameLvl;
+  const minR = lvl === 0 ? (z >= 8 ? 3 : 5) : lvl === 1 ? (z >= 9 ? 1 : z >= 7 ? 3 : 4) : (z >= 8 ? 1 : z >= 7 ? 3 : 4);
+  const cand = [];
+  for (const p of D.places) { const r = MAJOR.has(p[0]) && p[4] >= 3 ? 5 : p[4]; if (r >= minR && bb.contains([p[2], p[3]])) cand.push({ nm: p[0], la: p[2], lo: p[3], r }); }
+  cand.sort((a, b) => b.r - a.r);
+  const boxes = [], seen = new Set(); let n = 0;
+  for (const c of cand) {
+    if (seen.has(c.nm)) continue;
+    const pt = lmap.latLngToContainerPoint([c.la, c.lo]), fs = c.r >= 3 ? 11 : 10, bx = [pt.x - 4, pt.y - 8, pt.x + 10 + c.nm.length * fs * .62, pt.y + 7];
+    if (boxes.some(o => bx[0] < o[2] && bx[2] > o[0] && bx[1] < o[3] && bx[3] > o[1])) continue;
+    boxes.push(bx); seen.add(c.nm);
+    L.marker([c.la, c.lo], { pane: "labels", interactive: false, keyboard: false, icon: L.divIcon({ className: "city" + (c.r <= 1 ? " r1" : ""), html: `<i></i>${esc(c.nm)}`, iconSize: null, iconAnchor: [3, 6] }) }).addTo(nameL);
+    if (++n >= 260) break;
+  }
+}
+
+function initMap() {
+  if (!window.L) { document.getElementById("lmap").innerHTML = '<p style="padding:16px">The map library did not load.</p>'; return false; }
+  lmap = L.map("lmap", { zoomSnap: .25, zoomDelta: .5, minZoom: 5, maxZoom: 13, scrollWheelZoom: false, maxBounds: L.latLngBounds([47.5, -14.5], [62.5, 6.5]) });
+  lmap.fitBounds([[49.9, -8.2], [60.9, 1.8]], { padding: [6, 6] });
+  lmap.attributionControl.setPrefix('<a href="https://leafletjs.com">Leaflet</a>');
+  for (const [p, z] of [["landp", 150], ["base", 200], ["hills", 250], ["dat", 400], ["bord", 420], ["labels", 650]]) { lmap.createPane(p).style.zIndex = z; }
+  lmap.getPane("hills").style.pointerEvents = "none"; lmap.getPane("bord").style.pointerEvents = "none"; lmap.getPane("labels").style.pointerEvents = "none";
+  renderer = L.canvas({ pane: "dat", padding: .3, tolerance: 2 });
+  nameL = L.layerGroup();
+  lmap.attributionControl.addAttribution("Contains OS data © Crown copyright and database right 2026 | © OpenStreetMap contributors | ONS");
+  lmap.on("click", () => lmap.scrollWheelZoom.enable());
+  initLayers();
+  return true;
+}
+
+/* ===== loading ===== */
+const J = u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
+async function load() {
+  if (!initMap()) return;
+  try {
+    const [c20, land, la, c10, places] = await Promise.all([J("data/page/cells20.json"), J("data/page/land.json"), J("data/page/councils.json"), J("data/page/cells10.json"), J("data/page/places.json")]);
+    Object.assign(D, { c20, land, la, c10, places });
+  } catch (e) { msg.textContent = "The map data did not load. Try reloading the page."; return; }
+  landL = L.geoJSON(D.land, { pane: "landp", interactive: false, style: { stroke: true, weight: .6, color: css("--muted"), opacity: .5, fillColor: css("--land"), fillOpacity: 1 } }).addTo(lmap);
+  borderL = L.geoJSON(D.la, { pane: "bord", interactive: false, renderer: L.canvas({ pane: "bord" }), style: { weight: .7, color: isDark() ? "#E8E8EC" : "#2A2C33", fill: false, opacity: .5 } });
+  msg.textContent = "";
+  build(); applyLayers(); placeNames(); laTable();
+}
+function redrawAll() { if (!lmap) return; applyLayers(); if (U.length) restyle(); drawCharts(); }
+
+/* ===== controls ===== */
+function setPressed(id, attr, val) { document.querySelectorAll(`#${id} .btn`).forEach(b => b.setAttribute("aria-pressed", b.dataset[attr] === val)); }
+document.querySelectorAll("#modeBtns .btn").forEach(b => b.onclick = () => setMode(b.dataset.m));
+document.querySelectorAll("#unitBtns .btn").forEach(b => b.onclick = () => setUnit(b.dataset.u));
+function setMode(m) {
+  S.mode = m; setPressed("modeBtns", "m", m);
+  document.getElementById("wordRow").hidden = m !== "word"; document.getElementById("nameRow").hidden = m !== "name";
+  if (m === "name" && S.unit !== "c10") { setUnit("c10"); return; }
+  if (U.length) restyle();
+}
+function setUnit(u) {
+  if (S.mode === "name" && u !== "c10") { u = "c10"; }
+  S.unit = u; setPressed("unitBtns", "u", u); if (D.c20) build();
+}
+const wordSel = document.getElementById("word");
+{ const groups = { name: "Whole names", word: "A word in the name", royal: "Royal names", ending: "Endings", regional: "Regional words", welsh: "Welsh", gaelic: "Gaelic and Irish" };
+  for (const [g, lab] of Object.entries(groups)) { const og = document.createElement("optgroup"); og.label = lab; for (const t of TERMS.filter(t => t.group === g && t.n > 0)) { const o = document.createElement("option"); o.value = t.key; o.textContent = `${t.label} (${fmt(t.n)})`; og.appendChild(o); } wordSel.appendChild(og); } }
+wordSel.value = S.word;
+wordSel.onchange = () => { S.word = wordSel.value; restyle(); };
+function showWord(k) { S.word = k; wordSel.value = k; setMode("word"); scrollToMap(); }
+document.querySelectorAll("#mainCards .card,#wordCards .card").forEach(c => c.onclick = () => showWord(c.dataset.w));
+
+/* place search */
+function combo(inputId, listId, search, pick) {
+  const inp = document.getElementById(inputId), ul = document.getElementById(listId); let items = [], k = -1;
+  const close = () => { ul.style.display = "none"; inp.setAttribute("aria-expanded", "false"); k = -1; };
+  const render = () => { ul.innerHTML = items.map((it, j) => `<li role="option" aria-selected="${j === k}" data-j="${j}">${it.html}</li>`).join(""); ul.style.display = items.length ? "block" : "none"; inp.setAttribute("aria-expanded", items.length ? "true" : "false"); };
+  inp.addEventListener("input", async () => { items = await search(inp.value.trim()); k = -1; render(); });
+  inp.addEventListener("keydown", e => { if (e.key === "ArrowDown") { k = Math.min(items.length - 1, k + 1); render(); e.preventDefault(); } else if (e.key === "ArrowUp") { k = Math.max(0, k - 1); render(); e.preventDefault(); } else if (e.key === "Enter") { const it = items[k >= 0 ? k : 0]; if (it) { pick(it); inp.value = it.label; close(); } e.preventDefault(); } else if (e.key === "Escape") close(); });
+  ul.addEventListener("mousedown", e => { const li = e.target.closest("li"); if (!li) return; const it = items[+li.dataset.j]; pick(it); inp.value = it.label; close(); e.preventDefault(); });
+  inp.addEventListener("blur", () => setTimeout(close, 150));
+}
+const norm = s => s.toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, "");
+combo("q", "sug", async v => {
+  if (!D.places || v.length < 2) return []; const n = norm(v), out = [];
+  for (const p of D.places) { const m = norm(p[0]); if (m.startsWith(n)) out.push([m === n ? 0 : 1, -p[4], p]); }
+  out.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  return out.slice(0, 12).map(([, , p]) => ({ label: p[0], html: `${esc(p[0])} <span>${esc(p[1])}</span>`, p }));
+}, it => {
+  const p = it.p; lmap.setView([p[2], p[3]], p[4] >= 3 ? 10 : 11);
+  if (pin) pin.remove(); pin = L.marker([p[2], p[3]], { interactive: false, icon: L.divIcon({ className: "", html: '<div class="pin"></div>', iconSize: [16, 16], iconAnchor: [8, 8] }) }).addTo(lmap);
+  const u = unitAt(p[2], p[3]); if (u) select(u, false); scrollToMap();
+});
+
+/* street name search */
+const NSH = {};
+const shardOf = s => { const c = norm(s)[0] || "_"; return c >= "a" && c <= "z" ? c : "_"; };
+async function shard(s) { const k = shardOf(s); if (!NSH[k]) NSH[k] = J(`data/page/names/${k}.json`).then(d => ({ d, keys: Object.keys(d) })); return NSH[k]; }
+combo("sname", "snSug", async v => {
+  if (v.length < 2) return []; const sh = await shard(v), n = norm(v), out = [];
+  for (const nm of sh.keys) { const m = norm(nm); if (m.startsWith(n)) { const a = sh.d[nm]; let t = 0; for (let j = 1; j < a.length; j += 2) t += a[j]; out.push([m === n ? 0 : 1, -t, nm, t]); } }
+  out.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  return out.slice(0, 12).map(([, , nm, t]) => ({ label: nm, html: `${esc(nm)} <span>${fmt(t)}</span>`, nm }));
+}, async it => { await setName(it.nm); scrollToMap(); });
+async function setName(nm) {
+  const sh = await shard(nm), a = sh.d[nm]; if (!a) return;
+  const keys = R.cells10_keys, m = new Map(); let t = 0;
+  for (let j = 0; j < a.length; j += 2) { m.set(keys[a[j]], a[j + 1]); t += a[j + 1]; }
+  S.name = nm; S.nameData = m; S.nameTotal = t;
+  if (S.mode !== "name") setMode("name"); else restyle();
+  document.getElementById("sname").value = nm;
+}
+
+/* ===== charts ===== */
+const cw = id => Math.max(330, Math.min(680, document.getElementById(id).clientWidth || 640));
+function svgEl(w, h, inner) { return `<svg viewBox="0 0 ${w} ${h}" role="img">${inner}</svg>`; }
+function regChart() {
+  const rows = Object.entries(R.hm.region).map(([k, v]) => [k === "Eastern" ? "East of England" : k, v]).sort((a, b) => a[1].main_share - b[1].main_share);
+  const W = cw("regChart"), rh = 30, L0 = W < 500 ? 150 : 196, H = rows.length * rh + 30, x = v => L0 + v * (W - L0 - 70);
+  let s = "";
+  for (const g of [0, .25, .5, .75, 1]) s += `<line x1="${x(g)}" x2="${x(g)}" y1="0" y2="${H - 22}" stroke="${css("--rule")}"/><text x="${x(g)}" y="${H - 6}" text-anchor="middle" font-size="11" fill="${css("--muted")}">${pct(g)}</text>`;
+  rows.forEach(([k, v], j) => { const y = j * rh + 4; s += `<text x="${L0 - 8}" y="${y + 17}" text-anchor="end" font-size="12.5">${esc(W < 500 ? k.replace("Yorkshire and the Humber", "Yorkshire, Humber") : k)}</text><rect x="${x(0)}" y="${y + 3}" width="${x(v.main_share) - x(0)}" height="${rh - 9}" fill="${hmColour(v.main_share)}"/><text x="${x(v.main_share) + 6}" y="${y + 17}" font-size="12">${pct(v.main_share)} <tspan fill="${css("--muted")}" font-size="11">${v.main}/${v.high + v.main}</tspan></text>`; });
+  document.getElementById("regChart").innerHTML = svgEl(W, H, s);
+}
+function kindChart() {
+  const groups = [["England", R.hm.by_kind_england], ["East Midlands and Yorkshire", R.hm.by_kind_midlands_north], ["Scotland", R.hm.by_kind_scotland]], kinds = ["Town", "Village"];
+  const W = cw("kindChart"), gh = 74, L0 = W < 500 ? 120 : 196, H = groups.length * gh + 26, x = v => L0 + v * (W - L0 - 60);
+  let s = "";
+  for (const g of [0, .25, .5, .75, 1]) s += `<line x1="${x(g)}" x2="${x(g)}" y1="0" y2="${H - 22}" stroke="${css("--rule")}"/><text x="${x(g)}" y="${H - 6}" text-anchor="middle" font-size="11" fill="${css("--muted")}">${pct(g)}</text>`;
+  groups.forEach(([lab, d], j) => { const y = j * gh + 6; s += W < 500 ? lab.split(" and ").map((t, i) => `<text x="${L0 - 8}" y="${y + 18 + i * 15}" text-anchor="end" font-size="12" font-weight="500">${esc(i ? "and " + t : t)}</text>`).join("") : `<text x="${L0 - 8}" y="${y + 18}" text-anchor="end" font-size="12.5" font-weight="500">${esc(lab)}</text>`;
+    kinds.forEach((k, i) => { const v = d[k], yy = y + i * 28;
+      s += `<rect x="${x(0)}" y="${yy + 4}" width="${x(v.main_share) - x(0)}" height="22" fill="${hmColour(v.main_share)}"/><text x="${x(v.main_share) + 6}" y="${yy + 20}" font-size="12">${k === "Town" ? "towns" : "villages"} ${pct(v.main_share)} <tspan fill="${css("--muted")}" font-size="11">(${v.high + v.main})</tspan></text>`; }); });
+  document.getElementById("kindChart").innerHTML = svgEl(W, H, s);
+}
+function bandChart() {
+  const b = R.hm.bands_gb.filter(d => d.high + d.main >= 10), W = cw("bandChart"), H = 300, L0 = 46, B = 34, x = y0 => L0 + (y0 / 1000) * (W - L0 - 16), y = v => H - B - v * (H - B - 14);
+  let s = "";
+  for (const g of [0, .25, .5, .75, 1]) s += `<line x1="${L0}" x2="${W - 10}" y1="${y(g)}" y2="${y(g)}" stroke="${css("--rule")}"/><text x="${L0 - 6}" y="${y(g) + 4}" text-anchor="end" font-size="11" fill="${css("--muted")}">${pct(g)}</text>`;
+  const bw = (W - L0 - 16) / 20 - 3;
+  for (const d of b) { const v = d.main_share; s += `<rect x="${x(d.y0_km) + 1}" y="${y(v)}" width="${bw}" height="${y(0) - y(v)}" fill="${hmColour(v)}"><title>${d.y0_km} to ${d.y0_km + 50} km north: ${d.main} Main, ${d.high} High</title></rect><circle cx="${x(d.y0_km) + 1 + bw / 2}" cy="${y(v) - 8}" r="${Math.max(2, Math.sqrt(d.high + d.main) / 3)}" fill="${css("--fg")}" opacity=".35"/>`; }
+  for (const [km, lab] of [[0, "South coast"], [200, "London"], [400, "Leeds"], [650, "Edinburgh"], [850, "Inverness"]]) s += `<text x="${x(km)}" y="${H - 12}" font-size="11" fill="${css("--muted")}">${lab}</text>`;
+  document.getElementById("bandChart").innerHTML = svgEl(W, H, s);
+}
+function topChart() {
+  const rows = R.top_uk.slice(0, 25), W = cw("topChart"), rh = 22, L0 = 128, H = rows.length * rh + 6, mx = rows[0][1], x = v => L0 + v / mx * (W - L0 - 50);
+  let s = ""; rows.forEach(([n, c], j) => { const y = j * rh; s += `<text x="${L0 - 8}" y="${y + 15}" text-anchor="end" font-size="12">${esc(n)}</text><rect x="${L0}" y="${y + 3}" width="${x(c) - L0}" height="${rh - 6}" fill="${n === "High Street" ? css("--high") : n === "Main Street" ? css("--main") : css("--muted")}" opacity="${n === "High Street" || n === "Main Street" ? 1 : .55}"/><text x="${x(c) + 5}" y="${y + 15}" font-size="11.5">${fmt(c)}</text>`; });
+  document.getElementById("topChart").innerHTML = svgEl(W, H, s);
+}
+function rwTable() {
+  const t = document.getElementById("rwt"), per = {}, rows = R.regional_words_top.filter(r => r.lq >= 3 && (per[r.region] = (per[r.region] || 0) + 1) <= 3).slice(0, 24), reg = k => k === "Eastern" ? "East of England" : k;
+  t.innerHTML = `<thead><tr><th>Word</th><th class="wide">Where</th><th>Top region</th><th class="num">Streets</th><th class="num">Times</th></tr></thead><tbody>${rows.map(r => `<tr class="go" data-w="${esc(r.word)}" data-k="${esc(r.kind)}"><td><b>${esc(r.word)}</b></td><td class="wide">${r.kind === "ending" ? "ending" : "first word"}</td><td>${esc(reg(r.region))} <small class="muted">${pct(r.share)}</small></td><td class="num">${fmt(r.n)}</td><td class="num">${r.lq.toFixed(1)}</td></tr>`).join("")}</tbody>`;
+  t.querySelectorAll("tr.go").forEach(tr => tr.onclick = () => { const w = tr.dataset.w.toLowerCase(), k = tr.dataset.k === "ending" ? TERMS.find(x => x.label.toLowerCase() === w || x.label.toLowerCase() === "... " + w) : TERMS.find(x => x.label.toLowerCase().split(/[ ,]/)[0] === w && x.group !== "ending");
+    if (k) showWord(k.key); });
+  t.querySelectorAll("tr.go").forEach(tr => { const w = tr.dataset.w.toLowerCase(); const has = TERMS.some(x => x.label.toLowerCase() === w || x.label.toLowerCase() === "... " + w || x.label.toLowerCase().split(/[ ,]/)[0] === w); if (!has) { tr.classList.remove("go"); tr.onclick = null; } });
+}
+function laTable() {
+  const sel = document.getElementById("laSel"), feats = D.la.features.map(f => f.properties).sort((a, b) => a.nm.localeCompare(b.nm));
+  sel.innerHTML = `<option value="">All councils: High and Main Street leaders</option>` + feats.map(p => `<option value="${p.c}">${esc(p.nm)}</option>`).join("");
+  const draw = () => {
+    const t = document.getElementById("lat"), v = sel.value;
+    const list = v ? feats.filter(p => p.c === v) : feats.slice().sort((a, b) => { const ta = cellTerms(a.t), tb = cellTerms(b.t); return ((tb.main_street || 0) + (tb.high_street || 0)) - ((ta.main_street || 0) + (ta.high_street || 0)); }).slice(0, 25);
+    t.innerHTML = `<thead><tr><th>Council</th><th>Commonest</th><th class="wide">Signature name</th><th class="num">High</th><th class="num">Main</th></tr></thead><tbody>${list.map(p => { const tt = cellTerms(p.t); return `<tr class="go" data-c="${p.c}"><td><b>${esc(p.nm)}</b><small class="muted">${fmt(p.n)} streets</small></td><td>${esc(p.top[0][0])} <small class="muted">${p.top[0][1]}</small></td><td class="wide">${p.sig ? esc(p.sig[0]) + ` <small class="muted">${p.sig[1]} of ${p.sig[2]}</small>` : ""}</td><td class="num">${tt.high_street || 0}</td><td class="num">${tt.main_street || 0}</td></tr>`; }).join("")}</tbody>`;
+    t.querySelectorAll("tr.go").forEach(tr => tr.onclick = () => { setUnit("la"); const u = U.find(x => x.id === tr.dataset.c); if (u) { lmap.fitBounds(L.geoJSON(u.f).getBounds(), { maxZoom: 10 }); select(u, true); } });
+  };
+  sel.onchange = draw; draw();
+}
+function drawCharts() { regChart(); kindChart(); bandChart(); topChart(); }
+drawCharts(); rwTable();
+let rsT = null; addEventListener("resize", () => { clearTimeout(rsT); rsT = setTimeout(drawCharts, 200); });
+load();
+</script>
+</body>
+</html>
