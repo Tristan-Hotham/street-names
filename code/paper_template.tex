@@ -1,0 +1,197 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={High Street or Main Street? The United Kingdom's Street-Name Divide},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries High Street or Main Street?\\[2pt] The United Kingdom's Street-Name Divide\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: \href{https://doi.org/10.5281/zenodo.23757702}{https://doi.org/10.5281/zenodo.23757702}\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+Street names are among the most familiar place names, yet their geography is rarely mapped as a whole. I map all {{meta.n_streets|int}} named streets in the United Kingdom: {{meta.n_gb|int}} named roads in Great Britain from Ordnance Survey's OS Open Names and {{meta.n_ni|int}} streets in Northern Ireland built from OpenStreetMap. High Street is the commonest street name ({{hm.uk.high|int}}), followed by Station Road ({{top_uk.1.1|int}}) and Church Lane ({{top_uk.2.1|int}}); Main Street is sixth ({{hm.uk.main|int}}). Main Street outnumbers High Street in Scotland ({{hm.nation.Scotland.main|int}} to {{hm.nation.Scotland.high|int}}) and Northern Ireland ({{hm.nation.Northern Ireland.main|int}} to {{hm.nation.Northern Ireland.high|int}}), and, unexpectedly, in the East Midlands ({{hm.region.East Midlands.main|int}} to {{hm.region.East Midlands.high|int}}) and Yorkshire and the Humber ({{hm.region.Yorkshire and the Humber.main|int}} to {{hm.region.Yorkshire and the Humber.high|int}}), while in London, the South West, the East of England and Wales it makes up under 8\% of the pair. The sharper divide is between town and village: in England, Main Street is {{hm.by_kind_england.Town.main_share|pct}} of the pair in towns and {{hm.by_kind_england.Village.main_share|pct}} in villages; in the East Midlands and Yorkshire, {{hm.by_kind_midlands_north.Town.main_share|pct}} and {{hm.by_kind_midlands_north.Village.main_share|pct}}. Other names for the main street are strongly regional: The Street in East Anglia and the South East, Fore Street in the South West and Front Street in the North East. A location quotient ranks regional street words, from Wynd, Loan and Brae in Scotland to Garth in Yorkshire, Brow in the North West, Chare on Tyneside and Loke in Norfolk. The data describe where names are today, not when or why they were given. An interactive map lets readers explore any street word or name.
+
+\textbf{Keywords:} street names; odonymy; place names; dialect geography; OS Open Names; OpenStreetMap; United Kingdom; open data; data visualisation
+\end{quote}
+
+\section{Introduction}
+
+Almost everyone in the United Kingdom lives on a named street, and a few of those names are so common that they work as types rather than labels. A High Street is a shopping street, a Station Road is the road to the station, whether or not the railway is still there. Yet travellers notice that the names shift. In Scotland and Northern Ireland the main street of a village is very often called Main Street; in Norfolk it may be The Street; in Cornwall, Fore Street; in County Durham, Front Street. Short lanes become wynds in Scotland, lokes in Norfolk and twittens in Sussex.
+
+These impressions are easy to test now that the national mapping agency and a large volunteer mapping project publish street names as open data. This note asks three questions. Where does High Street give way to Main Street, and is the divide one of latitude, of nation, or of something else? Which other names for the main street are regional? And which street words, the generic words that end or begin a name, belong to one part of the country?
+
+The approach is descriptive. I count names and map their shares; I do not try to date the names or test why they were chosen. The interactive version is at \url{https://maps.tristanhotham.com/street-names/}, and a sister project maps the landscape words for streams, valleys and hills in the same way (\url{https://maps.tristanhotham.com/dale-down-fell-beck/}).
+
+\section{Data}
+
+\subsection{Great Britain: OS Open Names}
+
+OS Open Names is Ordnance Survey's open gazetteer of Great Britain (Ordnance Survey 2026a). Each feature has a name, an optional second name in Welsh or Scottish Gaelic with its language, a type and local type, a point on the British National Grid, and the populated place, district and region it lies in. Road points are derived from OS MasterMap Highways Network, and a road feature has one point calculated for the entire road (Ordnance Survey 2026b). I downloaded the GB CSV release on {{page.retrieved_gb}} and kept the {{meta.n_gb|int}} features of local type Named Road. OS also lists features of local type Section Of Named Road, extra points for the parts of a road inside a settlement that refer back to the whole road; counting them would count roads twice, so I left them out. Numbered roads without a name were also excluded.
+
+\subsection{Northern Ireland: OpenStreetMap}
+
+Ordnance Survey's open data cover Great Britain only. For Northern Ireland I used OpenStreetMap (OpenStreetMap contributors 2026), queried through the Overpass API on {{page.retrieved_ni}}. I took every way with a name and a highway type of residential, unclassified, tertiary, secondary, primary, trunk, motorway, living street, pedestrian street, road or busway inside Northern Ireland: {{meta.prep.ni_ways_kept|int}} ways. Paths, tracks and service roads were excluded. OpenStreetMap divides one street into many ways, so I joined ways with the same name that share an end node or whose ends lie within {{meta.prep.link_m|int}} m of each other, and treated each joined group as one street. This gave {{page.ni_before_bridges|int}} streets, from which I removed {{meta.prep.ni_bridges_dropped|int}} short groups (under 500 m) whose names end in Bridge, because OpenStreetMap often names a bridge separately within a street while Ordnance Survey names roads, not bridges. That left {{meta.n_ni|int}} streets. Where an OpenStreetMap way carries an Irish name (name:ga), I kept it.
+
+\subsection{Areas and settlements}
+
+Each street was placed in a current local authority district (ONS boundaries; Office for National Statistics 2025) by its point; {{meta.prep.snapped|int}} points that fell just outside the generalised coastline were given to the nearest district. There are {{meta.n_councils|int}} districts. English regions are those given by OS Open Names. Streets were also assigned to 10 km and 20 km squares of the British National Grid. For the comparison of towns and villages, each Great Britain street's populated place name was matched to the nearest OS Open Names populated place of the same name within 8 km, which supplies its local type (city, town, village, hamlet, suburban area or other settlement); {{hm.kind_matched_share|pct}} of Great Britain's streets were matched.
+
+\section{Methods}
+
+\textbf{Names.} Names were counted exactly as written. "High Street" and "Main Street" mean exactly those names, so Upper High Street, High Road and Main Road are not included.
+
+\textbf{Words.} A name's ending is its last word when that word is one of {{page.n_generics|int}} common street words (Road, Lane, Close, Wynd, Loke and so on); otherwise the name has no ending (The Green, Briggate, The Crescent). The first word is the first word of the name. For a few words of interest I also used particular rules: the -gate group counts names whose ending is Gate together with one-word names ending in -gate of more than five letters; the Welsh group counts names that Ordnance Survey marks as Welsh in either name field, plus names in Wales beginning with a Welsh street word such as Heol, Ffordd, Stryd, Lôn, Clos or Maes.
+
+\textbf{Concentration.} For each ending and first word used at least 150 times, I computed a location quotient for each region: the region's share of all streets with the word divided by the region's share of all streets. Wales, Scotland and Northern Ireland count as regions alongside the nine English regions. A quotient of 1 means the word is as common there as across the UK; the maximum possible for Wales, which holds {{page.wales_share|pct1}} of streets, is {{page.lq_wales_max|f1}}.
+
+\textbf{Signature names.} For each district, the signature name is the name used at least four times in the district and at least 25 times in the UK with the highest location quotient in that district.
+
+\textbf{Maps.} The divide is shown as Main Street's share of each square's High Streets plus Main Streets. Squares with neither are shown in grey.
+
+\section{Results}
+
+\subsection{The commonest names}
+
+The {{meta.n_streets|int}} streets share {{meta.n_names|int}} different names, and {{meta.unique_share|pct}} of those names are used by only one street. A few names are very common (Table~\ref{tab:top}). High Street leads with {{hm.uk.high|int}}, then Station Road, Church Lane, Church Street and Mill Lane. Main Street is sixth. Road is the commonest ending ({{page.gen_road_pct|pct}} of names), followed by Close ({{page.gen_close_pct|pct}}), Street ({{page.gen_street_pct|pct}}) and Lane ({{page.gen_lane_pct|pct}}).
+
+\begin{table}[H]
+\centering\small
+\caption{The commonest street names in the UK and in each nation.}
+\label{tab:top}
+{{tab_top}}
+\end{table}
+
+\subsection{High Street and Main Street}
+
+Table~\ref{tab:hm} and Figure~\ref{fig:map} show the divide. High Street dominates England and Wales; Main Street leads in Scotland and Northern Ireland. But the English pattern is not a simple north and south (Figure~\ref{fig:reg}). London, the South West, the East of England and Wales have almost no Main Streets, while the East Midlands and Yorkshire and the Humber have more Main Streets than High Streets. The North East, the region closest to Scotland, has a Main Street share of only {{hm.region.North East.main_share|pct}}. Of England's {{hm.england_councils|int}} districts, {{hm.england_councils_main_more|int}} have more Main Streets than High Streets, mostly in a belt from Leicestershire and Rutland through Nottinghamshire and Lincolnshire into Yorkshire; the largest counts are in North Yorkshire ({{hm.england_main_top.0.1|int}} Main, {{hm.england_main_top.0.2|int}} High), the East Riding of Yorkshire ({{hm.england_main_top.1.1|int}} and {{hm.england_main_top.1.2|int}}), Harborough ({{hm.england_main_top.2.1|int}} and {{hm.england_main_top.2.2|int}}) and Melton ({{hm.england_main_top.3.1|int}} and {{hm.england_main_top.3.2|int}}). In Scotland only {{hm.scotland_high_n|int}} of {{hm.scotland_councils|int}} council areas have more High Streets than Main Streets.
+
+\begin{table}[H]
+\centering\small
+\caption{High Street and Main Street by nation.}
+\label{tab:hm}
+{{tab_hm}}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{b_divide_map.png}
+\caption{Main Street's share of the High Streets and Main Streets in each 20 km square. Red: all High Street; blue: all Main Street; grey: neither name.}
+\label{fig:map}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{b_regions.png}
+\caption{Main Street's share of the High and Main Streets in each English region, Wales, Scotland and Northern Ireland, with counts.}
+\label{fig:reg}
+\end{figure}
+
+\subsection{Towns and villages}
+
+The clearest contrast is between towns and villages (Figure~\ref{fig:kind}). In England, Main Street makes up {{hm.by_kind_england.Town.main_share|pct}} of the pair in towns and {{hm.by_kind_england.Village.main_share|pct}} in villages. In the East Midlands and Yorkshire, where Main Street is commonest in England, the shares are {{hm.by_kind_midlands_north.Town.main_share|pct}} in towns and {{hm.by_kind_midlands_north.Village.main_share|pct}} in villages; in Scotland, {{hm.by_kind_scotland.Town.main_share|pct}} and {{hm.by_kind_scotland.Village.main_share|pct}}. So where Main Street is common, it is above all the name of the village street, and High Street holds on in the towns.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{b_towns_villages.png}
+\caption{Main Street's share of High plus Main Streets in towns and villages, with the number of High plus Main Streets in brackets. Settlement type from OS Open Names.}
+\label{fig:kind}
+\end{figure}
+
+\subsection{Other names for the main street}
+
+Three other names for a main street are strongly regional (Figure~\ref{fig:five}). The Street ({{main_words.the_street.n|int}}) is {{stories.the_street_east|pct}} in the East of England and the South East, with {{terms.the_street.top_councils.0.1|int}} in North Norfolk alone. Fore Street ({{main_words.fore_street.n|int}}) is {{stories.fore_street_sw|pct}} in the South West, {{terms.fore_street.top_councils.1.1|int}} of them in Cornwall. Front Street ({{main_words.front_street.n|int}}) is {{stories.front_street_ne|pct}} in the North East, {{terms.front_street.top_councils.0.1|int}} in County Durham. Of the {{cells.main_word_20km_n|int}} 20 km squares with at least three of the five names, High Street is commonest in {{cells.main_word_20km.high_street|int}}, Main Street in {{cells.main_word_20km.main_street|int}}, The Street in {{cells.main_word_20km.the_street|int}}, Fore Street in {{cells.main_word_20km.fore_street|int}} and Front Street in {{cells.main_word_20km.front_street|int}}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\textwidth]{b_main_words.png}
+\caption{The commonest of five names for the main street in each 20 km square with at least three of them.}
+\label{fig:five}
+\end{figure}
+
+\subsection{Regional street words}
+
+Table~\ref{tab:rw} lists the most concentrated endings and first words, three per region at most, and Figure~\ref{fig:rw} maps nine of them. Welsh first words reach the maximum concentration possible for Wales. In Scotland, Wynd ({{terms.r_wynd.n|int}}, {{stories.wynd_scot|pct}} in Scotland), Loan ({{terms.r_loan.n|int}}) and Brae ({{terms.r_brae.n|int}}, {{stories.brae_scot|pct}} in Scotland) stand out; Brae also appears in Northern Ireland. Garth ({{terms.r_garth.n|int}}) is {{stories.garth_yorks|pct}} in Yorkshire and the Humber; Brow ({{terms.r_brow.n|int}}) {{stories.brow_nw|pct}} in the North West; Fold ({{terms.r_fold.n|int}}) {{stories.fold_nw|pct}} in the North West and Yorkshire. Chare ({{terms.r_chare.n|int}}) occurs only in the North East, {{terms.r_chare.top_councils.0.1|int}} times in Newcastle upon Tyne. Loke ({{terms.r_loke.n|int}}) is {{stories.loke_east|pct}} in the East of England, {{terms.r_loke.top_councils.0.1|int}} in North Norfolk. Twitten is rare ({{terms.r_twitten.n|int}}), {{stories.twitten_se|pct}} in the South East. Drove ({{terms.r_drove.n|int}}) clusters in the Fens and the Somerset Levels, with {{terms.r_drove.top_councils.0.1|int}} in East Cambridgeshire. Names in the -gate group number {{terms.r_gate.n|int}}, {{stories.gate_yorks_em|pct}} of them in the north of England and the East Midlands. Northern Ireland's housing developments are often named Park: {{stories.park_ni|pct}} of its streets end in Park, against {{stories.park_gb|pct1}} in Great Britain. Bolton has {{terms.w_back.top_councils.0.1|int}} names beginning with Back, the named back streets of its terraces.
+
+\begin{table}[H]
+\centering\small
+\caption{The most regionally concentrated street words (at most three per region). LQ: location quotient in the top region.}
+\label{tab:rw}
+{{tab_rw}}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\textwidth]{b_regional_words.png}
+\caption{Nine regional street words. Each dot is a street.}
+\label{fig:rw}
+\end{figure}
+
+\subsection{Welsh, Gaelic and Irish names}
+
+{{stories.welsh_any_n|int}} streets have a Welsh name or begin with a Welsh street word, {{stories.welsh_any_wales|pct}} of the streets in Wales. Heol is the commonest Welsh word ({{terms.cy_heol.n|int}}, {{terms.cy_heol.top_councils.0.1|int}} in Carmarthenshire), then Ffordd ({{terms.cy_ffordd.n|int}}), Clos ({{terms.cy_clos.n|int}}) and Lôn ({{terms.cy_lon.n|int}}). OS Open Names records only {{stories.gaelic_n|int}} Scottish Gaelic street names, mostly in the Western Isles and Highland. In Northern Ireland {{terms.ga_any.n|int}} streets ({{stories.irish_ni_share|pct}}) have an Irish name in OpenStreetMap, which reflects what mappers have recorded rather than where Irish is spoken.
+
+\subsection{Royal and commemorative names}
+
+Names containing King or King's number {{royal.w_king|int}}, Queen or Queen's {{royal.w_queen|int}}, Victoria {{royal.w_victoria|int}}, George {{royal.w_george|int}} and Albert {{royal.w_albert|int}}; Jubilee {{royal.w_jubilee|int}}, Elizabeth {{royal.w_elizabeth|int}} and Coronation {{royal.w_coronation|int}}. Not all of these commemorate monarchs.
+
+\section{Discussion}
+
+The High Street and Main Street divide is real but it is not the north and south line it is often taken to be. Main Street is the majority name in Scotland and Northern Ireland, but in England it is concentrated in a belt from Leicestershire to Yorkshire and is rare in the North East. Most strikingly, it is a village name. This fits the ordinary sense of the two names: high in High Street meant chief or principal and the name belonged to the main street of a town, while a village's one street was its main street. The data cannot show when the names were given or whether the pattern reflects old usage or later naming by councils, but they show that within the same regions, towns and villages chose differently.
+
+The other main street names and the regional words show how much local vocabulary survives in an official gazetteer. Several of the concentrations match well-known dialect and history: Scots wynd, loan and brae; the Norse-influenced vocabulary of Yorkshire and the north and east Midlands (garth, and the -gate street names of towns such as York); chare on Tyneside; loke in Norfolk and twitten in Sussex. Some patterns are instead about how places were built: the back streets of Lancashire's terraced towns, the droves of drained wetlands, and the Parks of Northern Ireland's housing estates.
+
+\section{Limitations}
+
+First, the two sources differ. Ordnance Survey's named roads are grouped from its highways data, while Northern Ireland's streets were built from OpenStreetMap ways by a simple joining rule. Counts across the Irish Sea are therefore less comparable than shares. OpenStreetMap is not complete, although named roads in Northern Ireland are well mapped. Second, a named road is a modelling choice: a long road may be one feature or several, and two separate streets of the same name might be grouped. Third, exact matching misses variants (High Road, Main Road, Upper High Street), and the ending and first-word rules are simple; some names are counted in a group by coincidence (not every George is a king). Fourth, the town and village comparison depends on matching a street's settlement name to an OS settlement, which worked for {{hm.kind_matched_share|pct}} of streets. Finally, this is a snapshot of current names; many were given in the last century by developers and councils, and renamings are not visible.
+
+\section{Conclusion}
+
+Across {{meta.n_streets|int}} streets, High Street is the UK's commonest street name and Main Street its northern and rural counterpart: Main Street leads in Scotland and Northern Ireland and in the villages of the East Midlands and Yorkshire, while High Street holds the towns almost everywhere. Around this divide sit strongly regional names for the main street and a rich set of local street words, which open data now make easy to map and to explore.
+
+\section*{Data and code availability}
+
+The interactive page is at \url{https://maps.tristanhotham.com/street-names/}. Code and derived data are at \url{https://github.com/Tristan-Hotham/street-names} and archived with this paper at \url{https://doi.org/10.5281/zenodo.23757702}. Code is MIT licensed. Derived data that include Northern Ireland contain OpenStreetMap data and are released under the Open Database Licence 1.0; data for Great Britain contain OS data © Crown copyright and database right 2026 (Open Government Licence v3.0).
+
+\section*{AI statement}
+
+I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.
+
+\section*{References}
+
+\small
+Office for National Statistics (2025) Local Authority Districts boundaries, UK, via the uk-topojson repository (\url{https://github.com/onsvisual/uk-topojson}). Open Government Licence v3.0.
+
+OpenStreetMap contributors (2026) OpenStreetMap. \url{https://www.openstreetmap.org}. Open Database Licence 1.0. Queried with the Overpass API, \url{https://overpass-api.de}.
+
+Ordnance Survey (2026a) OS Open Names. \url{https://www.ordnancesurvey.co.uk/products/os-open-names}. Open Government Licence v3.0.
+
+Ordnance Survey (2026b) OS Open Names technical specification: source of OS Open Names. \url{https://docs.os.uk/os-downloads/products/addresses-and-names-portfolio/os-open-names/os-open-names-technical-specification/source-of-os-open-names}.
+
+\end{document}

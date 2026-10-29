@@ -1,0 +1,133 @@
+<!-- wp:paragraph -->
+<p><em>Is the main street where you live a High Street or a Main Street? I sorted all {{meta.n_streets|int}} named streets in the UK by name to find where one gives way to the other, and found a divide that runs less between north and south than between town and village.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/street-names/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23757702">Read the paper</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>Drive north from London and at some point the High Street becomes a Main Street. Everyone who has spent time in Scotland or Northern Ireland knows it, but where exactly does it happen? Ordnance Survey publishes the name and position of every named road in Great Britain as open data, and OpenStreetMap's volunteers have mapped the streets of Northern Ireland, so the line no longer needs to be guessed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I took all {{meta.n_streets|int}} named streets, {{meta.n_gb|int}} in Great Britain and {{meta.n_ni|int}} in Northern Ireland, and counted them by name, by the word at the end (Road, Lane, Close, Wynd) and by the word at the start (Heol, Back, Church). High Street is the commonest street name in the UK, with {{hm.uk.high|int}}. Main Street is sixth, with {{hm.uk.main|int}}, behind Station Road, Church Lane, Church Street and Mill Lane.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Not quite north and south</h2>
+<!-- /wp:heading -->
+
+{{IMG|b_divide_map.png|Map of the UK in 20 km squares coloured from red (all High Street) to blue (all Main Street): red across southern England and Wales, blue across Scotland, Northern Ireland and a belt from Leicestershire to Yorkshire.|Main Street's share of the High and Main Streets in each 20 km square. Grey squares have neither name.}}
+
+<!-- wp:paragraph -->
+<p>The broad pattern is the expected one. England has {{hm.nation.England.high|int}} High Streets and {{hm.nation.England.main|int}} Main Streets, Wales {{hm.nation.Wales.high|int}} and {{hm.nation.Wales.main|int}}. Scotland turns it round, with {{hm.nation.Scotland.main|int}} Main Streets to {{hm.nation.Scotland.high|int}} High Streets, and Northern Ireland has {{hm.nation.Northern Ireland.main|int}} to {{hm.nation.Northern Ireland.high|int}}.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>But look at England more closely and the line wobbles. London has {{hm.region.London.high|int}} High Streets and one Main Street. The North East, right next to Scotland, has only {{hm.region.North East.main|int}} Main Streets. Meanwhile the East Midlands has more Main Streets than High Streets ({{hm.region.East Midlands.main|int}} to {{hm.region.East Midlands.high|int}}), and so does Yorkshire and the Humber ({{hm.region.Yorkshire and the Humber.main|int}} to {{hm.region.Yorkshire and the Humber.high|int}}). {{hm.england_councils_main_more|int}} of England's {{hm.england_councils|int}} councils have more Main Streets than High Streets, led by North Yorkshire, the East Riding, Harborough and Melton.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_regions.png|Bar chart of Main Street's share of High plus Main Streets by region, from 2% in London to 80% in Northern Ireland, with the East Midlands and Yorkshire above half.|Main Street's share of each region's High and Main Streets.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A village word</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Ordnance Survey records the town or village each street belongs to, so I could ask whether size matters. It does, more than anything else I tried. In England's towns, Main Street makes up {{hm.by_kind_england.Town.main_share|pct}} of the pair. In England's villages it is {{hm.by_kind_england.Village.main_share|pct}}. In the East Midlands and Yorkshire it is {{hm.by_kind_midlands_north.Town.main_share|pct}} in towns and {{hm.by_kind_midlands_north.Village.main_share|pct}} in villages, and even in Scotland the towns lean to High Street ({{hm.by_kind_scotland.Town.main_share|pct}} Main) while the villages do not ({{hm.by_kind_scotland.Village.main_share|pct}}).</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_towns_villages.png|Bar chart showing Main Street's share is far higher in villages than in towns in England, in the East Midlands and Yorkshire, and in Scotland.|Main Street's share in towns and in villages, with the number of High plus Main Streets in brackets.}}
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>High Street is a town name. Main Street, across the Midlands, the north and Scotland, is a village name.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:paragraph -->
+<p>That fits the plain meaning of the words. "High" in High Street meant chief or principal, and the name belonged to the main street of a market town; a village's one street was simply its main street. The map shows where each name is today, though, not when it was given, so I would not push that story too hard.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The Street, Fore Street, Front Street</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>High and Main are not the only names for the main street. The Street ({{main_words.the_street.n|int}}) is {{stories.the_street_east|pct}} in the East of England and the South East, with {{terms.the_street.top_councils.0.1|int}} in North Norfolk alone. Fore Street ({{main_words.fore_street.n|int}}) is {{stories.fore_street_sw|pct}} in the South West, {{terms.fore_street.top_councils.1.1|int}} of them in Cornwall. Front Street ({{main_words.front_street.n|int}}) is {{stories.front_street_ne|pct}} in the North East, {{terms.front_street.top_councils.0.1|int}} in County Durham. Give each 20 km square whichever of the five it has most of, and the country falls into clean blocks.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_main_words.png|Map of 20 km squares coloured by the commonest of High Street, Main Street, The Street, Fore Street and Front Street: The Street in Norfolk and Suffolk, Fore Street in Cornwall and Devon, Front Street in County Durham.|The commonest of five names for the main street in each 20 km square with at least three of them.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Wynds, lokes, twittens and garths</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Most streets end in a handful of words: Road ends {{page.gen_road_pct|pct}} of names, Close {{page.gen_close_pct|pct}}, Street {{page.gen_street_pct|pct}}, Lane {{page.gen_lane_pct|pct}}. The rare endings are the fun ones, because so many belong to a single region. Wynd ({{terms.r_wynd.n|int}}) is {{stories.wynd_scot|pct}} Scottish, with {{terms.r_wynd.top_councils.0.1|int}} in Fife. Garth ({{terms.r_garth.n|int}}) is {{stories.garth_yorks|pct}} in Yorkshire and the Humber. Brow ({{terms.r_brow.n|int}}) is {{stories.brow_nw|pct}} in the North West, with Ribble Valley and Chorley at the top. Chare ({{terms.r_chare.n|int}}) is found only in the North East. Loke ({{terms.r_loke.n|int}}) is {{stories.loke_east|pct}} in the East of England, {{terms.r_loke.top_councils.0.1|int}} of them in North Norfolk, and the rare Twitten ({{terms.r_twitten.n|int}}) is a Sussex word.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_regional_words.png|Nine small maps with a dot for each street: Wynd and Brae in Scotland, Chare on Tyneside, Garth in Yorkshire, Brow and Fold in Lancashire and Yorkshire, Loke in Norfolk, Drove in the Fens and Somerset, Heol in south Wales.|Nine regional street words. Each dot is a street.}}
+
+<!-- wp:paragraph -->
+<p>Some of these are history, some landscape and some building. Drove ({{terms.r_drove.n|int}}), a track for driving stock, clusters in the Fens and the Somerset Levels. Bolton has {{terms.w_back.top_councils.0.1|int}} street names beginning with Back, the named back streets behind its terraces. In Northern Ireland {{stories.park_ni|pct}} of streets end in Park, against {{stories.park_gb|pct1}} in Great Britain: the housing estate is a Park there, where in England it would be a Close. In Wales, {{stories.welsh_any_wales|pct}} of streets have a Welsh name or start with a Welsh street word, Heol most often.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Station Road and the king</h2>
+<!-- /wp:heading -->
+
+{{IMG|b_top_names.png|Bar chart of the 20 commonest street names in the UK, led by High Street, Station Road, Church Lane, Church Street and Mill Lane, with Main Street sixth.|The 20 commonest street names in the UK.}}
+
+<!-- wp:paragraph -->
+<p>The UK's streets share {{meta.n_names|int}} different names, and {{meta.unique_share|pct}} of those names belong to a single street, so your own street is probably more unusual than it feels. Royalty is everywhere, though: names with King number {{royal.w_king|int}}, Queen {{royal.w_queen|int}} and Victoria {{royal.w_victoria|int}}. On the interactive page you can type any street name and see where its namesakes are, map any of the street words, or go to your own town.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I did this</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>For Great Britain I used the {{meta.n_gb|int}} features of type Named Road in Ordnance Survey's OS Open Names, leaving out the extra points OS adds for sections of roads inside settlements. For Northern Ireland, which OS open data do not cover, I took {{meta.prep.ni_ways_kept|int}} named road ways from OpenStreetMap and joined pieces of the same street, giving {{meta.n_ni|int}} streets. Names are counted exactly, so Upper High Street and High Road are not High Streets. Each street was placed in its current council area and on 10 km and 20 km squares, and matched to its Ordnance Survey town or village for the town and village comparison. The two sources divide streets differently, so compare shares rather than raw counts across the Irish Sea, and remember this is a map of today's names, many given by developers and councils in the last century.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/street-names/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23757702">Read the paper</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/Tristan-Hotham/street-names">Data and code</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Notes and sources</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><a href="https://www.ordnancesurvey.co.uk/products/os-open-names">OS Open Names</a>, Ordnance Survey. Contains OS data © Crown copyright and database right 2026, Open Government Licence v3.0.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, via the <a href="https://overpass-api.de">Overpass API</a>. Open Database Licence 1.0.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Local authority district boundaries, Office for National Statistics, via <a href="https://github.com/onsvisual/uk-topojson">uk-topojson</a>. Open Government Licence v3.0.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>The paper: Hotham, T. (2026) High Street or Main Street? The United Kingdom's Street-Name Divide. Zenodo. <a href="https://doi.org/10.5281/zenodo.23757702">https://doi.org/10.5281/zenodo.23757702</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Sister project: <a href="https://maps.tristanhotham.com/dale-down-fell-beck/">Beck, brook or burn?</a>, the same idea for streams, valleys and hills.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
