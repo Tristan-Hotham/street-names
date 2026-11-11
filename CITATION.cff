@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this data or code, please cite it as below."
+title: "High Street or Main Street? The United Kingdom's Street-Name Divide"
+type: dataset
+authors:
+  - family-names: Hotham
+    given-names: Tristan
+    orcid: "https://orcid.org/0000-0003-4931-9349"
+    affiliation: "Independent researcher"
+doi: "10.5281/zenodo.23757702"
+url: "https://maps.tristanhotham.com/street-names/"
+repository-code: "https://github.com/Tristan-Hotham/street-names"
+license: CC-BY-4.0
+keywords:
+  - "street names"
+  - "odonymy"
+  - "place names"
+  - "dialect geography"
+  - "OS Open Names"
+  - "OpenStreetMap"
+  - "United Kingdom"
+  - "High Street"
+  - "open data"
+  - "data visualisation"
